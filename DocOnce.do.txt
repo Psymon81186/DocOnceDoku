@@ -1,0 +1,10 @@
+TITLE: DocOnce
+AUTHOR: Michael Weiß
+AUTHOR: Simon Schäfer
+DATE: today
+TOC: on
+========= DocOnce, eine universelle Markup-Sprache =========
+========= Installation =========
+========= Syntax =========
+========= Ausgabeformate =========
+========= Parameter für den `doconce`-Befehl =========
