@@ -7,7 +7,9 @@ if [ $# -eq 0 ]
 		file=$1
 		sudo doconce format pdflatex $file --latex_packages=ngerman,parskip,nopageno --latex_font=helvetica --latex_code_style=vrb --latex_papersize=a4 --latex_title_layout=titlepage
 		echo -e "\e[32mLaTex File erstellt!\e[0m"
-		filetex="${file%%.*}.tex"
+    filename="${file%%.*}"
+    echo $filename
+		filetex="$filename.tex"
 		echo -e "\e[32mBeginne PDF-Erstellung\e[0m"
 		pdflatex -interaction=batchmode $filetex
 		echo -e "\e[32mSchritt1: pdfLatex\e[0m"
@@ -21,4 +23,11 @@ if [ $# -eq 0 ]
 		echo -e "\e[32mSchritt5: pdfLatex\e[0m"
 		pdflatex -interaction=batchmode $filetex
 		echo -e "\e[32mPDF erstellt!\e[0m"
+    rm "$filename.aux"
+    rm "$filename.idx"
+    rm "$filename.ilg"
+    rm "$filename.ind"
+    rm "$filename.out"
+    rm "$filename.tex"
+    rm "$filename.toc"
 fi

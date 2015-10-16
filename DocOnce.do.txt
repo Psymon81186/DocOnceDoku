@@ -4,7 +4,28 @@ AUTHOR: Simon Schäfer
 DATE: today
 TOC: on
 ========= DocOnce, eine universelle Markup-Sprache =========
+__Was ist DocOnce.__
+_5\%_
+__Vor- und Nachteile.__
+_5\%_
 ========= Installation =========
+_10\%_
 ========= Syntax =========
+_10\%_
 ========= Ausgabeformate =========
+======= Markdown =======
+_10\%_
+======= Rest und Sphinx =======
+_10\%_
+======= LaTex =======
+_10\%_
+======= HTML =======
+_10\%_
+======= Wiki-Formate =======
+_10\%_
 ========= Parameter für den `doconce`-Befehl =========
+_10\%_
+========= Fazit =========
+_10\%_
+========= Anhang =========
+_Rest_
