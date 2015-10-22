@@ -4,9 +4,21 @@ AUTHOR: Simon Schäfer
 DATE: today
 TOC: on
 ========= DocOnce, eine universelle Markup-Sprache =========
-__Was ist DocOnce.__
+======= Was ist DocOnce =======
+[Simon: einfache minimal getaggte Markup-Sprache]
+[Simon: kann in ziemlich jedes Format umgewandelt werden]
 _5\%_
-__Vor- und Nachteile.__
+======= Vor- und Nachteile =======
+=== Vorteile ===
+* viele Ausgabeformate
+* geeignet für Autoren die für viele unterschiedliche Medien schreiben
+* Viele unterschiedliche Designs für das Erstellen von z.B. html-Dokumenten
+* Source-Code kann direkt aus Dateien ausgelesen werden
+* kann auch nur als einfacher Text ausgegeben werden z.B. für Email oder Code-Dokumentationen]
+=== Nachteile ===
+ * Installation auf Windows nicht möglich
+ * erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung
+ * erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex
 _5\%_
 ========= Installation =========
 _10\%_
