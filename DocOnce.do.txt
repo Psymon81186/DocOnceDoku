@@ -3,41 +3,11 @@ AUTHOR: Michael Weiß
 AUTHOR: Simon Schäfer
 DATE: today
 TOC: on
-========= DocOnce, eine universelle Markup-Sprache =========
-======= Was ist DocOnce =======
-[Simon: einfache minimal getaggte Markup-Sprache]
-[Simon: kann in ziemlich jedes Format umgewandelt werden]
-_5\%_
-======= Vor- und Nachteile =======
-=== Vorteile ===
-* viele Ausgabeformate
-* geeignet für Autoren die für viele unterschiedliche Medien schreiben
-* Viele unterschiedliche Designs für das Erstellen von z.B. html-Dokumenten
-* Source-Code kann direkt aus Dateien ausgelesen werden
-* kann auch nur als einfacher Text ausgegeben werden z.B. für Email oder Code-Dokumentationen]
-=== Nachteile ===
- * Installation auf Windows nicht möglich
- * erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung
- * erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex
-_5\%_
-========= Installation =========
-_10\%_
-========= Syntax =========
-_10\%_
-========= Ausgabeformate =========
-======= Markdown =======
-_10\%_
-======= Rest und Sphinx =======
-_10\%_
-======= LaTex =======
-_10\%_
-======= HTML =======
-_10\%_
-======= Wiki-Formate =======
-_10\%_
-========= Parameter für den `doconce`-Befehl =========
-_10\%_
-========= Fazit =========
-_10\%_
-========= Anhang =========
-_Rest_
+
+# #include "einleitung/einleitung.do.txt"
+# #include "installation/installation.do.txt"
+# #include "syntax/syntax.do.txt"
+# #include "ausgabe/ausgabe.do.txt"
+# #include "parameter/parameter.do.txt"
+# #include "fazit/fazit.do.txt"
+# #include "anhang/anhang.do.txt"
