@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+		echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+	else
+		file=$1
+		sudo doconce format pandoc $file --no_abort
+		echo -e "\e[32mMarkdown File erstellt!\e[0m"
+    read -p "Weiterverarbeitung zu *.docx?(Y/N): " goOn
+    if [ $goOn == "Y" ] || [ $goOn == "y" ];
+      then
+      filename="${file%%.*}"
+      pandoc -t docx -o $filename.docx $filename.md
+      echo -e "\e[32m*.docx File erstellt!\e[0m"
+    fi
+fi

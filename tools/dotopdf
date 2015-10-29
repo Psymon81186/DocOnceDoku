@@ -5,23 +5,23 @@ if [ $# -eq 0 ]
 		echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
 	else
 		file=$1
-		sudo doconce format pdflatex $file --latex_packages=ngerman,parskip,nopageno --latex_font=helvetica --latex_code_style=verb --latex_papersize=a4 --latex_title_layout=titlepage
+		sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1
 		echo -e "\e[32mLaTex File erstellt!\e[0m"
     filename="${file%%.*}"
     echo $filename
 		filetex="$filename.tex"
 		echo -e "\e[32mBeginne PDF-Erstellung\e[0m"
-		pdflatex -interaction=batchmode -shell-escape $filetex
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
 		echo -e "\e[32mSchritt1: pdfLatex\e[0m"
-		pdflatex -interaction=batchmode -shell-escape $filetex
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
 		echo -e "\e[32mSchritt2: pdfLatex\e[0m"
-		pdflatex -interaction=batchmode -shell-escape $filetex
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
 		echo -e "\e[32mSchritt3: makeindex\e[0m"
-		makeindex $filetex
+		sudo makeindex $filetex
 		echo -e "\e[32mSchritt4: bibtex\e[0m"
-		bibtex $filetex
+		sudo bibtex $filetex
 		echo -e "\e[32mSchritt5: pdfLatex\e[0m"
-		pdflatex -interaction=batchmode -shell-escape $filetex
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
 		echo -e "\e[32mPDF erstellt!\e[0m"
     rm -f "$filename.aux"
     rm -f "$filename.idx"

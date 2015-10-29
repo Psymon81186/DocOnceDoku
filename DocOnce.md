@@ -1,3 +1,49 @@
+% DocOnce
+% **Michael Weiß**;  **Simon Schäfer**
+% Oct 28, 2015
+
+<!-- Table of contents: Run pandoc with --toc option -->
+
+
+
+# DocOnce, eine universelle Markup-Sprache
+## Was ist DocOnce
+[Simon 1: einfache minimal getaggte Markup-Sprache]
+[Simon 2: kann in ziemlich jedes Format umgewandelt werden]
+**5\%**
+## Vor- und Nachteile
+### Vorteile
+* viele Ausgabeformate
+* geeignet für Autoren die für viele unterschiedliche Medien schreiben
+* Viele unterschiedliche Designs für das Erstellen von z.B. html-Dokumenten
+* Source-Code kann direkt aus Dateien ausgelesen werden
+* kann auch nur als einfacher Text ausgegeben werden z.B. für Email oder Code-Dokumentationen]
+
+### Nachteile
+ * Installation auf Windows nicht möglich
+ * erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung
+ * erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex
+
+**5\%**
+# Installation
+**10\%**
+# Syntax
+**10\%**
+# Ausgabeformate
+
+<!-- include "markdown.do.txt" -->
+<!-- include "restSphinx.do.txt" -->
+<!-- include "latex.do.txt" -->
+<!-- include "html.do.txt" -->
+<!-- include "wiki.do.txt" -->
+# Parameter für den `doconce`-Befehl
+**10\%**
+# Fazit
+**10\%**
+# Anhang
+## Setup-Script
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{.Shell}
 #!/bin/bash
 # Automatically generated script by deb2sh.py.
 
@@ -7,7 +53,7 @@ set -x  # make sure each command is printed in the terminal
 
 function apt_install {
   sudo apt-get -y install $1
-  if [ $? -ne 0 ]; then
+  if [ $? -ne 0 ]; then0
     echo "could not install $1 - abort"
     exit 1
   fi
@@ -157,3 +203,5 @@ cd srclib
 git clone https://github.com/hplgit/doconce.git
 if [ -d doconce ]; then cd doconce; sudo python setup.py install; cd ../..; fi
 echo "Everything is successfully installed!"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
