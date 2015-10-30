@@ -1,8 +1,6 @@
 ========= DocOnce, eine universelle Markup-Sprache =========
 ======= Was ist DocOnce =======
-[Simon: einfache minimal getaggte Markup-Sprache]
-[Simon: kann in ziemlich jedes Format umgewandelt werden]
-_5\%_
+Doconce ist eine minimal ausgezeichnete Markup-Sprache, die alle wichtigen Funktionen einer Markup-Sprache bereitstellt und hierbei trotzdem die Anzahl der verwendeten Auszeichnungen möglichst gering hält. Durch die Verwendung von Doconce ist eine Konvertierung der Ausgangsdatei in viele unterschiedliche Formate (Latex, Markdown, PDF, ...) möglich. Außerdem lässt sich das Ausgabeformat für mehrere Anwendungsbereiche anpassen. Dies funktioniert für analoge Medien, wie z.B. Bücher, Abschlussarbeiten und wissenschaftliche Berichte, aber auch für digitale Veröffentlichungen, wie z.B. in Blogs oder auf Wiki-Seiten.
 ======= Vor- und Nachteile =======
 ===== Vorteile =====
 * viele Ausgabeformate
@@ -14,4 +12,3 @@ _5\%_
  * Installation auf Windows nicht möglich
  * erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung
  * erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex
-_5\%_
