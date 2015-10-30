@@ -5,7 +5,7 @@ if [ $# -eq 0 ]
 		echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
 	else
 		file=$1
-		sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1
+		sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
 		echo -e "\e[32mLaTex File erstellt!\e[0m"
     filename="${file%%.*}"
     echo $filename
@@ -28,6 +28,6 @@ if [ $# -eq 0 ]
     rm -f "$filename.ilg"
     rm -f "$filename.ind"
     rm -f "$filename.out"
-    rm -f "$filename.tex"
+    #rm -f "$filename.tex"
     rm -f "$filename.toc"
 fi
