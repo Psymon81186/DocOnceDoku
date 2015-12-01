@@ -24,11 +24,26 @@ _10\%_
 _10\%_
 ========= Ausgabeformate =========
 
-#include "markdown.do.txt"
-#include "restSphinx.do.txt"
-#include "latex.do.txt"
-#include "html.do.txt"
-#include "wiki.do.txt"
+======= Markdown =======
+__ Verwendung von Markdown.__
+__ Ausgabeoptionen für Markdown.__
+__ Konvertierung von Markdown in weitere Formate.__
+======= Rest und Sphinx =======
+__ Verwendung von Rest und Sphinx.__
+__ Ausgabeoptionen für Rest und Sphinx.__
+__ Konvertierung von Rest und Sphinx in weitere Formate.__
+======= LaTex =======
+__ Verwendung von LaTex.__
+__ Ausgabeoptionen für LaTex.__
+__ Konvertierung von LaTex in weitere Formate.__
+======= HTML =======
+__ Verwendung von HTML.__
+__ Ausgabeoptionen für HTML.__
+__ Konvertierung von HTML in weitere Formate.__
+======= Wiki-Formate =======
+__ Verwendung von Wiki-Formaten.__
+__ Ausgabeoptionen für Wiki-Formate.__
+__ Konvertierung von Wiki-Formaten in weitere Formate.__
 ========= Parameter für den `doconce`-Befehl =========
 _10\%_
 ========= Fazit =========
