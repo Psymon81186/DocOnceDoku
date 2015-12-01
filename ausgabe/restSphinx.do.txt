@@ -1,2 +1,4 @@
 ======= Rest und Sphinx =======
-_10\%_
+__ Verwendung von Rest und Sphinx.__
+__ Ausgabeoptionen für Rest und Sphinx.__
+__ Konvertierung von Rest und Sphinx in weitere Formate.__

@@ -1,2 +1,4 @@
 ======= Wiki-Formate =======
-_10\%_
+__ Verwendung von Wiki-Formaten.__
+__ Ausgabeoptionen für Wiki-Formate.__
+__ Konvertierung von Wiki-Formaten in weitere Formate.__

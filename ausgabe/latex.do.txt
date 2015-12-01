@@ -1,2 +1,4 @@
 ======= LaTex =======
-_10\%_
+__ Verwendung von LaTex.__
+__ Ausgabeoptionen für LaTex.__
+__ Konvertierung von LaTex in weitere Formate.__
