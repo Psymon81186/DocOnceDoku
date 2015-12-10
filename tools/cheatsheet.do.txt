@@ -1,0 +1,52 @@
+TITLE: DocOnce Cheat-Sheet
+AUTHOR: Simon
+AUTHOR: Michael
+DATE: today
+
+========= Spezielle Zeilen =========
+|--c---------c-------------------------------------------------------------|
+|Befehl                                   | Bedeutung                      |
+|---l-------------------------------------|-------l------------------------|
+|`TITLE:`                                 |Titel des Dokuments             |
+|`AUTHOR:`                                |Author                          |
+|`DATE:`                                  |Datum                           |
+|`{copyright,year1-year2|license}`        |Copyright                       |
+|`TOC: (on/off)`                          |Inhaltsverzeichnis              |
+|`9 * =`                                  |Kapitelüberschrift              |
+|`7 * =`                                  |Abschnitt                       |
+|`5 * =`                                  |Unterabschnitt                  |
+|`3 * =`                                  |Unterunterabschnitt             |
+|`2 * _`                                  |Paragraph                       |
+|`FIGURE:[filename, width= frac=] caption`|Bild einfügen                   |
+|`#`                                      |Kommentar                       |
+|`*`                                      |Liste                           |
+|`o`                                      |nummerierte Liste               |
+|--------------------------------------------------------------------------|
+
+Tabellen:<linebreak>
+!bc do
+
+|--------------------------------|
+|time  | velocity | acceleration |
+|--r--------r-----------r--------|
+| 0.0  | 1.4186   | -5.01        |
+| 2.0  | 1.376512 | 11.919       |
+| 4.0  | 1.1E+1   | 14.717624    |
+|--------------------------------|
+
+!ec
+
+========= Markup im Fließtext =========
+|--c---------c-------------------------------------------------------------|
+|Befehl                                   | Bedeutung                      |
+|---l-------------------------------------|-------l------------------------|
+|`* *`                                    |Kursiv                          |
+|`_ _`                                    |Fett                            |
+|````                                     |Code                            |
+|`"Search Google": "http://google.com"`   |Link                            |
+|`------`                                 |horizontale Linie               |
+|` & `                                    |kaufmännisches Und              |
+|`[name: comment]`                        |Kommentar                       |
+|`<linebreak>`                            |Zeilenumbruch                   |
+|`$ $`                                    |Formeln                         |
+|--------------------------------------------------------------------------|

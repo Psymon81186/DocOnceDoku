@@ -1,0 +1,417 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+
+% #define PREAMBLE
+
+% #ifdef PREAMBLE
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % draft: marks overfull hboxes, figures with paths
+chapterprefix=true,      % "Chapter" word at beginning of each chapter
+open=right,              % start new chapters on odd-numbered pages
+10pt]{book}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage[a4paper]{geometry}
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{bm,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+% user-provided packages: --latex_packages=minted,ngerman,parskip
+\usepackage{minted,ngerman,parskip}
+
+% Packages for typesetting blocks of computer code
+\usepackage{fancyvrb,framed,moreverb}
+
+% Define colors
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{tucorange}{rgb}{1.0,0.64,0}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+\definecolor{myteal}{rgb}{.26, .44, .56}
+\definecolor{gray}{gray}{0.45}
+\definecolor{mediumgray}{gray}{.8}
+\definecolor{lightgray}{gray}{.95}
+\definecolor{brown}{rgb}{0.54,0.27,0.07}
+\definecolor{purple}{rgb}{0.5,0.0,0.5}
+\definecolor{darkgray}{gray}{0.25}
+\definecolor{darkblue}{rgb}{0,0.08,0.45}
+\definecolor{darkblue2}{rgb}{0,0,0.8}
+\definecolor{lightred}{rgb}{1.0,0.39,0.28}
+\definecolor{lightgreen}{rgb}{0.48,0.99,0.0}
+\definecolor{lightblue}{rgb}{0.53,0.81,0.92}
+\definecolor{lightblue2}{rgb}{0.3,0.3,1.0}
+\definecolor{lightpurple}{rgb}{0.87,0.63,0.87}
+\definecolor{lightcyan}{rgb}{0.5,1.0,0.83}
+
+\colorlet{comment_green}{green!50!black}
+\colorlet{string_red}{red!60!black}
+\colorlet{keyword_pink}{magenta!70!black}
+\colorlet{indendifier_green}{green!70!white}
+
+% Backgrounds for code
+\definecolor{cbg_gray}{rgb}{.95, .95, .95}
+\definecolor{bar_gray}{rgb}{.92, .92, .92}
+
+\definecolor{cbg_yellowgray}{rgb}{.95, .95, .85}
+\definecolor{bar_yellowgray}{rgb}{.95, .95, .65}
+
+\colorlet{cbg_yellow2}{yellow!10}
+\colorlet{bar_yellow2}{yellow!20}
+
+\definecolor{cbg_yellow1}{rgb}{.98, .98, 0.8}
+\definecolor{bar_yellow1}{rgb}{.98, .98, 0.4}
+
+\definecolor{cbg_red1}{rgb}{1, 0.85, 0.85}
+\definecolor{bar_red1}{rgb}{1, 0.75, 0.85}
+
+\definecolor{cbg_blue1}{rgb}{0.87843, 0.95686, 1.0}
+\definecolor{bar_blue1}{rgb}{0.7,     0.95686, 1}
+
+\usepackage{minted}
+\usemintedstyle{autumn}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Set helvetica as the default font family:
+\RequirePackage{helvet}
+\renewcommand\familydefault{phv}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{1}  % number chapter, section, subsection
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% Make sure blank even-numbered pages before new chapters are
+% totally blank with no header
+\newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+%\let\cleardoublepage\clearemptydoublepage % caused error in the toc
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+% #endif
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+\hbox{\ \ }
+\vfill
+\begin{center}
+{\huge{\bfseries{
+\begin{spacing}{1.25}
+{\rule{\linewidth}{0.5mm}} \\[0.4cm]
+{DocOnce}
+\\[0.4cm] {\rule{\linewidth}{0.5mm}} \\[1.5cm]
+\end{spacing}
+}}}
+
+% ----------------- author(s) -------------------------
+
+\vspace{0.5cm}
+
+{\Large\textsf{Michael Weiß${}^{}$}}\\ [3mm]
+
+{\Large\textsf{Simon Schäfer${}^{}$}}\\ [3mm]
+
+\ \\ [2mm]
+
+% ----------------- end author(s) -------------------------
+
+% --- begin date ---
+\ \\ [10mm]
+{\large\textsf{Dec 1, 2015}}
+
+\end{center}
+% --- end date ---
+\vfill
+\clearpage
+
+\tableofcontents
+
+
+\vspace{1cm} % after toc
+
+
+
+
+\chapter{DocOnce, eine universelle Markup-Sprache}
+\section{Was ist DocOnce}
+Doconce ist eine minimal ausgezeichnete Markup-Sprache, die alle wichtigen Funktionen einer Markup-Sprache bereitstellt und hierbei trotzdem die Anzahl der verwendeten Auszeichnungen möglichst gering hält. Durch die Verwendung von Doconce ist eine Konvertierung der Ausgangsdatei in viele unterschiedliche Formate (Latex, Markdown, PDF, ...) möglich. Außerdem lässt sich das Ausgabeformat für mehrere Anwendungsbereiche anpassen. Dies funktioniert für analoge Medien, wie z.B. Bücher, Abschlussarbeiten und wissenschaftliche Berichte, aber auch für digitale Veröffentlichungen, wie z.B. in Blogs oder auf Wiki-Seiten.
+\section{Vor- und Nachteile}
+\subsection{Vorteile}
+\begin{itemize}
+\item viele Ausgabeformate
+
+\item geeignet für Autoren die für viele unterschiedliche Medien schreiben
+
+\item Viele unterschiedliche Designs für das Erstellen von z.B. html-Dokumenten
+
+\item Source-Code kann direkt aus Dateien ausgelesen werden
+
+\item kann auch nur als einfacher Text ausgegeben werden z.B. für Email oder Code-Dokumentationen]
+\end{itemize}
+
+\noindent
+\subsection{Nachteile}
+\begin{itemize}
+ \item Installation auf Windows nicht möglich
+
+ \item erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung
+
+ \item erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex
+\end{itemize}
+
+\noindent
+\chapter{Installation}
+\textbf{10\%}
+\chapter{Syntax}
+\textbf{10\%}
+\chapter{Ausgabeformate}
+
+\section{Markdown}
+\paragraph{ Verwendung von Markdown.}
+\paragraph{ Ausgabeoptionen für Markdown.}
+\paragraph{ Konvertierung von Markdown in weitere Formate.}
+\section{Rest und Sphinx}
+\paragraph{ Verwendung von Rest und Sphinx.}
+\paragraph{ Ausgabeoptionen für Rest und Sphinx.}
+\paragraph{ Konvertierung von Rest und Sphinx in weitere Formate.}
+\section{LaTex}
+\paragraph{ Verwendung von LaTex.}
+\paragraph{ Ausgabeoptionen für LaTex.}
+\paragraph{ Konvertierung von LaTex in weitere Formate.}
+\section{HTML}
+\paragraph{ Verwendung von HTML.}
+\paragraph{ Ausgabeoptionen für HTML.}
+\paragraph{ Konvertierung von HTML in weitere Formate.}
+\section{Wiki-Formate}
+\paragraph{ Verwendung von Wiki-Formaten.}
+\paragraph{ Ausgabeoptionen für Wiki-Formate.}
+\paragraph{ Konvertierung von Wiki-Formaten in weitere Formate.}
+\chapter{Parameter für den \texttt{doconce}-Befehl}
+\textbf{10\%}
+\chapter{Fazit}
+\textbf{10\%}
+\chapter{Anhang}
+\section{Setup-Script}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+#!/bin/bash
+# Automatically generated script by deb2sh.py.
+
+# The script is based on packages listed in debpkg_doconce.txt.
+
+set -x  # make sure each command is printed in the terminal
+
+function apt_install {
+  sudo apt-get -y install $1
+  if [ $? -ne 0 ]; then
+    echo "could not install $1 - abort"
+    exit 1
+  fi
+}
+
+function pip_install {
+  sudo pip install --upgrade "$@"
+  if [ $? -ne 0 ]; then
+    echo "could not install $p - abort"
+    exit 1
+  fi
+}
+
+sudo apt-get update --fix-missing
+
+# Installation script for doconce and all dependencies
+
+# This script is translated from
+# doc/src/manual/debpkg_doconce.txt
+# in the doconce source tree, with help of
+# vagrantbox/doc/src/vagrant/src-vagrant/deb2sh.py
+# (git clone git@github.com:hplgit/vagrantbox.git)
+
+# Python v2.7 must be installed (doconce does not work with v3.x)
+pyversion=`python -c 'import sys; print sys.version[:3]'`
+if [ $pyversion != '2.7' ]; then echo "Python v${pyversion} cannot be used with DocOnce"; exit 1; fi
+
+# Install downloaded source code in subdirectory srclib
+if [ ! -d srclib ]; then mkdir srclib; fi
+
+# Version control systems
+apt_install mercurial
+apt_install git
+apt_install subversion
+
+# --- Python-based packages and tools ---
+apt_install python-pip
+apt_install idle
+apt_install python-dev
+apt_install python-pdftools
+pip_install ipython --upgrade
+pip_install tornado --upgrade
+pip_install pyzmq --upgrade
+pip_install traitlets --upgrade
+pip_install pickleshare --upgrade
+pip_install jsonschema
+# If problems with IPython.nbformat.v4: clone ipython and run setup.py
+# to get the latest version
+
+# Preprocessors
+pip_install future
+pip_install mako --upgrade
+pip_install -e git+https://github.com/hplgit/preprocess#egg=preprocess --upgrade
+
+# Publish for handling bibliography
+pip_install python-Levenshtein
+pip_install lxml
+pip_install -e hg+https://bitbucket.org/logg/publish#egg=publish --upgrade
+
+# Sphinx (with additional third/party themes)
+pip_install sphinx
+
+pip_install alabaster --upgrade
+pip_install sphinx_rtd_theme --upgrade
+pip_install -e hg+https://bitbucket.org/ecollins/cloud_sptheme#egg=cloud_sptheme --upgrade
+pip_install -e git+https://github.com/ryan-roemer/sphinx-bootstrap-theme#egg=sphinx-bootstrap-theme --upgrade
+pip_install -e hg+https://bitbucket.org/miiton/sphinxjp.themes.solarized#egg=sphinxjp.themes.solarized --upgrade
+pip_install -e git+https://github.com/shkumagai/sphinxjp.themes.impressjs#egg=sphinxjp.themes.impressjs --upgrade
+pip_install -e git+https://github.com/kriskda/sphinx-sagecell#egg=sphinx-sagecell --upgrade
+
+# Runestone sphinx books
+pip_install sphinxcontrib-paverutils
+pip_install paver
+pip_install cogapp
+
+#pip install -e git+https://bitbucket.org/sanguineturtle/pygments-ipython-console#egg=pygments-ipython-console
+pip_install -e git+https://bitbucket.org/hplbit/pygments-ipython-console#egg=pygments-ipython-console
+pip_install -e git+https://github.com/hplgit/pygments-doconce#egg=pygments-doconce
+
+# XHTML
+pip_install beautifulsoup4
+pip_install html5lib
+
+# ptex2tex is not needed if --latex_code_style= option is used
+cd srclib
+svn checkout http://ptex2tex.googlecode.com/svn/trunk/ ptex2tex
+cd ptex2tex
+sudo python setup.py install
+cd latex
+sh cp2texmf.sh
+cd ../../..
+
+# LaTeX
+apt_install texinfo
+apt_install texlive-full
+#apt_install texlive-extra-utils
+#apt_install texlive-latex-extra
+#apt_install texlive-latex-recommended
+#apt_install texlive-math-extra
+#apt_install texlive-font-utils
+#apt_install texlive-humanities
+apt_install latexdiff
+apt_install auctex
+
+# Image manipulation
+apt_install imagemagick
+apt_install netpbm
+apt_install mjpegtools
+apt_install pdftk
+apt_install giftrans
+apt_install gv
+apt_install evince
+apt_install smpeg-plaympeg
+apt_install mplayer
+apt_install totem
+apt_install libav-tools
+
+# Misc
+apt_install ispell
+apt_install pandoc
+apt_install libreoffice
+apt_install unoconv
+apt_install libreoffice-dmaths
+#epydoc is an old-fashioned output format, will any doconce user use it?
+#pip install -e svn+https://epydoc.svn.sourceforge.net/svnroot/epydoc/trunk/epydoc#egg=epydoc
+
+apt_install curl
+apt_install a2ps
+apt_install wdiff
+apt_install meld
+apt_install diffpdf
+apt_install kdiff3
+apt_install diffuse
+
+# tkdiff.tcl:
+#tcl8.5-dev tk8.5-dev blt-dev
+#https://sourceforge.net/projects/tkdiff/
+
+# example on installing mdframed.sty manually (it exists in texlive,
+# but sometimes needs to be in its newest version)
+git clone https://github.com/marcodaniel/mdframed
+if [ -d mdframed ]; then cd mdframed; make localinstall; cd ..; fi
+#$ echo "remove the mdframe directory (if successful install of mdframed.sty): rm -rf mdframed"
+
+# DocOnce itself
+cd srclib
+git clone https://github.com/hplgit/doconce.git
+if [ -d doconce ]; then cd doconce; sudo python setup.py install; cd ../..; fi
+echo "Everything is successfully installed!"
+\end{minted}
+
+% ------------------- end of main content ---------------
+
+
+% #ifdef PREAMBLE
+\clearemptydoublepage
+\markboth{Index}{Index}
+\thispagestyle{empty}
+\printindex
+
+\end{document}
+% #endif
+

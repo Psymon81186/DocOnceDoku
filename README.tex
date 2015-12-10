@@ -1,0 +1,186 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+
+% #define PREAMBLE
+
+% #ifdef PREAMBLE
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % draft: marks overfull hboxes, figures with paths
+chapterprefix=true,      % "Chapter" word at beginning of each chapter
+open=right,              % start new chapters on odd-numbered pages
+10pt]{book}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage[a4paper]{geometry}
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{bm,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+% user-provided packages: --latex_packages=minted,ngerman,parskip,nopageno
+\usepackage{minted,ngerman,parskip,nopageno}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Set helvetica as the default font family:
+\RequirePackage{helvet}
+\renewcommand\familydefault{phv}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{1}  % number chapter, section, subsection
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% Make sure blank even-numbered pages before new chapters are
+% totally blank with no header
+\newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+%\let\cleardoublepage\clearemptydoublepage % caused error in the toc
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+% #endif
+
+
+% ------------------- main content ----------------------
+
+\chapter{DocOnceDoku}
+Projektarbeit zum Thema DocOnce von Michael Weiß und Simon Schäfer
+
+\textbf{TODO:}
+
+\begin{itemize}
+\item [x] Einleitung
+
+\item [ ] Installation
+
+\item [ ] Syntax
+
+\item [ ] Ausgabe
+
+\item [ ] Parameter
+
+\item [ ] Fazit
+
+\item [x] Anhang
+\end{itemize}
+
+\noindent
+Offen:
+\begin{itemize}
+\item Text für Installation
+
+\item Text für Ausgabeformate
+
+\item Text Fazit
+\end{itemize}
+
+\noindent
+Erledigt:
+\begin{itemize}
+\item Einleitung
+
+\item Struktur des Dokuments
+
+\item Skripte für Ausgabeformate
+
+\item Repository eingerichtet
+
+\item Aufteilung der Kapitel
+\begin{itemize}
+
+ \item Simon
+\begin{itemize}
+
+  \item Installation Ubuntu
+
+  \item Syntax
+
+  \item Wiki-Formate
+
+\end{itemize}
+
+\noindent
+ \item Michael
+\begin{itemize}
+
+  \item Markdown
+
+  \item Rest und Sphinx
+
+  \item Latex
+
+  \item HTML
+
+\end{itemize}
+
+\noindent
+ \item Zusammen
+\begin{itemize}
+
+  \item Parameter
+
+  \item Fazit  
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+
+% ------------------- end of main content ---------------
+
+
+% #ifdef PREAMBLE
+\clearemptydoublepage
+\markboth{Index}{Index}
+\thispagestyle{empty}
+\printindex
+
+\end{document}
+% #endif
+
