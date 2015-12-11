@@ -109,6 +109,21 @@ open=right,              % start new chapters on odd-numbered pages
 
 \setcounter{tocdepth}{1}  % number chapter, section, subsection
 
+% Tricks for having figures close to where they are defined:
+% 1. define less restrictive rules for where to put figures
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{0.75}
+% floatpagefraction must always be less than topfraction!
+% 2. ensure all figures are flushed before next section
+\usepackage[section]{placeins}
+% 3. enable begin{figure}[H] (often leads to ugly pagebreaks)
+%\usepackage{float}\restylefloat{figure}
+
 % prevent orhpans and widows
 \clubpenalty = 10000
 \widowpenalty = 10000
@@ -215,7 +230,37 @@ Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgef
 
 Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl \texttt{doconce} und verschiedenen Parametern(siehe Kapitel 5 "Parameter für den \texttt{doconce}-Befehl") gestartet werden.
 \chapter{Syntax}
-\chapter{Ausgabeformate}
+DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertieren in verschiedene Markup-Ausgabeformate die Formatierung zu übertragen. Diese Auszeichnungsarten sind  \emph{zeilenbasierte Auszeichnungen}, das sog. \emph{Inline-Tagging}, Auszeichnungen die im Fließtext vorgenommen werden, und \emph{Block-Auszeichnungen}. Im folgenden sollen die wichtigsten Auszeichnungen behandelt werden.
+
+\section{Zeilenbasierte Auszeichnungen}
+Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
+
+Die wichtigsten zeilenbasierten sind:
+
+\begin{quote}
+\begin{tabular}{ll}
+\hline
+\multicolumn{1}{c}{ Befehl } & \multicolumn{1}{c}{ Bedeutung } \\
+\hline
+\texttt{TITLE:}                                  & Titel des Dokuments \\
+\texttt{AUTHOR:}                                 & Author              \\
+\texttt{DATE:}                                   & Datum               \\
+\Verb!{copyright,year1-year2|license}!         & Copyright           \\
+\texttt{TOC: (on/off)}                           & Inhaltsverzeichnis  \\
+\texttt{9 * =}                                   & Kapitelüberschrift \\
+\texttt{7 * =}                                   & Abschnitt           \\
+\texttt{5 * =}                                   & Unterabschnitt      \\
+\texttt{3 * =}                                   & Unterunterabschnitt \\
+\Verb!2 * _!                                   & Paragraph           \\
+\texttt{FIGURE:[filename, width= frac=] caption} & Bild einfügen      \\
+\Verb!#!                                       & Kommentar           \\
+\texttt{*}                                       & Liste               \\
+\texttt{o}                                       & nummerierte Liste   \\
+\hline
+\end{tabular}
+\end{quote}
+
+\noindent
 
 \section{Markdown}
 \paragraph{ Verwendung von Markdown.}
