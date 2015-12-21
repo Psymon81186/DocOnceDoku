@@ -4,22 +4,24 @@ DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertiere
 ======= Zeilenbasierte Auszeichnungen =======
 Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
 
-Die wichtigsten zeilenbasierten sind:
-|--c---------c-------------------------------------------------------------|
-|Befehl                                   | Bedeutung                      |
-|---l-------------------------------------|-------l------------------------|
-|`TITLE:`                                 |Titel des Dokuments             |
-|`AUTHOR:`                                |Author                          |
-|`DATE:`                                  |Datum                           |
-|`{copyright,year1-year2|license}`        |Copyright                       |
-|`TOC: (on/off)`                          |Inhaltsverzeichnis              |
-|`9 * =`                                  |Kapitelüberschrift              |
-|`7 * =`                                  |Abschnitt                       |
-|`5 * =`                                  |Unterabschnitt                  |
-|`3 * =`                                  |Unterunterabschnitt             |
-|`2 * _`                                  |Paragraph                       |
-|`FIGURE:[filename, width= frac=] caption`|Bild einfügen                   |
-|`#`                                      |Kommentar                       |
-|`*`                                      |Liste                           |
-|`o`                                      |nummerierte Liste               |
-|--------------------------------------------------------------------------|
+Die wichtigsten zeilenbasierten Auszeichnungen sind:
+[Simon: Liste in Ordnung? oder Beispiele bringen?]
+|--c-----------------------------------------------------------c-----------------|
+|Befehl                                         | Bedeutung                      |
+|---l-------------------------------------------|--------------l-----------------|
+|`TITLE:`                                       |Titel des Dokuments             |
+|`AUTHOR:`                                      |Autor                           |
+|`DATE:`                                        |Datum (today=aktuelles Datum)   |
+|`{copyright,year1-year2|license}`              |Copyright                       |
+|`TOC:`                                         |Inhaltsverzeichnis              |
+|`=========` *Kapitel* `=========`              |Kapitelüberschrift              |
+|`=======` *Abschnitt* `=======`                |Abschnitt                       |
+|`=====` *Unterabschnitt* `=====`               |Unterabschnitt                  |
+|`===` *Unterunterabschnitt* `===`              |Unterunterabschnitt             |
+|`__` *Pragraph* `__`                           |Paragraph                       |
+|`FIGURE:[Datei, width= frac=] Unterschrift`    |Bild einfügen                   |
+|`#`                                            |Kommentar                       |
+|`*`                                            |Liste                           |
+|`o`                                            |nummerierte Liste               |
+|`- Wort: Erklärung`                            |Beschreibungsliste              |
+|--------------------------------------------------------------------------------|
