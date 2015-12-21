@@ -24,6 +24,30 @@ Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgef
 
 Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl `doconce` und verschiedenen Parametern(siehe Kapitel 5 "Parameter für den `doconce`-Befehl") gestartet werden.
 ========= Syntax =========
+DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertieren in verschiedene Markup-Ausgabeformate die Formatierung zu übertragen. Diese Auszeichnungsarten sind  *zeilenbasierte Auszeichnungen*, das sog. *Inline-Tagging*, Auszeichnungen die im Fließtext vorgenommen werden, und *Block-Auszeichnungen*. Im folgenden sollen die wichtigsten Auszeichnungen behandelt werden.
+
+======= Zeilenbasierte Auszeichnungen =======
+Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
+
+Die wichtigsten zeilenbasierten sind:
+|--c---------c-------------------------------------------------------------|
+|Befehl                                   | Bedeutung                      |
+|---l-------------------------------------|-------l------------------------|
+|`TITLE:`                                 |Titel des Dokuments             |
+|`AUTHOR:`                                |Author                          |
+|`DATE:`                                  |Datum                           |
+|`{copyright,year1-year2|license}`        |Copyright                       |
+|`TOC: (on/off)`                          |Inhaltsverzeichnis              |
+|`9 * =`                                  |Kapitelüberschrift              |
+|`7 * =`                                  |Abschnitt                       |
+|`5 * =`                                  |Unterabschnitt                  |
+|`3 * =`                                  |Unterunterabschnitt             |
+|`2 * _`                                  |Paragraph                       |
+|`FIGURE:[filename, width= frac=] caption`|Bild einfügen                   |
+|`#`                                      |Kommentar                       |
+|`*`                                      |Liste                           |
+|`o`                                      |nummerierte Liste               |
+|--------------------------------------------------------------------------|
 ========= Ausgabeformate =========
 
 ======= Markdown =======
