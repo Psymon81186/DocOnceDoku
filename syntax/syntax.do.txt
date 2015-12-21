@@ -25,3 +25,32 @@ Die wichtigsten zeilenbasierten Auszeichnungen sind:
 |`o`                                            |nummerierte Liste               |
 |`- Wort: Erklärung`                            |Beschreibungsliste              |
 |--------------------------------------------------------------------------------|
+
+Eine spezielle zeilenbasierte Auszeichnung ist die Auszeichnung um eine Tabelle zu erstellen. Sie erstreckt sich über mehre Zeilen wie in folgendem Beispiel zu sehen ist:
+!bc
+
+|----l-----------------l------|
+|Beschriftung 1|Beschriftung 2|
+|----l---------|-------l------|
+|Eintrag 1     |Eintrag 2     |
+|Eintrag 3     |Eintrag 4     |
+|Eintrag 5     |Eintrag 6     |
+|Eintrag 7     |Eintrag 8     |
+|-----------------------------|
+
+!ec
+Durch kleine Buchstaben über den Spalten (hier *l*) kann die Orientierung der Spalteninhalte festgelegt werden. Möglich sind l(= *left*), r(= *right*) und c(= *center*).<linebreak>
+<linebreak>
+Das oben gezeigte Beispiel ergibt im fertig gerenderten Dokument folgende Tabelle:
+
+|----l-----------------l------|
+|Beschriftung 1|Beschriftung 2|
+|----l---------|-------l------|
+|Eintrag 1     |Eintrag 2     |
+|Eintrag 3     |Eintrag 4     |
+|Eintrag 5     |Eintrag 6     |
+|Eintrag 7     |Eintrag 8     |
+|-----------------------------|
+
+======= Inline-Tagging =======
+Das Inline-Tagging wird für das Hervorheben bzw. die spezielle Formatierung von Wörtern im Fließtext verwendet. Das Inline-Tagging umfasst alles von einfachen Formatierungen wie _Fett_ oder *Kursiv* bis hin zum Verlinken von "Websites": "https://github.com/hplgit/doconce" oder lokalen "color{blue}{Dokumenten}": "tools/manual.pdf".
