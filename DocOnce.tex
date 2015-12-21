@@ -166,7 +166,7 @@ open=right,              % start new chapters on odd-numbered pages
 
 % --- begin date ---
 \ \\ [10mm]
-{\large\textsf{Dec 1, 2015}}
+{\large\textsf{Dec 11, 2015}}
 
 \end{center}
 % --- end date ---
@@ -210,9 +210,11 @@ Doconce ist eine minimal ausgezeichnete Markup-Sprache, die alle wichtigen Funkt
 
 \noindent
 \chapter{Installation}
-\textbf{10\%}
+\section{Ubuntu}
+Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgeführt werden. Zusätzlich zu den im Original Install-Skript angegebenen Pakete mussten, für die Installation des lxml-Python-Packages, auf Ubuntu 15.04 noch die development-packages  \texttt{libxml2-dev}, \texttt{libxslt1-dev} und \texttt{python-dev} installiert werden, da das Compilieren des Package ansonsten fehlschlug.
+
+Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl \texttt{doconce} und verschiedenen Parametern(siehe Kapitel 5 "Parameter für den \texttt{doconce}-Befehl") gestartet werden.
 \chapter{Syntax}
-\textbf{10\%}
 \chapter{Ausgabeformate}
 
 \section{Markdown}
