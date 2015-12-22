@@ -31,27 +31,27 @@ Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schl
 
 Die wichtigsten zeilenbasierten Auszeichnungen sind:
 [Simon: Liste in Ordnung? oder Beispiele bringen?]
-|--c-----------------------------------------------------------c-----------------|
-|Befehl                                         | Bedeutung                      |
-|---l-------------------------------------------|--------------l-----------------|
-|`TITLE:`                                       |Titel des Dokuments             |
-|`AUTHOR:`                                      |Autor                           |
-|`DATE:`                                        |Datum (today=aktuelles Datum)   |
-|`{copyright,year1-year2|license}`              |Copyright                       |
-|`TOC:`                                         |Inhaltsverzeichnis              |
-|`=========` *Kapitel* `=========`              |Kapitelüberschrift              |
-|`=======` *Abschnitt* `=======`                |Abschnitt                       |
-|`=====` *Unterabschnitt* `=====`               |Unterabschnitt                  |
-|`===` *Unterunterabschnitt* `===`              |Unterunterabschnitt             |
-|`__` *Pragraph* `__`                           |Paragraph                       |
-|`FIGURE:[Datei, width= frac=] Unterschrift`    |Bild einfügen                   |
-|`#`                                            |Kommentar                       |
-|`*`                                            |Liste                           |
-|`o`                                            |nummerierte Liste               |
-|`- Wort: Erklärung`                            |Beschreibungsliste              |
-|--------------------------------------------------------------------------------|
+|--c-----------------------------------------------------------c------------------|
+|Befehl                                         | Bedeutung                       |
+|---l-------------------------------------------|--------------l------------------|
+|`TITLE:`                                       | Titel des Dokuments             |
+|`AUTHOR:`                                      | Autor                           |
+|`DATE:`                                        | Datum (today=aktuelles Datum)   |
+|`{copyright,year1-year2|license}`              | Copyright                       |
+|`TOC:`                                         | Inhaltsverzeichnis              |
+|`=========` *Kapitel* `=========`              | Kapitelüberschrift              |
+|`=======` *Abschnitt* `=======`                | Abschnitt                       |
+|`=====` *Unterabschnitt* `=====`               | Unterabschnitt                  |
+|`===` *Unterunterabschnitt* `===`              | Unterunterabschnitt             |
+|`__` *Pragraph* `__`                           | Paragraph                       |
+|`FIGURE:[Datei, width= frac=] Unterschrift`    | Bild einfügen                   |
+|`#`                                            | Kommentar                       |
+|`*`                                            | Liste                           |
+|`o`                                            | nummerierte Liste               |
+|`- Wort: Erklärung`                            | Beschreibungsliste              |
+|---------------------------------------------------------------------------------|
 
-Eine spezielle zeilenbasierte Auszeichnung ist die Auszeichnung um eine Tabelle zu erstellen. Sie erstreckt sich über mehre Zeilen wie in folgendem Beispiel zu sehen ist:
+Die zeilenbasierte Auszeichnung zum Erstellen einer Tabelle nimmt eine Sonderstellung ein . Sie erstreckt sich über mehre Zeilen wie in folgendem Beispiel zu sehen ist:
 !bc
 
 |----l-----------------l------|
@@ -78,7 +78,71 @@ Das oben gezeigte Beispiel ergibt im fertig gerenderten Dokument folgende Tabell
 |-----------------------------|
 
 ======= Inline-Tagging =======
-Das Inline-Tagging wird für das Hervorheben bzw. die spezielle Formatierung von Wörtern im Fließtext verwendet. Das Inline-Tagging umfasst alles von einfachen Formatierungen wie _Fett_ oder *Kursiv* bis hin zum Verlinken von "Websites": "https://github.com/hplgit/doconce" oder lokalen "color{blue}{Dokumenten}": "tools/manual.pdf".
+Das Inline-Tagging wird für das Hervorheben bzw. die spezielle Formatierung von Wörtern im Fließtext verwendet. Das Inline-Tagging umfasst alles von einfachen Formatierungen wie _Fett_ oder *Kursiv* bis hin zum Verlinken von "Websites": "https://github.com/hplgit/doconce" oder lokalen "color{darkblue2}{Dokumenten}": "tools/manual.pdf".
+<linebreak>
+
+|--c-----------------------------------------------------------c----------------------------------------------------|
+|Befehl                                         | Bedeutung                                                         |
+|---l-------------------------------------------|--------------l----------------------------------------------------|
+|`*Text*`                                       | *Kursiv*                                                          |
+|`_Fett_`                                       | _Fett_                                                            |
+|`color{red}{Text}`                             | color{red}{farbiger Text}                                         |
+|` `Code` `                                     | `Quellcode`                                                       |
+|`''Google'': ''URL''`                          | "Weblinks": "http://google.com"                                   |
+|`''mailto'': ''mailto:Email'' `                | "mailto-Links": "mailto:simon81186@aol.com"                       |
+|`''Dokument'': ''/Pfad/zu/Dokument'' `         | "color{darkblue2}{Link auf lokale Dateien}": "/tools/manual.pdf"  |
+|`‘‘Zitat’’`                                    | ‘‘Zitate’’                                                        |
+|`----`                                         | Horizontale Linie                                                 |
+|`*Zitat*----Vorname Nachname`                  | Gedankenstrich(für Zitate)                                        |
+|`[Name:Kommentar ]`                            | Kommentar im Fließtext                                            |
+|`<linebreak>`                                  | Zeilenumbruch                                                     |
+|`$Gleichung$`                                  | Gleichungen (z.B.: $a^2 + b^2 = c^2$)                             |
+|-------------------------------------------------------------------------------------------------------------------|
+
+======= Block-Auszeichnungen =======
+Die dritte Art von Auszeichnungen in DocOnce sind die Block-Auszeichnungen. Die Wichtigsten Vertreter sind der _Formel-Block_ und der _Quellcode-Block_.
+
+__Formel-Block.__
+Der Formel-Block wird verwendet um Mathematische Formeln und Funktionen übersichtlich dar zu stellen. Er wird durch `!bt` geöffnet und mit `!et` wieder geschlossen. Hier ein Beispiel der Formatierung der _Schrödinger Gleichung_ durch einen Formel-Block (Zeilenumbrüche bei Code-Beispiel eingefügt um Übersicht zu verbessern!).
+!bc
+|bt
+\begin{align}
+\frac{\partial^2 \Psi(x,y,z)}{\partial x\partial x}
++ \frac{\partial^2 \Psi(x,y,z)}{\partial y\partial y}
++ \frac{\partial^2 \Psi(x,y,z)}{\partial z\partial z}
+= -c (E-E_{pot}(x))\Psi(x) \quad \textrm{mit} \qquad c=\frac{8\pi^2m}{h^2}
+\end{align}
+|et
+!ec
+Wird zu:
+!bt
+\begin{align}
+\frac{\partial^2 \Psi(x,y,z)}{\partial x\partial x} + \frac{\partial^2 \Psi(x,y,z)}{\partial y\partial y} + \frac{\partial^2 \Psi(x,y,z)}{\partial z\partial z} = -c (E-E_{pot}(x))\Psi(x) \quad \textrm{mit} \qquad c=\frac{8\pi^2m}{h^2}
+\end{align}
+!et
+Zusätzlich werden Gleichungen nach dem Schema *(Kapitelnummer.Gleichungsnummer)* automatisch durchnummeriert.
+
+__Quellcode-Block.__
+Wie der Formel-Block wird auch der Quellcode-Block durch zwei Auszeichnungen eingeschlossen. Dies sind am Beginn `!bc` und am Ende `!ec`. Auch hier ein kurzes Beispiel der Formatierung des klassischen "Hello World"-Programm.
+!bc
+|bc
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.println("Hello, World");
+   }
+}
+|ec
+!ec
+Wird zu:
+!bc java
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.println("Hello, World");
+   }
+}
+!ec
+
+Um das Code-Highlighting zu verwenden kann man hinter Start-Auszeichnung `!bc` die im Quellcode verwendete Sprache angeben (im Beispiel `!bc java`). Zusätzlich muss der Parameter `--latex_code_style=pyg`, als Parameter, dem `doconce`-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket `python-pygments`. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe "Pygments-Homepage": "http://pygments.org/docs/cmdline/#getting-lexer-names") .
 ========= Ausgabeformate =========
 
 ======= Markdown =======

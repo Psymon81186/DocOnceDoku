@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+!bc
+public class HelloWorld \PYGautumnZob{}
+   public static void main(String[] args) \PYGautumnZob{}
+      System.out.println(\PYGautumnZdq{}Hello, World\PYGautumnZdq{});
+   \PYGautumnZcb{}
+\PYGautumnZcb{}
+!ec
+\end{Verbatim}

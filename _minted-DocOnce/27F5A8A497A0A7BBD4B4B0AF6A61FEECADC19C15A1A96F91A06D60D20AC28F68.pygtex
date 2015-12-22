@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+!bt
+\PYGautumnZbs{}frac\PYGautumnZob{}\PYGautumnZbs{}partial\PYGautumnZca{}2 \PYGautumnZbs{}Psi(x,y,z)\PYGautumnZcb{}\PYGautumnZob{}\PYGautumnZbs{}partial x\PYGautumnZbs{}partial x\PYGautumnZcb{}
++ \PYGautumnZbs{}frac\PYGautumnZob{}\PYGautumnZbs{}partial\PYGautumnZca{}2 \PYGautumnZbs{}Psi(x,y,z)\PYGautumnZcb{}\PYGautumnZob{}\PYGautumnZbs{}partial y\PYGautumnZbs{}partial y\PYGautumnZcb{}
++ \PYGautumnZbs{}frac\PYGautumnZob{}\PYGautumnZbs{}partial\PYGautumnZca{}2 \PYGautumnZbs{}Psi(x,y,z)\PYGautumnZcb{}\PYGautumnZob{}\PYGautumnZbs{}partial z\PYGautumnZbs{}partial z\PYGautumnZcb{}
+= \PYGautumnZhy{}c (E\PYGautumnZhy{}E\PYGautumnZus{}\PYGautumnZob{}pot\PYGautumnZcb{}(x))\PYGautumnZbs{}Psi(x) \PYGautumnZbs{}quad \PYGautumnZbs{}textrm\PYGautumnZob{}mit\PYGautumnZcb{} \PYGautumnZbs{}qquad c=\PYGautumnZbs{}frac\PYGautumnZob{}8\PYGautumnZbs{}pi\PYGautumnZca{}2m\PYGautumnZcb{}\PYGautumnZob{}h\PYGautumnZca{}2\PYGautumnZcb{}
+!et
+\end{Verbatim}

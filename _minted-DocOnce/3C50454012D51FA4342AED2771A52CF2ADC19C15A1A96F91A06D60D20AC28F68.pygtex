@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+!bc
+Write\PYGautumnZhy{}Host \PYGautumnZsq{}Hello World!\PYGautumnZsq{}
+!ec
+\end{Verbatim}
