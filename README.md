@@ -4,10 +4,10 @@ Projektarbeit zum Thema DocOnce von Michael Weiß und Simon Schäfer
 **TODO:**
 
 - [x] Einleitung
-* [ ] Installation
-* [ ] Syntax
+* [x] Installation
+* [x] Syntax
 * [ ] Ausgabe
-* [ ] Parameter
+* [x] Parameter
 * [ ] Fazit
 * [x] Anhang
 
@@ -36,7 +36,3 @@ Erledigt:
   * Zusammen
     * Parameter
     * Fazit  
-
-
-
-
