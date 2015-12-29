@@ -12,12 +12,12 @@ Projektarbeit zum Thema DocOnce von Michael Weiß und Simon Schäfer
 * [x] Anhang
 
 Offen:
-* Text für Installation
 * Text für Ausgabeformate
 * Text Fazit
 
 Erledigt:
 * Einleitung
+* Text für Installation
 * Struktur des Dokuments
 * Skripte für Ausgabeformate
 * Repository eingerichtet
@@ -35,4 +35,8 @@ Erledigt:
 
   * Zusammen
     * Parameter
-    * Fazit  
+    * Fazit
+
+
+
+

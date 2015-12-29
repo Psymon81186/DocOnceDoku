@@ -3,6 +3,55 @@
 @@@CODE anhang/install.sh
 ======= Skripte für die Ausgabe in Latex und Markdown =======
 __Latex beziehungsweise PDF.__
-@@@CODE tools/dotopdf
-__Markdown beziehungsweise Github-MD__
-@@@CODE tools/dotogithub
+
+!bc shcod
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+    else
+    file=$1
+    sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+    echo -e "\e[32mLaTex File erstellt!\e[0m"
+    filename="${file%%.*}"
+    echo $filename
+    filetex="$filename.tex"
+    echo -e "\e[32mBeginne PDF-Erstellung\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt1: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt2: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt3: makeindex\e[0m"
+    sudo makeindex $filetex
+    echo -e "\e[32mSchritt4: bibtex\e[0m"
+    sudo bibtex $filetex
+    echo -e "\e[32mSchritt5: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mPDF erstellt!\e[0m"
+    rm -f "$filename.aux"
+    rm -f "$filename.idx"
+    rm -f "$filename.ilg"
+    rm -f "$filename.ind"
+    rm -f "$filename.out"
+    rm -f "$filename.toc"
+fi
+!ec
+
+__Markdown beziehungsweise Github-MD.__
+
+!bc shcod
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+  else
+    file=$1
+    sudo doconce format pandoc $file --no_abort --github_md
+    filename="${file%%.*}"
+    mv $filename.md README.md
+    echo -e "\e[32mREADME.md erstellt!\e[0m"
+fi
+!ec

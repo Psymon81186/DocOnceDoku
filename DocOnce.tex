@@ -21,7 +21,7 @@ open=right,              % start new chapters on odd-numbered pages
 
 \usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
 \usepackage[table]{xcolor}
-\usepackage{bm,ltablex,microtype}
+\usepackage{bm,microtype}
 
 \usepackage[pdftex]{graphicx}
 
@@ -144,14 +144,12 @@ open=right,              % start new chapters on odd-numbered pages
 
 \raggedbottom
 \makeindex
-\usepackage[totoc]{idxlayout}   % for index in the toc
-\usepackage[nottoc]{tocbibind}  % for references/bibliography in the toc
 
 %-------------------- end preamble ----------------------
 
 \begin{document}
 
-% matching end for #ifdef PREAMBLE
+% endif for #ifdef PREAMBLE
 % #endif
 
 
@@ -187,7 +185,7 @@ open=right,              % start new chapters on odd-numbered pages
 
 % --- begin date ---
 \ \\ [10mm]
-{\large\textsf{Dec 22, 2015}}
+{\large\textsf{Dec 29, 2015}}
 
 \end{center}
 % --- end date ---
@@ -378,7 +376,7 @@ public class HelloWorld {
 }
 \end{minted}
 
-Um das Code-Highlighting zu verwenden kann man hinter Start-Auszeichnung \Verb?!bc? die im Quellcode verwendete Sprache angeben (im Beispiel \Verb?!bc java?). Zusätzlich muss der Parameter \Verb!--latex_code_style=pyg!, als Parameter, dem \texttt{doconce}-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket \texttt{python-pygments}. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe \href{{http://pygments.org/docs/cmdline/#getting-lexer-names}}{Pygments-Homepage}) .
+Um das Code-Highlighting zu verwenden kann man hinter der Start-Auszeichnung \Verb?!bc? die im Quellcode verwendete Sprache angeben (im Beispiel \Verb?!bc java?). Zusätzlich muss der Parameter \Verb!--latex_code_style=pyg!, als Parameter, dem \texttt{doconce}-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket \texttt{python-pygments}. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe \href{{http://pygments.org/docs/cmdline/#getting-lexer-names}}{Pygments-Homepage}) .
 \chapter{Ausgabeformate}
 
 \section{Markdown}
@@ -402,12 +400,74 @@ Um das Code-Highlighting zu verwenden kann man hinter Start-Auszeichnung \Verb?!
 \paragraph{ Ausgabeoptionen für Wiki-Formate.}
 \paragraph{ Konvertierung von Wiki-Formaten in weitere Formate.}
 \chapter{Parameter für den \texttt{doconce}-Befehl}
-\textbf{10\%}
+Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem \texttt{doconce}-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--help
+\end{minted}
+
+Durch das Anhängen des Parameters \texttt{--help} werden alle Optionen von DocOnce ausgegeben.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+format X
+\end{minted}
+
+Das Ausgabeformat wird dem Parameter \texttt{format} angehängt. X kann hierbei \texttt{html, latex, pdflatex, rst, sphinx, plain, gwiki, mwiki, cwiki, pandoc, epytext} sein.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--debug
+\end{minted}
+
+Erstellt eine Debug-Datei die alle auftretenden Fehler und Zwischenschritte protokoliert.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--no_abort
+\end{minted}
+
+Führt die Konvertierung auch dann fort, wenn \texttt{doconce} Fehler in der Syntax registriert.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--verbose=...
+\end{minted}
+
+Gibt den Fortschritt eines Zwischenschritts aus, wenn erlänger als die festgelegte Zeitspanne (in Sekunden) dauert.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--toc_depth=...
+\end{minted}
+
+Gibt die Anzahl der Untergliederungen im Inhaltsverzeichnis an.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--encoding=...
+\end{minted}
+
+Gibt die zuverwendete Codierung der Eingabedatei an (z.B. utf-8 oder latin1)
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--no_title
+\end{minted}
+
+Entfernt Autor, Titel und Datum im fertigen Dokument
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--device=...
+\end{minted}
+
+Gibt an ob das Dokument für die Ausgabe auf einen Bildschirm oder zum Ausdruck optimiert werden soll. Die wichtigsten Optionen sind \emph{screen}, für die Ausgabe auf Bildschirmen (verkleinert Seitenränder), und \emph{paper}, für den Ausdruck (Links werden als Fußnote ausgegeben).
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--urlcheck
+\end{minted}
+
+Überprüft die im Dokument verwendeten Links auf Webseiten auf Gültigkeit
+
+Die zur Konvertierung dieses Dokuments, in Latex und Markdown, verwendeten Skripte sind im Anhang beigefügt.
 \chapter{Fazit}
 \textbf{10\%}
 \chapter{Anhang}
-\section{Setup-Script}
-\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+\section{Setup-Skript}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
 #!/bin/bash
 # Automatically generated script by deb2sh.py.
 
@@ -568,10 +628,70 @@ git clone https://github.com/hplgit/doconce.git
 if [ -d doconce ]; then cd doconce; sudo python setup.py install; cd ../..; fi
 echo "Everything is successfully installed!"
 \end{minted}
+\section{Skripte für die Ausgabe in Latex und Markdown}
+\paragraph{Latex beziehungsweise PDF.}
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+    else
+    file=$1
+    sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+    echo -e "\e[32mLaTex File erstellt!\e[0m"
+    filename="${file%%.*}"
+    echo $filename
+    filetex="$filename.tex"
+    echo -e "\e[32mBeginne PDF-Erstellung\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt1: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt2: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt3: makeindex\e[0m"
+    sudo makeindex $filetex
+    echo -e "\e[32mSchritt4: bibtex\e[0m"
+    sudo bibtex $filetex
+    echo -e "\e[32mSchritt5: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mPDF erstellt!\e[0m"
+    rm -f "$filename.aux"
+    rm -f "$filename.idx"
+    rm -f "$filename.ilg"
+    rm -f "$filename.ind"
+    rm -f "$filename.out"
+    rm -f "$filename.toc"
+fi
+\end{minted}
+
+\paragraph{Markdown beziehungsweise Github-MD.}
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+  else
+    file=$1
+    sudo doconce format pandoc $file --no_abort --github_md
+    filename="${file%%.*}"
+    mv $filename.md README.md
+    echo -e "\e[32mREADME.md erstellt!\e[0m"
+fi
+\end{minted}
 
 % ------------------- end of main content ---------------
 
+
 % #ifdef PREAMBLE
+\clearemptydoublepage
+\markboth{Index}{Index}
+\thispagestyle{empty}
+\printindex
+
 \end{document}
 % #endif
 
