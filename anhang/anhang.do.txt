@@ -1,3 +1,8 @@
 ========= Anhang =========
-======= Setup-Script =======
+======= Setup-Skript =======
 @@@CODE anhang/install.sh
+======= Skripte für die Ausgabe in Latex und Markdown =======
+__Latex beziehungsweise PDF.__
+@@@CODE tools/dotopdf
+__Markdown beziehungsweise Github-MD__
+@@@CODE tools/dotogithub
