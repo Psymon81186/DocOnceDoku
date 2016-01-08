@@ -5,7 +5,7 @@ Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgef
 Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl `doconce` und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den `doconce`-Befehl’’) gestartet werden.
 
 ======= Mac OSX =======
-Unter Mac OS ist es notwendig den Paketmanager Anaconda für Python 2.7 zu installieren. Dieser ist unter "URL":"https://www.continuum.io/downloads" zu finden. Außerdem muss für die Umwandlung in das PDF-Format eine TeX-Distribution installiert sein. Sollten diese noch nicht vorhanden sein, kann diese unter "URL":"https://tug.org/mactex/" gefunden werden.
+Unter Mac OS ist es notwendig den Paketmanager Anaconda für Python 2.7 zu installieren. Dieser ist unter "URL":"https://www.continuum.io/downloads" zu finden. Außerdem muss für die Umwandlung in das PDF-Format eine TeX-Distribution installiert sein. Sollte diese noch nicht vorhanden sein, kann diese unter "URL":"https://tug.org/mactex/" gefunden werden.
 Sobald diese beiden Pakete installiert sind kann über das Terminal mit dem Befehl
 !bc
 conda install --channel johannr doconce

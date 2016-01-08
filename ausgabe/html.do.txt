@@ -1,4 +1,23 @@
 ======= HTML =======
+Um ein DocOnce Dokument in eine Webseite einzubetten bietet sich an dieses in ein HTML-Dokument umzuwandeln.
 __ Verwendung von HTML.__
+Die Konvertierung in das HTML-Format erfolgt über den Befehl
+!bc
+doconce format html DATEINAME.do.txt
+!ec
+Das erzeugte Dokument mit dem Namen DATEINAME.html kann nun mit jedem Webbrowser zur Ansicht geöffnet werden.
 __ Ausgabeoptionen für HTML.__
-__ Konvertierung von HTML in weitere Formate.__
+Mithilfe von Kommandozeilenparameter lässt sich das HTML-Dokument noch weiter personalisieren:
+Über den Befehl `--css=filename` lässt sich ein eigenes CSS Stylesheet zur Verwendung einbinden, wobei über der Befehl `--html_style=name` aus einigen vorgefertigten Styles ausgewählt werden kann.
+* solarized: "solarized": "http://ethanschoonover.com/solarized" Style
+* blueish: einfacher Style mit blauen Überschriften (Standard)
+* blueish2: etwas abgeänderter Variante von *blueish*
+* bloodish: wie *blueish*, aber in dunkelrot
+
+Andere Parameter:
+* `--html_share=http://...` fügt am Ende des Dokumentes ''Share Buttons'' für Email, Facebook, Google+, LinkedIn, Twitter und Drucken ein
+* `--html_share=http://...,twitter,linkedin` erzeugt ''Share Buttons'' für Twitter und LinkedIn. Die Seitennamen werden durch Kommata getrennt. Gültige Namen sind: `email`, `facebook`, `google+`, `linkedin`, `twitter` und `print`. Die URL muss auf die Seite weisen, auf der das Dokument publiziert wird.
+* `--toc_depth=X`: bestimmt die Tiefe des Inhaltsverzeichnisses im Dokument. Der Standardwert beträgt 3 und erzeugt somit Einträge für Kapitelüberschriften, Abschnitte und Unterabschnitte.
+* `--html_body_font=`: bestimmt die Schriftart für den Fließtext. Der Wert `?` listet alle verfügbaren Schriftarten auf.
+* `--html_heading_font=`: bestimmt die Schriftart für die Überschriften. Der Wert `?` listet alle verfügbaren Schriftarten auf.
+* `--html_video_autoplay=True,False`: lässt Videos automatisch abspielen, sobald die HTML Seite geladen wird (`True`, Standard).
