@@ -5,7 +5,7 @@ if [ $# -eq 0 ]
 		echo "Bitte geben sie einen Dateinamen ein!"
 	else
 		file=$1
-		sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+		sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --no_abort
 		echo -e "LaTex File erstellt!"
     filename="${file%%.*}"
     echo $filename
