@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+		echo "Bitte geben sie einen Dateinamen ein!"
+	else
+		file=$1
+		sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+		echo -e "LaTex File erstellt!"
+    filename="${file%%.*}"
+    echo $filename
+		filetex="$filename.tex"
+    echo -e "TeX-Header aufräumen"
+    sudo doconce replace "\setcounter{tocdepth}{2}" "\setcounter{tocdepth}{1}" $filetex
+    sudo doconce replace "twoside" "oneside" $filetex
+    sudo doconce replace "\usepackage[pdftex]{graphicx}" "\usepackage[pdftex]{minted,ngerman,parskip,graphicx}" $filetex
+		echo -e "Beginne PDF-Erstellung"
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
+		echo -e "mchritt1: pdfLatex"
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
+		echo -e "Schritt2: pdfLatex"
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
+		echo -e "Schritt3: makeindex"
+		sudo makeindex $filetex
+		echo -e "Schritt4: bibtex"
+		sudo bibtex $filetex
+		echo -e "Schritt5: pdfLatex"
+		sudo pdflatex -interaction=batchmode -shell-escape $filetex
+		echo -e "PDF erstellt!"
+    rm -f "$filename.aux"
+    rm -f "$filename.idx"
+    rm -f "$filename.ilg"
+    rm -f "$filename.ind"
+    rm -f "$filename.out"
+    rm -f "$filename.tex"
+    rm -f "$filename.toc"
+    rm -f "$filename.tex.old~~"
+    rm -f "tmp_preprocess__$filename.do.txt"
+    sudo rm -f -r "_minted-$filename"
+fi

@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
-\PYGautumn{k+kd}{public} \PYGautumn{k+kd}{class} \PYGautumn{n+nc}{HelloWorld} \PYGautumn{o}{\PYGautumnZob{}}
-   \PYGautumn{k+kd}{public} \PYGautumn{k+kd}{static} \PYGautumn{k+kt}{void} \PYGautumn{n+nf}{main}\PYGautumn{o}{(}\PYGautumn{n}{String}\PYGautumn{o}{[]} \PYGautumn{n}{args}\PYGautumn{o}{)} \PYGautumn{o}{\PYGautumnZob{}}
-      \PYGautumn{n}{System}\PYGautumn{o}{.}\PYGautumn{n+na}{out}\PYGautumn{o}{.}\PYGautumn{n+na}{println}\PYGautumn{o}{(}\PYGautumn{l+s}{\PYGautumnZdq{}Hello, World\PYGautumnZdq{}}\PYGautumn{o}{);}
-   \PYGautumn{o}{\PYGautumnZcb{}}
-\PYGautumn{o}{\PYGautumnZcb{}}
-\end{Verbatim}
