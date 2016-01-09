@@ -28,15 +28,12 @@ Erledigt:
     * Wiki-Formate
 
   * Michael
-    * Markdown
-    * Rest und Sphinx
-    * Latex
-    * HTML
+    * [x] Installation Mac OS
+    * [x] Markdown
+    * [ ] Rest und Sphinx
+    * [x] Latex
+    * [x] HTML
 
   * Zusammen
     * Parameter
     * Fazit  
-
-
-
-
