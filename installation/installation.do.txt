@@ -12,4 +12,6 @@ conda install --channel johannr doconce
 !ec
 das DocOnce Paket installiert werden.
 
+Wenn mit Pandoc Markdown gearbeitet werden soll, muss auch noch dieses Paket gesondert installiert werden, welches unter "URL":"http://pandoc.org/installing.html" gefunden werden kann. Das Paket wird benötigt um beispielsweise in das `docx`-Format von Microsoft Office zu konvertieren.
+
 Ebenso wie unter Ubuntu kann DocOnce nun direkt im Terminal mit dem Befehl `doconce` und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den `doconce`-Befehl’’) gestartet werden.
