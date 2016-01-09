@@ -1,4 +1,43 @@
-======= LaTex =======
-__ Verwendung von LaTex.__
-__ Ausgabeoptionen für LaTex.__
-__ Konvertierung von LaTex in weitere Formate.__
+======= LaTeX =======
+Für die Umwandlung eines DocOnce Dokumentes in ein LaTeX File gibt es generell zwei verschiedene Möglichkeiten:
+o direkte Übersetzung in ein `.tex` File
+o Übersetzung in ein `.p.tex` File
+Im zweiten Fall muss noch das Programm `ptex2tex` oder das vereinfachte `doconce ptex2tex` verwendet werden um die `.p.tex` Datei in eine einfache `.tex` Datei zu konvertieren. Dieser Schritt beinhaltet die Spezifikation, wie Blöcke aus Verbatim Code gesetzt werden sollen. Vor 2015 hat DocOnce immer standardmäßig in eine `.p.tex` Datei übersetzt und diesen zweiten Schritt erfordert. Nun gibt es eine direkte Übersetzung, welche nicht nur einfacher sondern auch noch vielseitiger ist. Deshalb wird der Einfachheit halber nur auf die direkte Übersetzung eingegangen.
+===== Konvertierung in LaTeX =====
+Das DocOnce Dokument kann direkt in ein gültiges LaTeX File konvertiert werden, indem der `--latex_code_style=` Parameter verwendet wird:
+!bc
+Terminal> doconce format pdflatex DATEINAME --latex_code_style=vrb
+!ec
+Ohne den `--latex_code_style` Parameter wird nur ein `.p.tex` File ausgegeben, welches noch mit `ptex2tex` bzw. `doconce ptex2tex` weiterbearbeitet werden muss.
+__ Ausgabe für Druck bzw. Bildschirm.__
+Die Option `--device=paper` verändert einige Parameter der Datei für Dokumente, welche für den Druck gedacht sind. Zum Beispiel werden Links für Web Ressourcen mit einer Fußnote und der kompletten URL verknüpft. Der Standardwert `--device=screen` erstellt ein PDF für das Lesen auf einem Bildschirm mit klickbaren Links.
+__ Einige Kommandozeilenparameter.__
+Es gibt sehr viele zusätzliche Optionen für die Umwandlung in LaTeX Code (die komplette Liste wird ausgegeben auf den Befehl `doconce format --help`):
+* `--latex_code_style=lst,vrb,pyg`
+* `--latex_font=helvetica,palatino`
+* `--latex_papersize=a4,a6`
+* `--latex_title_layout=titlepage, std, beamer, doconce_heading, Springer_collection`
+* `--latex_packages=package1,package2,package3` (Liste der zu importierenden Zusatzpakete; dieser Parameter ist unter Mac OS nicht verfügbar!)
+__ Syntax Hervorhebung.__
+Der Stil von Verbatim Blöcken mit Computer Code wird durch den `--latex_code_style=X` Parameter bestimmt. Es gibt drei Hauptwerte für X, welche drei Verbatim Typ Einstellungen in LaTeX entsprechen:
+* `vrb` für den einfachen `Verbatim` Stil (`fancyvrb` LaTeX Paket)
+* `pyg` für den Pygments Stil (`mintex` LaTeX Paket)
+* `lst` für die Listen Stile (`listingsutf8` LaTeX Paket)
+===== Konvertierung von LaTeX in PDF =====
+Das `.tex` File wird nun kompiliert und mithilfe von `pdflatex` in ein PDF umgewandelt:
+!bc
+Terminal> pdflatex DATEINAME
+Terminal> pdflatex DATEINAME
+Terminal> makeindex DATEINAME # falls es einen Index gibt
+Terminal> bibtex DATEINAME    # falls es ein Literaturverzeichnis gibt
+Terminal> pdflatex DATEINAME
+!ec
+
+Falls der Minted Stil verwendet wird, _muss_ `pdflatex` mit der Option `-shell-escape` ausgeführt werden:
+!bc
+Terminal> pdflatex -shell-escape DATEINAME
+Terminal> pdflatex -shell-escape DATEINAME
+Terminal> makeindex DATEINAME # falls es einen Index gibt
+Terminal> bibtex DATEINAME    # falls es ein Literaturverzeichnis gibt
+Terminal> pdflatex -shell-escape DATEINAME
+!ec
