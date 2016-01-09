@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.8)  8 JAN 2016 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.8)  9 JAN 2016 12:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -793,9 +793,9 @@ C394.pygtex) [5
 ]
 Kapitel 3.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 243.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 245.
 
-Overfull \hbox (11.57414pt too wide) in paragraph at lines 252--273
+Overfull \hbox (11.57414pt too wide) in paragraph at lines 254--275
 [][] 
  []
 
@@ -806,7 +806,7 @@ Overfull \hbox (11.57414pt too wide) in paragraph at lines 252--273
 C394.pygtex [6
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
 
@@ -815,14 +815,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
 (./_minted-DocOnce/521244B7DCB68DA23A7A1BD2B9C24B467078043229FD8C0BA79C6403CDBA
 C394.pygtex [7])
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 362.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 364.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ! ngerman: The command "H is undefined.
 \grmn@dq@error ...and \dq \string #1 is undefined}
                                                   
-l.366 ...spiel der Formatierung des klassischen "H
+l.368 ...spiel der Formatierung des klassischen "H
                                                   ello World"-Programm.
 Use `` for a simple double quote character.
 
@@ -842,20 +842,42 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
 ) [8]
 Kapitel 4.
-[9
+\openout3 = `DocOnce.pyg'.
 
-]
+
+(./_minted-DocOnce/6B3F6B8F59D00DAD2DE3F70542B78AF67078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/A77AA7150B09CFEC38650831946BADA07078043229FD8C0BA79C6403CDBA
+C394.pygtex [9
+
+])
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 430.
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/118BCD6C4A6FB2DEEEF72CFB18774CA57078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+Overfull \hbox (45.27574pt too wide) in paragraph at lines 437--438
+\T1/phv/m/n/10 nur das stan-dard [] Kon-strukt ver-steht. Des-wei-te-ren wä-ren
+ ei-ni-ge wei-te-re Auf-ru-fe von []
+ []
+
+[10]
 \openout3 = `DocOnce.pyg'.
 
 
 (./_minted-DocOnce/84FCF20426759738CC48A736EFE48CA37078043229FD8C0BA79C6403CDBA
-C394.pygtex) [10] [11]
+C394.pygtex) [11] [12]
 Kapitel 5.
-[12
+[13
 
 ]
 Kapitel 6.
-[13
+[14
 
 ]
 Kapitel 7.
@@ -863,9 +885,9 @@ Kapitel 7.
 
 
 (./_minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269BD18E5A55F5CA713872F9C686CFD6
-B056.pygtex [14
+B056.pygtex [15
 
-] [15]
+] [16]
 ! Extra }, or forgotten $.
 <argument> ... of mdframed.sty): rm -rf mdframed"}
                                                   }
@@ -1099,13 +1121,13 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-) [16] (./DocOnce.ind)
+) [17] (./DocOnce.ind)
 runsystem(rm "DocOnce.pyg")...executed.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 619.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 619.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 665.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 665.
 (./DocOnce.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 619.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 665.
 
  *File List*
     book.cls    2014/09/29 v1.4h Standard LaTeX document class
@@ -1233,6 +1255,12 @@ _minted-DocOnce/B2485539D9340A1069327F24C08E4D567078043229FD8C0BA79C6403CDBAC39
 4.pygtex
 _minted-DocOnce/BA51A063D9D1DC9ACE6A7F38E717BE7841922C898F2192962370C8B3111FB76
 6.pygtex
+_minted-DocOnce/6B3F6B8F59D00DAD2DE3F70542B78AF67078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/A77AA7150B09CFEC38650831946BADA07078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/118BCD6C4A6FB2DEEEF72CFB18774CA57078043229FD8C0BA79C6403CDBAC39
+4.pygtex
 _minted-DocOnce/84FCF20426759738CC48A736EFE48CA37078043229FD8C0BA79C6403CDBAC39
 4.pygtex
 _minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269BD18E5A55F5CA713872F9C686CFD6B05
@@ -1240,16 +1268,16 @@ _minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269BD18E5A55F5CA713872F9C686CFD6B05
  DocOnce.ind
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 619.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 665.
 Package rerunfilecheck Info: File `DocOnce.out' has not changed.
 (rerunfilecheck)             Checksum: 878C7958BA6CE7B006C74CF2F767B485;1274.
  ) 
 Here is how much of TeX's memory you used:
- 12953 strings out of 493054
- 205570 string characters out of 6134761
- 371197 words of memory out of 5000000
- 16066 multiletter control sequences out of 15000+600000
- 82322 words of font info for 102 fonts, out of 8000000 for 9000
+ 12975 strings out of 493054
+ 206847 string characters out of 6134761
+ 372710 words of memory out of 5000000
+ 16075 multiletter control sequences out of 15000+600000
+ 86206 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,37p,797b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1268,10 +1296,10 @@ onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on DocOnce.pdf (16 pages, 211164 bytes).
+Output written on DocOnce.pdf (17 pages, 216293 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 23729 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 291 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 24241 words of extra memory for PDF output out of 24883 (max. 10000000)
 
