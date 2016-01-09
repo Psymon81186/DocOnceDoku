@@ -15,7 +15,7 @@ Unter Ubuntu gibt es zusätzlich die Möglichkeit mit dem Befehl `unoconv` in de
 __ Anmerkung zu Mathematischen Formeln.__
 Zur Zeit gibt es keinen einfachen Weg LaTeX Mathematik über das DocOnce Format zu reST bzw. OpenOffice zu konvertieren. Formeln werden nur vollständig von `latex` unterstützt.
 
-======= Sphinx =======
-__ Verwendung von Sphinx.__
-__ Ausgabeoptionen für Sphinx.__
-__ Konvertierung von Sphinx in weitere Formate.__
+#======= Sphinx =======
+#__ Verwendung von Sphinx.__
+#__ Ausgabeoptionen für Sphinx.__
+#__ Konvertierung von Sphinx in weitere Formate.__
