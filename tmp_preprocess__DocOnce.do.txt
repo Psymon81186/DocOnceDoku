@@ -30,7 +30,6 @@ DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertiere
 Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
 
 Die wichtigsten zeilenbasierten Auszeichnungen sind:
-[Simon: Liste in Ordnung? oder Beispiele bringen?]
 |--c-----------------------------------------------------------c------------------|
 |Befehl                                         | Bedeutung                       |
 |---l-------------------------------------------|--------------l------------------|
@@ -163,8 +162,17 @@ __ Ausgabeoptionen für HTML.__
 __ Konvertierung von HTML in weitere Formate.__
 ======= Wiki-Formate =======
 __ Verwendung von Wiki-Formaten.__
+Wikis werden in vielen Unternehmen verwendet um verschiedenste Aufgaben zu erledigen. Zu diesen Aufgaben zählen z.B. die Standadisierung verschiedener Prozesse im Betrieb, wie die Einarbeitung von Mitarbeitern oder das Sammeln von externen Berichten (Pressespiegel) über das Unternehmen. Häufig werden Wikis auch als Wissensdatenbank für unterschiedliche Themen (Dokumementation von bestimmten Prozessen in der IT oder Qualitätsmanagment) benutzt. Die wohl bekannteste Anwendung eines Wikis ist die freie Enzyklopädie Wikipedia.
 __ Ausgabeoptionen für Wiki-Formate.__
+DocOnce unterstützt die drei gebräuchlichsten Wiki-Formate Googlecode wiki, MediaWiki und Creole Wiki. Die Auswahl des gewünschten Wiki-Formats wir durch den `format`-Befehl realisiert:
+
+!bc
+doconce format gwiki *Datei* (Googlecode Wiki)
+doconce format mwiki *Datei* (MediaWiki)
+doconce format cwiki *Datei* (Creole Wiki)
+!ec
 __ Konvertierung von Wiki-Formaten in weitere Formate.__
+Das ausgegebene Wiki-Dokument kann nicht weiter in andere Formate konvertiert werden. Ein Anwendungszweck ist das erstellte DocOnce-Dokument zusätzlich zur Ausgabe als PDF für die Veröffentlichung in einem Wiki zu konvertieren.
 ========= Parameter für den `doconce`-Befehl =========
 Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem `doconce`-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
 
