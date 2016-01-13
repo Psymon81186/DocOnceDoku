@@ -1,4 +1,13 @@
 ======= Wiki-Formate =======
 __ Verwendung von Wiki-Formaten.__
+Wikis werden in vielen Unternehmen verwendet um verschiedenste Aufgaben zu erledigen. Zu diesen Aufgaben zählen z.B. die Standadisierung verschiedener Prozesse im Betrieb, wie die Einarbeitung von Mitarbeitern oder das Sammeln von externen Berichten (Pressespiegel) über das Unternehmen. Häufig werden Wikis auch als Wissensdatenbank für unterschiedliche Themen (Dokumementation von bestimmten Prozessen in der IT oder Qualitätsmanagment) benutzt. Die wohl bekannteste Anwendung eines Wikis ist die freie Enzyklopädie Wikipedia.
 __ Ausgabeoptionen für Wiki-Formate.__
+DocOnce unterstützt die drei gebräuchlichsten Wiki-Formate Googlecode wiki, MediaWiki und Creole Wiki. Die Auswahl des gewünschten Wiki-Formats wir durch den `format`-Befehl realisiert:
+
+!bc
+doconce format gwiki *Datei* (Googlecode Wiki)
+doconce format mwiki *Datei* (MediaWiki)
+doconce format cwiki *Datei* (Creole Wiki)
+!ec
 __ Konvertierung von Wiki-Formaten in weitere Formate.__
+Das ausgegebene Wiki-Dokument kann nicht weiter in andere Formate konvertiert werden. Ein Anwendungszweck ist das erstellte DocOnce-Dokument zusätzlich zur Ausgabe als PDF für die Veröffentlichung in einem Wiki zu konvertieren.

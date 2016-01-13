@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.12.14)  22 DEC 2015 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.1.9)  11 JAN 2016 16:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **DocOnce.tex
 (./DocOnce.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
+(/usr/share/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+(/usr/share/texmf-dist/tex/latex/base/bk10.clo
 File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,18 +23,18 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+) (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+) (/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-) (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+) (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -49,40 +49,40 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
-) (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
-) (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+) (/usr/share/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+) (/usr/share/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+) (/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count91
-)) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+)) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen111
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen112
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count92
@@ -122,23 +122,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen120
 \extrarowheight=\dimen121
@@ -160,16 +160,16 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+) (/usr/share/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
-) (/usr/share/texlive/texmf-dist/tex/latex/ltablex/ltablex.sty
+) (/usr/share/texmf-dist/tex/latex/ltablex/ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip49
 \LTright=\skip50
@@ -186,7 +186,7 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count108
 \c@LT@chunks=\count109
 \LT@p@ftn=\toks23
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 \TX@col@width=\dimen123
 \TX@old@table=\dimen124
@@ -195,7 +195,7 @@ Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 \TX@delta=\dimen127
 \TX@cols=\count110
 \TX@ftn=\toks24
-)) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+)) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks25
 \MT@count=\count111
@@ -203,7 +203,7 @@ LaTeX Info: Redefining \textls on input line 766.
 \MT@outer@kern=\dimen128
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
 \MT@listname@count=\count112
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+(/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
@@ -211,30 +211,30 @@ LaTeX Info: Redefining \lslig on input line 915.
 \MT@outer@space=\skip53
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+(/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
-)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+) (/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 )
 \Gin@req@height=\dimen129
 \Gin@req@width=\dimen130
-) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
-Package: minted 2015/01/31 v2.0 Yet another Pygments shim for LaTeX
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+) (/usr/share/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2015/09/09 v2.1 Yet another Pygments shim for LaTeX
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -242,7 +242,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-))) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+))) (/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -253,16 +253,16 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \c@FancyVerbLine=\count114
 \FV@StepNumber=\count115
 \FV@OutFile=\write3
-) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count116
 \float@exts=\toks26
 \float@box=\box33
 \@float@everytoks=\toks27
 \@floatcapt=\box34
-) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count117
 \calc@Bcount=\count118
@@ -274,16 +274,16 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count119
 \calc@Cskip=\skip56
-) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+) (/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
+) (/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
 )
 runsystem(uname -s > "DocOnce.w18")...executed.
@@ -291,17 +291,17 @@ runsystem(uname -s > "DocOnce.w18")...executed.
 (./DocOnce.w18)
 runsystem(rm -- "DocOnce.w18")...executed.
 
-) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count120
-) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/te
-xlive/texmf-dist/tex/generic/xstring/xstring.tex
+) (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texmf-dist
+/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
 \integerpart=\count121
 \decimalpart=\count122
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+) (/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count123
 \output=\toks28
@@ -336,27 +336,23 @@ LaTeX Info: Redefining \\ on input line 3056.
 )
 runsystem(mkdir -p "_minted-DocOnce")...executed.
 
-runsystem(which "pygmentize" && touch "DocOnce.aex")...executed.
-
-runsystem(rm "DocOnce.aex")...executed.
-
-(./_minted-DocOnce/default.pygstyle) (/usr/share/texlive/texmf-dist/tex/generic
-/german/ngerman.sty v2.5e 1998-07-08
+(./_minted-DocOnce/default.pygstyle) (/usr/share/texmf-dist/tex/generic/german/
+ngerman.sty v2.5e 1998-07-08
 Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
 \grmnU@D=\dimen143
-ngerman -- \language number for naustrian undefined, default 69 used.
-) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+ngerman -- \language number for naustrian undefined, default 31 used.
+) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
-) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip57
 \fb@frw=\dimen144
 \fb@frh=\dimen145
 \FrameRule=\dimen146
 \FrameSep=\dimen147
-) (/usr/share/texlive/texmf-dist/tex/latex/moreverb/moreverb.sty
+) (/usr/share/texmf-dist/tex/latex/moreverb/moreverb.sty
 Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks30
 \verbatim@line=\toks31
@@ -393,30 +389,30 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-) (./_minted-DocOnce/autumn.pygstyle) (/usr/share/texlive/texmf-dist/tex/latex/
-base/fontenc.sty
+) (./_minted-DocOnce/autumn.pygstyle) (/usr/share/texmf-dist/tex/latex/base/fon
+tenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+)) (/usr/share/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+(/usr/share/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count136
 \uc@combtoks=\toks32
 \uc@combtoksb=\toks33
 \uc@temptokena=\toks34
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks35
 \inpenc@posthook=\toks36
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+(/usr/share/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+)) (/usr/share/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
-) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+) (/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -450,12 +446,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -482,17 +478,17 @@ Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+) (/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen148
 \Hy@linkcounter=\count137
 \Hy@pagecounter=\count138
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count139
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `final' set `true' on input line 4319.
@@ -504,7 +500,7 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count140
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -529,11 +525,11 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count145
 \c@bookmark@seq@number=\count146
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -544,17 +540,17 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 107.
 Package hyperref Info: Option `colorlinks' set `true' on input line 107.
 Package hyperref Info: Option `pdfmenubar' set `true' on input line 107.
 Package hyperref Info: Option `pdftoolbar' set `true' on input line 107.
-(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+(/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
 \@indexfile=\write6
 \openout6 = `DocOnce.idx'.
 
 Writing index file DocOnce.idx
-(/usr/share/texlive/texmf-dist/tex/latex/idxlayout/idxlayout.sty
+(/usr/share/texmf-dist/tex/latex/idxlayout/idxlayout.sty
 Package: idxlayout 2012/03/30 v0.4d Configurable index layout
-(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \c@tracingmulticols=\count147
 \mult@box=\box39
 \multicol@leftmargin=\dimen152
@@ -607,15 +603,20 @@ Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \indexrule=\skip62
 \ila@indentunit=\skip63
 \ila@initsep=\skip64
-) (/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+) (/usr/share/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) (/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
+)
+runsystem(which "pygmentize" && touch "DocOnce.aex")...executed.
+
+runsystem(rm "DocOnce.aex")...executed.
+
+(/usr/share/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+(/usr/share/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip65
@@ -655,7 +656,7 @@ LaTeX Font Info:    ... okay on input line 152.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
 LaTeX Font Info:    ... okay on input line 152.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 152.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+(/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 *geometry* driver: auto-detecting
@@ -692,7 +693,7 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count157
 \scratchdimen=\dimen161
@@ -720,26 +721,27 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+)) (./_minted-DocOnce/default-pyg-prefix.pygstyle) (/usr/share/texmf-dist/tex/l
+atex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box66
 Package hyperref Info: Link coloring ON on input line 152.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count163
@@ -757,37 +759,37 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 168.
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 180.
 
-(/usr/share/texmf/tex/latex/lm/t1lmss.fd
+(/usr/share/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+(/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 180.
 
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+(/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 180.
 
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+(/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 180
 .
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMX+lmex on input line 180
 .
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+(/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -797,15 +799,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 180.
 LaTeX Font Info:    Try loading font information for U+msa on input line 180.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 180.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
@@ -818,7 +820,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 35.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+(/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
@@ -842,7 +844,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 209.
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 211.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+(/usr/share/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
@@ -857,7 +859,7 @@ für Email oder Code-Dokumentationen]
 
 ] [4]
 Kapitel 2.
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+(/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [5
 
@@ -866,47 +868,47 @@ Kapitel 3.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 239.
 
-Overfull \hbox (11.57414pt too wide) in paragraph at lines 248--269
+Overfull \hbox (11.57414pt too wide) in paragraph at lines 247--268
 [][] 
  []
 
 \openout3 = `DocOnce.pyg'.
 
 
-(./_minted-DocOnce/56135177B993367FF158680DD4218349ADC19C15A1A96F91A06D60D20AC2
-8F68.pygtex [6
+(./_minted-DocOnce/56135177B993367FF158680DD42183497078043229FD8C0BA79C6403CDBA
+C394.pygtex [6
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 \openout3 = `DocOnce.pyg'.
 
 
-(./_minted-DocOnce/521244B7DCB68DA23A7A1BD2B9C24B46ADC19C15A1A96F91A06D60D20AC2
-8F68.pygtex [7])
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 358.
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+(./_minted-DocOnce/521244B7DCB68DA23A7A1BD2B9C24B467078043229FD8C0BA79C6403CDBA
+C394.pygtex [7])
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 357.
+(/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ! ngerman: The command "H is undefined.
 \grmn@dq@error ...and \dq \string #1 is undefined}
                                                   
-l.362 ...spiel der Formatierung des klassischen "H
+l.361 ...spiel der Formatierung des klassischen "H
                                                   ello World"-Programm.
 Use `` for a simple double quote character.
 
 \openout3 = `DocOnce.pyg'.
 
 
-(./_minted-DocOnce/B2485539D9340A1069327F24C08E4D56ADC19C15A1A96F91A06D60D20AC2
-8F68.pygtex)
+(./_minted-DocOnce/B2485539D9340A1069327F24C08E4D567078043229FD8C0BA79C6403CDBA
+C394.pygtex)
 \openout3 = `DocOnce.pyg'.
 
 
-(./_minted-DocOnce/BA51A063D9D1DC9ACE6A7F38E717BE7862E7046DF100E9DA7478AA8941AA
-2E56.pygtex
+(./_minted-DocOnce/BA51A063D9D1DC9ACE6A7F38E717BE7841922C898F2192962370C8B3111F
+B766.pygtex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -915,32 +917,102 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Kapitel 4.
 [9
 
-] [10]
+]
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/118B0C38B66549DDBE25A3FE0FFEC44D7078043229FD8C0BA79C6403CDBA
+C394.pygtex) [10]
 Kapitel 5.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 404.
-[11
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 412.
+\openout3 = `DocOnce.pyg'.
 
-]
+
+(./_minted-DocOnce/D30802C33DDEEF530861FC4941C8B7397078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/0A80F4B67C35C008136D1F71C97FACB47078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+Overfull \hbox (24.92099pt too wide) in paragraph at lines 425--426
+[]\T1/phv/m/n/10 Das Aus-ga-be-for-mat wird dem Pa-ra-me-ter \T1/lmtt/m/n/10 fo
+rmat \T1/phv/m/n/10 an-ge-hängt. X kann hier-bei \T1/lmtt/m/n/10 html, latex, p
+dflatex,
+ []
+
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/55ECDC54261E9E4E21893962A8472E7D7078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/DE0324193AD21CA6A9F7B7247E85603A7078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/1B208606339810C0735D25E80ABE64077078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/7F5B88FB69524B2BB72C1A05C9E1648D7078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/7574B5D5113C839F4C48C6F9BF9BBB107078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/F5EFB525820CEAD8258C64A3711779027078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/EFC7DC5338A0158A3A4054993D250C247078043229FD8C0BA79C6403CDBA
+C394.pygtex)
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/430DE0AC50C1D198F9866FC1FC5AA8C47078043229FD8C0BA79C6403CDBA
+C394.pygtex) [11
+
+] [12]
 Kapitel 6.
-[12
+[13
 
 ]
 Kapitel 7.
 \openout3 = `DocOnce.pyg'.
 
 
-(./_minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269B2E0A507BFE2C2DA6D0BC52ADB776
-0F55.pygtex [13
+(./_minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269B0D9EC4E2720705294D7E382BA834
+2BD0.pygtex [14
 
-] [14])
+] [15])
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/07D97331897A8B617366A2A1D1DDB4660D9EC4E2720705294D7E382BA834
+2BD0.pygtex [16])
+\openout3 = `DocOnce.pyg'.
+
+
+(./_minted-DocOnce/76BF7E3EB4C7B6980F267CC4293DA3E40D9EC4E2720705294D7E382BA834
+2BD0.pygtex)
 runsystem(rm "DocOnce.pyg")...executed.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 575.
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 575.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 699.
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 699.
 (./DocOnce.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 575.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 699.
 
  *File List*
     book.cls    2014/09/29 v1.4h Standard LaTeX document class
@@ -980,7 +1052,7 @@ graphicx.sty    2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 graphics.sty    2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
     trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
 graphics.cfg    2010/04/23 v1.9 graphics configuration of TeX Live
-  minted.sty    2015/01/31 v2.0 Yet another Pygments shim for LaTeX
+  minted.sty    2015/09/09 v2.1 Yet another Pygments shim for LaTeX
 kvoptions.sty    2011/06/30 v3.11 Key value format for package options (HO)
 kvsetkeys.sty    2012/04/25 v1.16 Key value parser (HO)
 etexcmds.sty    2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
@@ -1036,7 +1108,7 @@ hyperref.cfg    2002/06/06 v1.2 hyperref configuration of TeXLive
 rerunfilecheck.sty    2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 placeins.sty    2005/04/18  v 2.2
 idxlayout.sty    2012/03/30 v0.4d Configurable index layout
-multicol.sty    2015/03/31 v1.8m multicolumn formatting (FMi)
+multicol.sty    2015/08/19 v1.8n multicolumn formatting (FMi)
 tocbibind.sty    2010/10/13 v1.5k extra ToC listings
 ragged2e.sty    2009/05/21 v2.1 ragged2e Package (MS)
 everysel.sty    2011/10/28 v1.2 EverySelectfont Package (MS)
@@ -1045,6 +1117,7 @@ supp-pdf.mkii
 epstopdf-base.sty    2010/02/09 v2.5 Base part for package epstopdf
   grfext.sty    2010/08/19 v1.1 Manage graphics extensions (HO)
 epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+_minted-DocOnce/default-pyg-prefix.pygstyle
  ucsencs.def    2011/01/21 Fixes to fontencodings LGR, T3
  nameref.sty    2012/10/27 v2.43 Cross-referencing by name of section
 gettitlestring.sty    2010/12/03 v1.4 Cleanup title references (HO)
@@ -1065,49 +1138,76 @@ RS)
   t1lmtt.fd    2009/10/30 v1.6 Font defs for Latin Modern
   omsphv.fd    
   uni-32.def    2013/05/13 UCS: Unicode data U+2000..U+20FF
-_minted-DocOnce/56135177B993367FF158680DD4218349ADC19C15A1A96F91A06D60D20AC28F6
-8.pygtex
-_minted-DocOnce/521244B7DCB68DA23A7A1BD2B9C24B46ADC19C15A1A96F91A06D60D20AC28F6
-8.pygtex
+_minted-DocOnce/56135177B993367FF158680DD42183497078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/521244B7DCB68DA23A7A1BD2B9C24B467078043229FD8C0BA79C6403CDBAC39
+4.pygtex
    t1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
-_minted-DocOnce/B2485539D9340A1069327F24C08E4D56ADC19C15A1A96F91A06D60D20AC28F6
-8.pygtex
-_minted-DocOnce/BA51A063D9D1DC9ACE6A7F38E717BE7862E7046DF100E9DA7478AA8941AA2E5
+_minted-DocOnce/B2485539D9340A1069327F24C08E4D567078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/BA51A063D9D1DC9ACE6A7F38E717BE7841922C898F2192962370C8B3111FB76
 6.pygtex
-_minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269B2E0A507BFE2C2DA6D0BC52ADB7760F5
-5.pygtex
+_minted-DocOnce/118B0C38B66549DDBE25A3FE0FFEC44D7078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/D30802C33DDEEF530861FC4941C8B7397078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/0A80F4B67C35C008136D1F71C97FACB47078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/55ECDC54261E9E4E21893962A8472E7D7078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/DE0324193AD21CA6A9F7B7247E85603A7078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/1B208606339810C0735D25E80ABE64077078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/7F5B88FB69524B2BB72C1A05C9E1648D7078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/7574B5D5113C839F4C48C6F9BF9BBB107078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/F5EFB525820CEAD8258C64A3711779027078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/EFC7DC5338A0158A3A4054993D250C247078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/430DE0AC50C1D198F9866FC1FC5AA8C47078043229FD8C0BA79C6403CDBAC39
+4.pygtex
+_minted-DocOnce/8A81C4FE7103B3FC0D6CCCE9E0EB269B0D9EC4E2720705294D7E382BA8342BD
+0.pygtex
+_minted-DocOnce/07D97331897A8B617366A2A1D1DDB4660D9EC4E2720705294D7E382BA8342BD
+0.pygtex
+_minted-DocOnce/76BF7E3EB4C7B6980F267CC4293DA3E40D9EC4E2720705294D7E382BA8342BD
+0.pygtex
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 575.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 699.
 Package rerunfilecheck Info: File `DocOnce.out' has not changed.
-(rerunfilecheck)             Checksum: ABBEB18BFB1C8B0CD00C0F557242C2DC;1220.
+(rerunfilecheck)             Checksum: 8A36255363A82DDE34283AF0B6AC6B7D;1315.
  ) 
 Here is how much of TeX's memory you used:
- 13429 strings out of 493085
- 208323 string characters out of 6136916
- 370926 words of memory out of 5000000
- 16486 multiletter control sequences out of 15000+600000
- 82958 words of font info for 104 fonts, out of 8000000 for 9000
+ 13730 strings out of 493054
+ 216886 string characters out of 6140587
+ 387328 words of memory out of 5000000
+ 16777 multiletter control sequences out of 15000+600000
+ 83279 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,37p,797b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/en
-c/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
-10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
-hvro8a.pfb>
-Output written on DocOnce.pdf (15 pages, 228958 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
+nts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-d
+ist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr
+/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/
+type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb
+></usr/share/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf-dist
+/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
+lmtk10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/
+texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/lm/lmtti10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtto10.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/he
+lvetic/uhvro8a.pfb>
+Output written on DocOnce.pdf (17 pages, 252619 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 24745 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 298 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 25265 words of extra memory for PDF output out of 29859 (max. 10000000)
 

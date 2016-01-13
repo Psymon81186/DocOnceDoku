@@ -30,7 +30,6 @@ DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertiere
 Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
 
 Die wichtigsten zeilenbasierten Auszeichnungen sind:
-[Simon: Liste in Ordnung? oder Beispiele bringen?]
 |--c-----------------------------------------------------------c------------------|
 |Befehl                                         | Bedeutung                       |
 |---l-------------------------------------------|--------------l------------------|
@@ -142,7 +141,7 @@ public class HelloWorld {
 }
 !ec
 
-Um das Code-Highlighting zu verwenden kann man hinter Start-Auszeichnung `!bc` die im Quellcode verwendete Sprache angeben (im Beispiel `!bc java`). Zusätzlich muss der Parameter `--latex_code_style=pyg`, als Parameter, dem `doconce`-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket `python-pygments`. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe "Pygments-Homepage": "http://pygments.org/docs/cmdline/#getting-lexer-names") .
+Um das Code-Highlighting zu verwenden kann man hinter der Start-Auszeichnung `!bc` die im Quellcode verwendete Sprache angeben (im Beispiel `!bc java`). Zusätzlich muss der Parameter `--latex_code_style=pyg`, als Parameter, dem `doconce`-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket `python-pygments`. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe "Pygments-Homepage": "http://pygments.org/docs/cmdline/#getting-lexer-names") .
 ========= Ausgabeformate =========
 
 ======= Markdown =======
@@ -163,12 +162,138 @@ __ Ausgabeoptionen für HTML.__
 __ Konvertierung von HTML in weitere Formate.__
 ======= Wiki-Formate =======
 __ Verwendung von Wiki-Formaten.__
+Wikis werden in vielen Unternehmen verwendet um verschiedenste Aufgaben zu erledigen. Zu diesen Aufgaben zählen z.B. die Standadisierung verschiedener Prozesse im Betrieb, wie die Einarbeitung von Mitarbeitern oder das Sammeln von externen Berichten (Pressespiegel) über das Unternehmen. Häufig werden Wikis auch als Wissensdatenbank für unterschiedliche Themen (Dokumementation von bestimmten Prozessen in der IT oder Qualitätsmanagment) benutzt. Die wohl bekannteste Anwendung eines Wikis ist die freie Enzyklopädie Wikipedia.
 __ Ausgabeoptionen für Wiki-Formate.__
+DocOnce unterstützt die drei gebräuchlichsten Wiki-Formate Googlecode wiki, MediaWiki und Creole Wiki. Die Auswahl des gewünschten Wiki-Formats wir durch den `format`-Befehl realisiert:
+
+!bc
+doconce format gwiki *Datei* (Googlecode Wiki)
+doconce format mwiki *Datei* (MediaWiki)
+doconce format cwiki *Datei* (Creole Wiki)
+!ec
 __ Konvertierung von Wiki-Formaten in weitere Formate.__
+Das ausgegebene Wiki-Dokument kann nicht weiter in andere Formate konvertiert werden. Ein Anwendungszweck ist das erstellte DocOnce-Dokument zusätzlich zur Ausgabe als PDF für die Veröffentlichung in einem Wiki zu konvertieren.
 ========= Parameter für den `doconce`-Befehl =========
-_10\%_
+Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem `doconce`-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
+
+!bc
+--help
+!ec
+
+Durch das Anhängen des Parameters `--help` werden alle Optionen von DocOnce ausgegeben.
+
+!bc
+format X
+!ec
+
+Das Ausgabeformat wird dem Parameter `format` angehängt. X kann hierbei `html, latex, pdflatex, rst, sphinx, plain, gwiki, mwiki, cwiki,
+pandoc, epytext` sein.
+
+!bc
+--debug
+!ec
+
+Erstellt eine Debug-Datei die alle auftretenden Fehler und Zwischenschritte protokoliert.
+
+!bc
+--no_abort
+!ec
+
+Führt die Konvertierung auch dann fort, wenn `doconce` Fehler in der Syntax registriert.
+
+!bc
+--verbose=...
+!ec
+
+Gibt den Fortschritt eines Zwischenschritts aus, wenn erlänger als die festgelegte Zeitspanne (in Sekunden) dauert.
+
+!bc
+--toc_depth=...
+!ec
+
+Gibt die Anzahl der Untergliederungen im Inhaltsverzeichnis an.
+
+!bc
+--encoding=...
+!ec
+
+Gibt die zuverwendete Codierung der Eingabedatei an (z.B. utf-8 oder latin1)
+
+!bc
+--no_title
+!ec
+
+Entfernt Autor, Titel und Datum im fertigen Dokument
+
+!bc
+--device=...
+!ec
+
+Gibt an ob das Dokument für die Ausgabe auf einen Bildschirm oder zum Ausdruck optimiert werden soll. Die wichtigsten Optionen sind *screen*, für die Ausgabe auf Bildschirmen (verkleinert Seitenränder), und *paper*, für den Ausdruck (Links werden als Fußnote ausgegeben).
+
+!bc
+--urlcheck
+!ec
+
+Überprüft die im Dokument verwendeten Links auf Webseiten auf Gültigkeit
+
+Die zur Konvertierung dieses Dokuments, in Latex und Markdown, verwendeten Skripte sind im Anhang beigefügt.
 ========= Fazit =========
 _10\%_
 ========= Anhang =========
-======= Setup-Script =======
+======= Setup-Skript =======
 @@@CODE anhang/install.sh
+======= Skripte für die Ausgabe in Latex und Markdown =======
+__Latex beziehungsweise PDF.__
+
+!bc shcod
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+    else
+    file=$1
+    sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+    echo -e "\e[32mLaTex File erstellt!\e[0m"
+    filename="${file%%.*}"
+    echo $filename
+    filetex="$filename.tex"
+    echo -e "\e[32mBeginne PDF-Erstellung\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt1: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt2: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt3: makeindex\e[0m"
+    sudo makeindex $filetex
+    echo -e "\e[32mSchritt4: bibtex\e[0m"
+    sudo bibtex $filetex
+    echo -e "\e[32mSchritt5: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mPDF erstellt!\e[0m"
+    rm -f "$filename.aux"
+    rm -f "$filename.idx"
+    rm -f "$filename.ilg"
+    rm -f "$filename.ind"
+    rm -f "$filename.out"
+    rm -f "$filename.toc"
+fi
+!ec
+
+__Markdown beziehungsweise Github-MD.__
+
+!bc shcod
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+  else
+    file=$1
+    sudo doconce format pandoc $file --no_abort --github_md
+    filename="${file%%.*}"
+    mv $filename.md README.md
+    echo -e "\e[32mREADME.md erstellt!\e[0m"
+fi
+!ec
