@@ -1,4 +1,21 @@
-======= Rest und Sphinx =======
-__ Verwendung von Rest und Sphinx.__
-__ Ausgabeoptionen für Rest und Sphinx.__
-__ Konvertierung von Rest und Sphinx in weitere Formate.__
+======= reStructuredText =======
+Die Verwendung von reStructuredText ermöglicht es in viele verschiedene Ausgabeformate zu konvertieren. Zuerst wandeln wir das DocOnce Dokument in eine reStructuredText Datei um:
+!bc
+Terminal> doconce format rst DATEINAME.do.txt
+!ec
+Daraus können nun verschiedene andere Formate erstellt werden:
+!bc
+Terminal> rst2html.py DATEINAME.rst > DATEINAME.html # für HTML
+Terminal> rst2latex.py DATEINAME.rst > DATEINAME.tex # für LaTeX
+Terminal> rst2xml.py DATEINAME.rst > DATEINAME.xml # für XML
+Terminal> rst2odt.py DATEINAME.rst > DATEINAME.odt # für OpenOffice
+!ec
+Das OpenOffice File könnte nun mit OpenOffice geöffnet werden und beispielsweise in das RTF Format oder das Microsoft Word Format konvertiert werden.
+Unter Ubuntu gibt es zusätzlich die Möglichkeit mit dem Befehl `unoconv` in der Kommandozeile zwischen den von OpenOffice unterstützten Formaten zu konvertieren. Der Befehl `unoconv --show` zeigt alle unterstützten Formate an.
+__ Anmerkung zu Mathematischen Formeln.__
+Zur Zeit gibt es keinen einfachen Weg LaTeX Mathematik über das DocOnce Format zu reST bzw. OpenOffice zu konvertieren. Formeln werden nur vollständig von `latex` unterstützt.
+
+#======= Sphinx =======
+#__ Verwendung von Sphinx.__
+#__ Ausgabeoptionen für Sphinx.__
+#__ Konvertierung von Sphinx in weitere Formate.__

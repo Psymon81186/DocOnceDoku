@@ -1,4 +1,36 @@
 ======= Markdown =======
+DocOnce lässt eine Konvertierung in viele Unterarten des Markdown zu und aus diesen lässt sich auch noch in viele andere Formate konvertieren.
 __ Verwendung von Markdown.__
+Die Konvertierung in Markdown erfolgt standardmäßig in das Pandoc-extended Markdown Format
+!bc
+doconce format pandoc DATEINAME
+!ec
+Die Ausgabe erfolt in einer `DATEINAME.md` Datei. Die unterstützten Markdown Dialekte sind:
+* Pandoc-extended Markdown
+* GitHub-flavored Markdown
+* MultiMarkdown
+* Strict Markdown
+
+Über das Pandoc Markdown lässt sich beispielsweise in `latex`, `html`, `odt` (OpenOffice), `docx` (Microsoft Word) und `rtf` umwandeln.
 __ Ausgabeoptionen für Markdown.__
-__ Konvertierung von Markdown in weitere Formate.__
+Mithilfe von Kommandozeilenparametern lässt sich der Markdown Dialekt spezifizieren:
+* `--github_md`: Erzeugt ein GitHub-flavored Markdown File, welches Task-Listen unterstützt (unnummerierte Liste mit [x] (Task erledigt) und [ ] (Task noch zu erledigen))
+* `--multimarkdown_output`: Erzeugt eine MultiMarkdown Version des Dokumentes
+* `--strict_markdown_output`: Erzeugt ein einfaches oder striktes Markdown File ohne viele der Erweiterungen, die Pandoc akzeptiert.
+__ Konvertierung von Markdown in HTML.__
+Die HTML Ausgabe von `pandoc` benötigt einige Anpassungen um eine vollständige Unterstützung von MathJax LaTeX Mathematik anzubieten und aus diesem Grund wird empfohlen den `doconce md2html` Befehl zu nutzen:
+!bc
+Terminal> doconce format pandoc DATEINAME
+Terminal> doconce md2html DATEINAME
+!ec
+Die resultierende `DATEINAME.html` Datei kann mit einem Browser geöffnet werden.
+
+__ Verwendung von Pandoc um von LaTeX in MS Word zu konvertieren.__
+Pandoc ist nützlich um von LaTeX Mathematik in beispielsweise HTML oder MS Word umzuwandeln. Hierfür gibt es zwei Wege, welche beide ausporbiert werden sollten, um das beste Ergebnis für ein spezielles Dokument zu erreichen: `doconce format pandoc` gefolgt von `doconce md2latex` (führt `pandoc` aus), oder `doconce format latex`. Die resultierenden .tex Dateien können dann mithilfe von `pandoc` in das gewünschte Format konvertiert werden. Hier ein Beispiel der zweiten Möglichkeit:
+!bc
+Terminal> doconce format latex DATEINAME
+Terminal> doconce ptex2tex DATEINAME
+Terminal> doconce replace '\Verb!' '\verb!' DATEINAME.tex
+Terminal> pandoc -f latex -t docx -o DATEINAME.docx DATEINAME.tex
+!ec
+Beachten Sie, dass DocOnce das `Verb` Makro des `fancyvrb` Paketes verwendet währen `pandoc` nur das standard `verb` Konstrukt versteht. Desweiteren wären einige weitere Aufrufe von `doconce replace` bzw. `doconce subst` nötig um Formeln vollständig richtig in ein MS Word Dokument zu konvertieren.

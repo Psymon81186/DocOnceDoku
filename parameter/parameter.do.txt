@@ -1,2 +1,2 @@
-========= Parameter für den `doconce`-Befehl =========
+========= Parameter für den doconce-Befehl =========
 _10\%_
