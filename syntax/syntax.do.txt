@@ -5,7 +5,6 @@ DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertiere
 Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
 
 Die wichtigsten zeilenbasierten Auszeichnungen sind:
-[Simon: Liste in Ordnung? oder Beispiele bringen?]
 |--c-----------------------------------------------------------c------------------|
 |Befehl                                         | Bedeutung                       |
 |---l-------------------------------------------|--------------l------------------|

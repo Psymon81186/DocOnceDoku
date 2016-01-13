@@ -1,0 +1,2 @@
+======= Arch-Linux =======
+Eine Installation unter Arch ist nur bedingt möglich, da viele, in Debian vorhandene Repositories nicht oder nur in den Arch User Repositories (AUR) vorhanden sind. Das Bash-Installationsskript wurde hierfür angepasst. Obwohl manche Abhängigkeiten für DocOnce nicht aufgelöst werden konnten, ist es trotzdem möglich das Programm für die grundlegende Konvertierung in andere Markup-Formate zu verwenden. Spezielle Fehler oder Probleme wurden bei der Konvertierung dieses Dokumentes nicht festgestellt.

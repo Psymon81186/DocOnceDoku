@@ -1,0 +1,869 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+
+% #define PREAMBLE
+
+% #ifdef PREAMBLE
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % draft: marks overfull hboxes, figures with paths
+chapterprefix=true,      % "Chapter" word at beginning of each chapter
+open=right,              % start new chapters on odd-numbered pages
+10pt]{book}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage[a4paper]{geometry}
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{bm,ltablex,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+% user-provided packages: --latex_packages=minted,ngerman,parskip
+\usepackage{minted,ngerman,parskip}
+
+% Packages for typesetting blocks of computer code
+\usepackage{fancyvrb,framed,moreverb}
+
+% Define colors
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{tucorange}{rgb}{1.0,0.64,0}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+\definecolor{myteal}{rgb}{.26, .44, .56}
+\definecolor{gray}{gray}{0.45}
+\definecolor{mediumgray}{gray}{.8}
+\definecolor{lightgray}{gray}{.95}
+\definecolor{brown}{rgb}{0.54,0.27,0.07}
+\definecolor{purple}{rgb}{0.5,0.0,0.5}
+\definecolor{darkgray}{gray}{0.25}
+\definecolor{darkblue}{rgb}{0,0.08,0.45}
+\definecolor{darkblue2}{rgb}{0,0,0.8}
+\definecolor{lightred}{rgb}{1.0,0.39,0.28}
+\definecolor{lightgreen}{rgb}{0.48,0.99,0.0}
+\definecolor{lightblue}{rgb}{0.53,0.81,0.92}
+\definecolor{lightblue2}{rgb}{0.3,0.3,1.0}
+\definecolor{lightpurple}{rgb}{0.87,0.63,0.87}
+\definecolor{lightcyan}{rgb}{0.5,1.0,0.83}
+
+\colorlet{comment_green}{green!50!black}
+\colorlet{string_red}{red!60!black}
+\colorlet{keyword_pink}{magenta!70!black}
+\colorlet{indendifier_green}{green!70!white}
+
+% Backgrounds for code
+\definecolor{cbg_gray}{rgb}{.95, .95, .95}
+\definecolor{bar_gray}{rgb}{.92, .92, .92}
+
+\definecolor{cbg_yellowgray}{rgb}{.95, .95, .85}
+\definecolor{bar_yellowgray}{rgb}{.95, .95, .65}
+
+\colorlet{cbg_yellow2}{yellow!10}
+\colorlet{bar_yellow2}{yellow!20}
+
+\definecolor{cbg_yellow1}{rgb}{.98, .98, 0.8}
+\definecolor{bar_yellow1}{rgb}{.98, .98, 0.4}
+
+\definecolor{cbg_red1}{rgb}{1, 0.85, 0.85}
+\definecolor{bar_red1}{rgb}{1, 0.75, 0.85}
+
+\definecolor{cbg_blue1}{rgb}{0.87843, 0.95686, 1.0}
+\definecolor{bar_blue1}{rgb}{0.7,     0.95686, 1}
+
+\usepackage{minted}
+\usemintedstyle{autumn}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Set helvetica as the default font family:
+\RequirePackage{helvet}
+\renewcommand\familydefault{phv}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{1}  % number chapter, section, subsection
+
+% Tricks for having figures close to where they are defined:
+% 1. define less restrictive rules for where to put figures
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{0.75}
+% floatpagefraction must always be less than topfraction!
+% 2. ensure all figures are flushed before next section
+\usepackage[section]{placeins}
+% 3. enable begin{figure}[H] (often leads to ugly pagebreaks)
+%\usepackage{float}\restylefloat{figure}
+
+% newcommands for typesetting inline (doconce) comments
+\newcommand{\shortinlinecomment}[3]{{\color{red}{\bf #1}: #2}}
+\newcommand{\longinlinecomment}[3]{{\color{red}{\bf #1}: #2}}
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% Make sure blank even-numbered pages before new chapters are
+% totally blank with no header
+\newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+%\let\cleardoublepage\clearemptydoublepage % caused error in the toc
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+\usepackage[totoc]{idxlayout}   % for index in the toc
+\usepackage[nottoc]{tocbibind}  % for references/bibliography in the toc
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% matching end for #ifdef PREAMBLE
+% #endif
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+\hbox{\ \ }
+\vfill
+\begin{center}
+{\huge{\bfseries{
+\begin{spacing}{1.25}
+{\rule{\linewidth}{0.5mm}} \\[0.4cm]
+{DocOnce}
+\\[0.4cm] {\rule{\linewidth}{0.5mm}} \\[1.5cm]
+\end{spacing}
+}}}
+
+% ----------------- author(s) -------------------------
+
+\vspace{0.5cm}
+
+{\Large\textsf{Michael Weiß${}^{}$}}\\ [3mm]
+
+{\Large\textsf{Simon Schäfer${}^{}$}}\\ [3mm]
+
+\ \\ [2mm]
+
+% ----------------- end author(s) -------------------------
+
+% --- begin date ---
+\ \\ [10mm]
+{\large\textsf{Jan 13, 2016}}
+
+\end{center}
+% --- end date ---
+\vfill
+\clearpage
+
+\tableofcontents
+
+
+\vspace{1cm} % after toc
+
+
+
+
+\chapter{DocOnce, eine universelle Markup-Sprache}
+\section{Was ist DocOnce}
+Doconce ist eine minimal ausgezeichnete Markup-Sprache, die alle wichtigen Funktionen einer Markup-Sprache bereitstellt und hierbei trotzdem die Anzahl der verwendeten Auszeichnungen möglichst gering hält. Durch die Verwendung von Doconce ist eine Konvertierung der Ausgangsdatei in viele unterschiedliche Formate (Latex, Markdown, PDF, ...) möglich. Außerdem lässt sich das Ausgabeformat für mehrere Anwendungsbereiche anpassen. Dies funktioniert für analoge Medien, wie z.B. Bücher, Abschlussarbeiten und wissenschaftliche Berichte, aber auch für digitale Veröffentlichungen, wie z.B. in Blogs oder auf Wiki-Seiten.
+\section{Vor- und Nachteile}
+\subsection{Vorteile}
+\begin{itemize}
+\item viele Ausgabeformate
+
+\item geeignet für Autoren die für viele unterschiedliche Medien schreiben
+
+\item Viele unterschiedliche Designs für das Erstellen von z.B. html-Dokumenten
+
+\item Source-Code kann direkt aus Dateien ausgelesen werden
+
+\item kann auch nur als einfacher Text ausgegeben werden z.B. für Email oder Code-Dokumentationen]
+\end{itemize}
+
+\noindent
+\subsection{Nachteile}
+\begin{itemize}
+ \item Installation auf Windows nicht möglich
+
+ \item erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung
+
+ \item erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex
+\end{itemize}
+
+\noindent
+\chapter{Installation}
+\section{Ubuntu 15.04/15.10}
+Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgeführt werden. Zusätzlich zu den im Original Install-Skript angegebenen Pakete mussten, für die Installation des lxml-Python-Packages, auf Ubuntu 15.04 noch die development-packages  \texttt{libxml2-dev}, \texttt{libxslt1-dev} und \texttt{python-dev} installiert werden, da das Compilieren des Package ansonsten fehlschlug.
+
+Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl \texttt{doconce} und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den \texttt{doconce}-Befehl’’) gestartet werden.
+
+\section{Arch-Linux}
+Eine Installation unter Arch ist nur bedingt möglich, da viele, in Debian vorhandene Repositories nicht oder nur in den Arch User Repositories (AUR) vorhanden sind. Das Bash-Installationsskript wurde hierfür angepasst. Obwohl manche Abhängigkeiten für DocOnce nicht aufgelöst werden konnten, ist es trotzdem möglich das Programm für die grundlegende Konvertierung in andere Markup-Formate zu verwenden. Spezielle Fehler oder Probleme wurden bei der Konvertierung dieses Dokumentes nicht festgestellt.
+
+\section{Mac OSX}
+Unter Mac OS ist es notwendig den Paketmanager Anaconda für Python 2.7 zu installieren. Dieser ist unter \href{{https://www.continuum.io/downloads}}{\nolinkurl{https://www.continuum.io/downloads}} zu finden. Außerdem muss für die Umwandlung in das PDF-Format eine TeX-Distribution installiert sein. Sollte diese noch nicht vorhanden sein, kann diese unter \href{{https://tug.org/mactex/}}{\nolinkurl{https://tug.org/mactex/}} gefunden werden.
+Sobald diese beiden Pakete installiert sind kann über das Terminal mit dem Befehl
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+conda install --channel johannr doconce
+\end{minted}
+das DocOnce Paket installiert werden.
+
+Wenn mit Pandoc Markdown gearbeitet werden soll, muss auch noch dieses Paket gesondert installiert werden, welches unter \href{{http://pandoc.org/installing.html}}{\nolinkurl{http://pandoc.org/installing.html}} gefunden werden kann. Das Paket wird benötigt um beispielsweise in das \texttt{docx}-Format von Microsoft Office zu konvertieren.
+
+Ebenso wie unter Ubuntu kann DocOnce nun direkt im Terminal mit dem Befehl \texttt{doconce} und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den \texttt{doconce}-Befehl’’) gestartet werden.
+\chapter{Syntax}
+DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertieren in verschiedene Markup-Ausgabeformate die Formatierung zu übertragen. Diese Auszeichnungsarten sind  \emph{zeilenbasierte Auszeichnungen}, das sog. \emph{Inline-Tagging}, Auszeichnungen die im Fließtext vorgenommen werden, und \emph{Block-Auszeichnungen}. Im folgenden sollen die wichtigsten Auszeichnungen behandelt werden.
+
+\section{Zeilenbasierte Auszeichnungen}
+Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
+
+Die wichtigsten zeilenbasierten Auszeichnungen sind:
+
+\begin{quote}
+\begin{tabular}{ll}
+\hline
+\multicolumn{1}{c}{ Befehl } & \multicolumn{1}{c}{ Bedeutung } \\
+\hline
+\texttt{TITLE:}                                    & Titel des Dokuments           \\
+\texttt{AUTHOR:}                                   & Autor                         \\
+\texttt{DATE:}                                     & Datum (today=aktuelles Datum) \\
+\Verb!{copyright,year1-year2|license}!           & Copyright                     \\
+\texttt{TOC:}                                      & Inhaltsverzeichnis            \\
+\texttt{=========} \emph{Kapitel} \texttt{=========} & Kapitelüberschrift           \\
+\texttt{=======} \emph{Abschnitt} \texttt{=======}   & Abschnitt                     \\
+\texttt{=====} \emph{Unterabschnitt} \texttt{=====}  & Unterabschnitt                \\
+\texttt{===} \emph{Unterunterabschnitt} \texttt{===} & Unterunterabschnitt           \\
+\Verb!__! \emph{Pragraph} \Verb!__!              & Paragraph                     \\
+\texttt{FIGURE:[Datei, width= frac=] Unterschrift} & Bild einfügen                \\
+\Verb!#!                                         & Kommentar                     \\
+\texttt{*}                                         & Liste                         \\
+\texttt{o}                                         & nummerierte Liste             \\
+\texttt{- Wort: Erklärung}                        & Beschreibungsliste            \\
+\hline
+\end{tabular}
+\end{quote}
+
+\noindent
+Die zeilenbasierte Auszeichnung zum Erstellen einer Tabelle nimmt eine Sonderstellung ein . Sie erstreckt sich über mehre Zeilen wie in folgendem Beispiel zu sehen ist:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+
+|----l-----------------l------|
+|Beschriftung 1|Beschriftung 2|
+|----l---------|-------l------|
+|Eintrag 1     |Eintrag 2     |
+|Eintrag 3     |Eintrag 4     |
+|Eintrag 5     |Eintrag 6     |
+|Eintrag 7     |Eintrag 8     |
+|-----------------------------|
+
+\end{minted}
+Durch kleine Buchstaben über den Spalten (hier \emph{l}) kann die Orientierung der Spalteninhalte festgelegt werden. Möglich sind l(= \emph{left}), r(= \emph{right}) und c(= \emph{center}).\\
+
+
+\vspace{3mm}
+
+
+Das oben gezeigte Beispiel ergibt im fertig gerenderten Dokument folgende Tabelle:
+
+
+\begin{quote}
+\begin{tabular}{ll}
+\hline
+\multicolumn{1}{l}{ Beschriftung 1 } & \multicolumn{1}{l}{ Beschriftung 2 } \\
+\hline
+Eintrag 1      & Eintrag 2      \\
+Eintrag 3      & Eintrag 4      \\
+Eintrag 5      & Eintrag 6      \\
+Eintrag 7      & Eintrag 8      \\
+\hline
+\end{tabular}
+\end{quote}
+
+\noindent
+\section{Inline-Tagging}
+Das Inline-Tagging wird für das Hervorheben bzw. die spezielle Formatierung von Wörtern im Fließtext verwendet. Das Inline-Tagging umfasst alles von einfachen Formatierungen wie \textbf{Fett} oder \emph{Kursiv} bis hin zum Verlinken von \href{{https://github.com/hplgit/doconce}}{Websites} oder lokalen \href{{tools/manual.pdf}}{\textcolor{darkblue2}{Dokumenten}}.
+
+
+\vspace{3mm}
+
+
+
+
+\begin{quote}
+\begin{tabular}{ll}
+\hline
+\multicolumn{1}{c}{ Befehl } & \multicolumn{1}{c}{ Bedeutung } \\
+\hline
+\texttt{*Text*}                               & \emph{Kursiv}                                                              \\
+\Verb!_Fett_!                               & \textbf{Fett}                                                              \\
+\Verb!\textcolor{red}{Text}!                & \textcolor{red}{farbiger Text}                                             \\
+` \texttt{Code} `                             & \texttt{Quellcode}                                                           \\
+\texttt{''Google'': ''URL''}                  & \href{{http://google.com}}{Weblinks}                                       \\
+\texttt{''mailto'': ''mailto:Email'' }        & \href{{mailto:simon81186@aol.com}}{mailto-Links}                           \\
+\texttt{''Dokument'': ''/Pfad/zu/Dokument'' } & \href{{/tools/manual.pdf}}{\textcolor{darkblue2}{Link auf lokale Dateien}} \\
+\texttt{‘‘Zitat’’}                    & ‘‘Zitate’’                                                         \\
+\texttt{----}                                 & Horizontale Linie                                                          \\
+\texttt{*Zitat*----Vorname Nachname}          & Gedankenstrich(für Zitate)                                                \\
+\texttt{[Name:Kommentar ]}                    & Kommentar im Fließtext                                                    \\
+\texttt{<linebreak>}                          & Zeilenumbruch                                                              \\
+\Verb!$Gleichung$!                          & Gleichungen (z.B.: $a^2 + b^2 = c^2$)                                      \\
+\hline
+\end{tabular}
+\end{quote}
+
+\noindent
+\section{Block-Auszeichnungen}
+Die dritte Art von Auszeichnungen in DocOnce sind die Block-Auszeichnungen. Die Wichtigsten Vertreter sind der \textbf{Formel-Block} und der \textbf{Quellcode-Block}.
+
+\paragraph{Formel-Block.}
+Der Formel-Block wird verwendet um Mathematische Formeln und Funktionen übersichtlich dar zu stellen. Er wird durch \Verb?!bt? geöffnet und mit \Verb?!et? wieder geschlossen. Hier ein Beispiel der Formatierung der \textbf{Schrödinger Gleichung} durch einen Formel-Block (Zeilenumbrüche bei Code-Beispiel eingefügt um Übersicht zu verbessern!).
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+!bt
+\begin{align}
+\frac{\partial^2 \Psi(x,y,z)}{\partial x\partial x}
++ \frac{\partial^2 \Psi(x,y,z)}{\partial y\partial y}
++ \frac{\partial^2 \Psi(x,y,z)}{\partial z\partial z}
+= -c (E-E_{pot}(x))\Psi(x) \quad \textrm{mit} \qquad c=\frac{8\pi^2m}{h^2}
+\end{align}
+!et
+\end{minted}
+Wird zu:
+\begin{align}
+\frac{\partial^2 \Psi(x,y,z)}{\partial x\partial x} + \frac{\partial^2 \Psi(x,y,z)}{\partial y\partial y} + \frac{\partial^2 \Psi(x,y,z)}{\partial z\partial z} = -c (E-E_{pot}(x))\Psi(x) \quad \textrm{mit} \qquad c=\frac{8\pi^2m}{h^2}
+\end{align}
+Zusätzlich werden Gleichungen nach dem Schema \emph{(Kapitelnummer.Gleichungsnummer)} automatisch durchnummeriert.
+
+\paragraph{Quellcode-Block.}
+Wie der Formel-Block wird auch der Quellcode-Block durch zwei Auszeichnungen eingeschlossen. Dies sind am Beginn \Verb?!bc? und am Ende \Verb?!ec?. Auch hier ein kurzes Beispiel der Formatierung des klassischen "Hello World"-Programm.
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+!bc
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.println("Hello, World");
+   }
+}
+!ec
+\end{minted}
+Wird zu:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{java}
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.println("Hello, World");
+   }
+}
+\end{minted}
+
+Um das Code-Highlighting zu verwenden kann man hinter der Start-Auszeichnung \Verb?!bc? die im Quellcode verwendete Sprache angeben (im Beispiel \Verb?!bc java?). Zusätzlich muss der Parameter \Verb!--latex_code_style=pyg!, als Parameter, dem \texttt{doconce}-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket \texttt{python-pygments}. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe \href{{http://pygments.org/docs/cmdline/#getting-lexer-names}}{Pygments-Homepage}) .
+\chapter{Ausgabeformate}
+
+\section{Markdown}
+DocOnce lässt eine Konvertierung in viele Unterarten des Markdown zu und aus diesen lässt sich auch noch in viele andere Formate konvertieren.
+\paragraph{ Verwendung von Markdown.}
+Die Konvertierung in Markdown erfolgt standardmäßig in das Pandoc-extended Markdown Format
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+doconce format pandoc DATEINAME
+\end{minted}
+Die Ausgabe erfolt in einer \texttt{DATEINAME.md} Datei. Die unterstützten Markdown Dialekte sind:
+\begin{itemize}
+\item Pandoc-extended Markdown
+
+\item GitHub-flavored Markdown
+
+\item MultiMarkdown
+
+\item Strict Markdown
+\end{itemize}
+
+\noindent
+Über das Pandoc Markdown lässt sich beispielsweise in \texttt{latex}, \texttt{html}, \texttt{odt} (OpenOffice), \texttt{docx} (Microsoft Word) und \texttt{rtf} umwandeln.
+\paragraph{ Ausgabeoptionen für Markdown.}
+Mithilfe von Kommandozeilenparametern lässt sich der Markdown Dialekt spezifizieren:
+\begin{itemize}
+\item \Verb!--github_md!: Erzeugt ein GitHub-flavored Markdown File, welches Task-Listen unterstützt (unnummerierte Liste mit [x] (Task erledigt) und [ ] (Task noch zu erledigen))
+
+\item \Verb!--multimarkdown_output!: Erzeugt eine MultiMarkdown Version des Dokumentes
+
+\item \Verb!--strict_markdown_output!: Erzeugt ein einfaches oder striktes Markdown File ohne viele der Erweiterungen, die Pandoc akzeptiert.
+\end{itemize}
+
+\noindent
+\paragraph{ Konvertierung von Markdown in HTML.}
+Die HTML Ausgabe von \texttt{pandoc} benötigt einige Anpassungen um eine vollständige Unterstützung von MathJax {\LaTeX} Mathematik anzubieten und aus diesem Grund wird empfohlen den \texttt{doconce md2html} Befehl zu nutzen:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> doconce format pandoc DATEINAME
+Terminal> doconce md2html DATEINAME
+\end{minted}
+Die resultierende \texttt{DATEINAME.html} Datei kann mit einem Browser geöffnet werden.
+
+\paragraph{ Verwendung von Pandoc um von {\LaTeX} in MS Word zu konvertieren.}
+Pandoc ist nützlich um von {\LaTeX} Mathematik in beispielsweise HTML oder MS Word umzuwandeln. Hierfür gibt es zwei Wege, welche beide ausporbiert werden sollten, um das beste Ergebnis für ein spezielles Dokument zu erreichen: \texttt{doconce format pandoc} gefolgt von \texttt{doconce md2latex} (führt \texttt{pandoc} aus), oder \texttt{doconce format latex}. Die resultierenden .tex Dateien können dann mithilfe von \texttt{pandoc} in das gewünschte Format konvertiert werden. Hier ein Beispiel der zweiten Möglichkeit:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> doconce format latex DATEINAME
+Terminal> doconce ptex2tex DATEINAME
+Terminal> doconce replace '\Verb!' '\verb!' DATEINAME.tex
+Terminal> pandoc -f latex -t docx -o DATEINAME.docx DATEINAME.tex
+\end{minted}
+Beachten Sie, dass DocOnce das \texttt{Verb} Makro des \texttt{fancyvrb} Paketes verwendet währen \texttt{pandoc} nur das standard \texttt{verb} Konstrukt versteht. Desweiteren wären einige weitere Aufrufe von \texttt{doconce replace} bzw. \texttt{doconce subst} nötig um Formeln vollständig richtig in ein MS Word Dokument zu konvertieren.
+\section{reStructuredText}
+Die Verwendung von reStructuredText ermöglicht es in viele verschiedene Ausgabeformate zu konvertieren. Zuerst wandeln wir das DocOnce Dokument in eine reStructuredText Datei um:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> doconce format rst DATEINAME.do.txt
+\end{minted}
+Daraus können nun verschiedene andere Formate erstellt werden:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> rst2html.py DATEINAME.rst > DATEINAME.html # für HTML
+Terminal> rst2latex.py DATEINAME.rst > DATEINAME.tex # für LaTeX
+Terminal> rst2xml.py DATEINAME.rst > DATEINAME.xml # für XML
+Terminal> rst2odt.py DATEINAME.rst > DATEINAME.odt # für OpenOffice
+\end{minted}
+Das OpenOffice File könnte nun mit OpenOffice geöffnet werden und beispielsweise in das RTF Format oder das Microsoft Word Format konvertiert werden.
+Unter Ubuntu gibt es zusätzlich die Möglichkeit mit dem Befehl \texttt{unoconv} in der Kommandozeile zwischen den von OpenOffice unterstützten Formaten zu konvertieren. Der Befehl \texttt{unoconv --show} zeigt alle unterstützten Formate an.
+\paragraph{ Anmerkung zu Mathematischen Formeln.}
+Zur Zeit gibt es keinen einfachen Weg {\LaTeX} Mathematik über das DocOnce Format zu reST bzw. OpenOffice zu konvertieren. Formeln werden nur vollständig von \texttt{latex} unterstützt.
+
+% ======= Sphinx =======
+% __ Verwendung von Sphinx.__
+% __ Ausgabeoptionen für Sphinx.__
+% __ Konvertierung von Sphinx in weitere Formate.__
+\section{{\LaTeX}}
+Für die Umwandlung eines DocOnce Dokumentes in ein {\LaTeX} File gibt es generell zwei verschiedene Möglichkeiten:
+\begin{enumerate}
+\item direkte Übersetzung in ein \texttt{.tex} File
+
+\item Übersetzung in ein \texttt{.p.tex} File
+\end{enumerate}
+
+\noindent
+Im zweiten Fall muss noch das Programm \texttt{ptex2tex} oder das vereinfachte \texttt{doconce ptex2tex} verwendet werden um die \texttt{.p.tex} Datei in eine einfache \texttt{.tex} Datei zu konvertieren. Dieser Schritt beinhaltet die Spezifikation, wie Blöcke aus Verbatim Code gesetzt werden sollen. Vor 2015 hat DocOnce immer standardmäßig in eine \texttt{.p.tex} Datei übersetzt und diesen zweiten Schritt erfordert. Nun gibt es eine direkte Übersetzung, welche nicht nur einfacher sondern auch noch vielseitiger ist. Deshalb wird der Einfachheit halber nur auf die direkte Übersetzung eingegangen.
+\subsection{Konvertierung in {\LaTeX}}
+Das DocOnce Dokument kann direkt in ein gültiges {\LaTeX} File konvertiert werden, indem der \Verb!--latex_code_style=! Parameter verwendet wird:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> doconce format pdflatex DATEINAME --latex_code_style=vrb
+\end{minted}
+Ohne den \Verb!--latex_code_style! Parameter wird nur ein \texttt{.p.tex} File ausgegeben, welches noch mit \texttt{ptex2tex} bzw. \texttt{doconce ptex2tex} weiterbearbeitet werden muss.
+\paragraph{ Ausgabe für Druck bzw. Bildschirm.}
+Die Option \texttt{--device=paper} verändert einige Parameter der Datei für Dokumente, welche für den Druck gedacht sind. Zum Beispiel werden Links für Web Ressourcen mit einer Fußnote und der kompletten URL verknüpft. Der Standardwert \texttt{--device=screen} erstellt ein PDF für das Lesen auf einem Bildschirm mit klickbaren Links.
+\paragraph{ Einige Kommandozeilenparameter.}
+Es gibt sehr viele zusätzliche Optionen für die Umwandlung in {\LaTeX} Code (die komplette Liste wird ausgegeben auf den Befehl \texttt{doconce format --help}):
+\begin{itemize}
+\item \Verb!--latex_code_style=lst,vrb,pyg!
+
+\item \Verb!--latex_font=helvetica,palatino!
+
+\item \Verb!--latex_papersize=a4,a6!
+
+\item \Verb!--latex_title_layout=titlepage, std, beamer, doconce_heading, Springer_collection!
+
+\item \Verb!--latex_packages=package1,package2,package3! (Liste der zu importierenden Zusatzpakete; dieser Parameter ist unter Mac OS nicht verfügbar!)
+\end{itemize}
+
+\noindent
+\paragraph{ Syntax Hervorhebung.}
+Der Stil von Verbatim Blöcken mit Computer Code wird durch den \Verb!--latex_code_style=X! Parameter bestimmt. Es gibt drei Hauptwerte für X, welche drei Verbatim Typ Einstellungen in {\LaTeX} entsprechen:
+\begin{itemize}
+\item \texttt{vrb} für den einfachen \texttt{Verbatim} Stil (\texttt{fancyvrb} {\LaTeX} Paket)
+
+\item \texttt{pyg} für den Pygments Stil (\texttt{mintex} {\LaTeX} Paket)
+
+\item \texttt{lst} für die Listen Stile (\texttt{listingsutf8} {\LaTeX} Paket)
+\end{itemize}
+
+\noindent
+\subsection{Konvertierung von {\LaTeX} in PDF}
+Das \texttt{.tex} File wird nun kompiliert und mithilfe von \texttt{pdflatex} in ein PDF umgewandelt:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> pdflatex DATEINAME
+Terminal> pdflatex DATEINAME
+Terminal> makeindex DATEINAME # falls es einen Index gibt
+Terminal> bibtex DATEINAME    # falls es ein Literaturverzeichnis gibt
+Terminal> pdflatex DATEINAME
+\end{minted}
+
+Falls der Minted Stil verwendet wird, \textbf{muss} \texttt{pdflatex} mit der Option \texttt{-shell-escape} ausgeführt werden:
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+Terminal> pdflatex -shell-escape DATEINAME
+Terminal> pdflatex -shell-escape DATEINAME
+Terminal> makeindex DATEINAME # falls es einen Index gibt
+Terminal> bibtex DATEINAME    # falls es ein Literaturverzeichnis gibt
+Terminal> pdflatex -shell-escape DATEINAME
+\end{minted}
+\section{HTML}
+Um ein DocOnce Dokument in eine Webseite einzubetten bietet sich an dieses in ein HTML-Dokument umzuwandeln.
+\paragraph{ Verwendung von HTML.}
+Die Konvertierung in das HTML-Format erfolgt über den Befehl
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+doconce format html DATEINAME.do.txt
+\end{minted}
+Das erzeugte Dokument mit dem Namen DATEINAME.html kann nun mit jedem Webbrowser zur Ansicht geöffnet werden.
+\paragraph{ Ausgabeoptionen für HTML.}
+Mithilfe von Kommandozeilenparameter lässt sich das HTML-Dokument noch weiter personalisieren:
+Über den Befehl \texttt{--css=filename} lässt sich ein eigenes CSS Stylesheet zur Verwendung einbinden, wobei über der Befehl \Verb!--html_style=name! aus einigen vorgefertigten Styles ausgewählt werden kann.
+\begin{itemize}
+\item solarized: \href{{http://ethanschoonover.com/solarized}}{solarized} Style
+
+\item blueish: einfacher Style mit blauen Überschriften (Standard)
+
+\item blueish2: etwas abgeänderter Variante von \emph{blueish}
+
+\item bloodish: wie \emph{blueish}, aber in dunkelrot
+\end{itemize}
+
+\noindent
+Andere Parameter:
+\begin{itemize}
+\item \Verb!--html_share=http://...! fügt am Ende des Dokumentes ''Share Buttons'' für Email, Facebook, Google+, LinkedIn, Twitter und Drucken ein
+
+\item \Verb!--html_share=http://...,twitter,linkedin! erzeugt ''Share Buttons'' für Twitter und LinkedIn. Die Seitennamen werden durch Kommata getrennt. Gültige Namen sind: \texttt{email}, \texttt{facebook}, \texttt{google+}, \texttt{linkedin}, \texttt{twitter} und \texttt{print}. Die URL muss auf die Seite weisen, auf der das Dokument publiziert wird.
+
+\item \Verb!--toc_depth=X!: bestimmt die Tiefe des Inhaltsverzeichnisses im Dokument. Der Standardwert beträgt 3 und erzeugt somit Einträge für Kapitelüberschriften, Abschnitte und Unterabschnitte.
+
+\item \Verb!--html_body_font=!: bestimmt die Schriftart für den Fließtext. Der Wert \texttt{?} listet alle verfügbaren Schriftarten auf.
+
+\item \Verb!--html_heading_font=!: bestimmt die Schriftart für die Überschriften. Der Wert \texttt{?} listet alle verfügbaren Schriftarten auf.
+
+\item \Verb!--html_video_autoplay=True,False!: lässt Videos automatisch abspielen, sobald die HTML Seite geladen wird (\texttt{True}, Standard).
+\end{itemize}
+
+\noindent
+\section{Wiki-Formate}
+\paragraph{ Verwendung von Wiki-Formaten.}
+Wikis werden in vielen Unternehmen verwendet um verschiedenste Aufgaben zu erledigen. Zu diesen Aufgaben zählen z.B. die Standadisierung verschiedener Prozesse im Betrieb, wie die Einarbeitung von Mitarbeitern oder das Sammeln von externen Berichten (Pressespiegel) über das Unternehmen. Häufig werden Wikis auch als Wissensdatenbank für unterschiedliche Themen (Dokumementation von bestimmten Prozessen in der IT oder Qualitätsmanagment) benutzt. Die wohl bekannteste Anwendung eines Wikis ist die freie Enzyklopädie Wikipedia.
+\paragraph{ Ausgabeoptionen für Wiki-Formate.}
+DocOnce unterstützt die drei gebräuchlichsten Wiki-Formate Googlecode wiki, MediaWiki und Creole Wiki. Die Auswahl des gewünschten Wiki-Formats wir durch den \texttt{format}-Befehl realisiert:
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+doconce format gwiki *Datei* (Googlecode Wiki)
+doconce format mwiki *Datei* (MediaWiki)
+doconce format cwiki *Datei* (Creole Wiki)
+\end{minted}
+\paragraph{ Konvertierung von Wiki-Formaten in weitere Formate.}
+Das ausgegebene Wiki-Dokument kann nicht weiter in andere Formate konvertiert werden. Ein Anwendungszweck ist das erstellte DocOnce-Dokument zusätzlich zur Ausgabe als PDF für die Veröffentlichung in einem Wiki zu konvertieren.
+\chapter{Parameter für den \texttt{doconce}-Befehl}
+Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem \texttt{doconce}-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--help
+\end{minted}
+
+Durch das Anhängen des Parameters \texttt{--help} werden alle Optionen von DocOnce ausgegeben.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+format X
+\end{minted}
+
+Das Ausgabeformat wird dem Parameter \texttt{format} angehängt. X kann hierbei \texttt{html, latex, pdflatex, rst, sphinx, plain, gwiki, mwiki, cwiki, pandoc, epytext} sein.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--debug
+\end{minted}
+
+Erstellt eine Debug-Datei die alle auftretenden Fehler und Zwischenschritte protokoliert.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--no_abort
+\end{minted}
+
+Führt die Konvertierung auch dann fort, wenn \texttt{doconce} Fehler in der Syntax registriert.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--verbose=...
+\end{minted}
+
+Gibt den Fortschritt eines Zwischenschritts aus, wenn erlänger als die festgelegte Zeitspanne (in Sekunden) dauert.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--toc_depth=...
+\end{minted}
+
+Gibt die Anzahl der Untergliederungen im Inhaltsverzeichnis an.
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--encoding=...
+\end{minted}
+
+Gibt die zuverwendete Codierung der Eingabedatei an (z.B. utf-8 oder latin1)
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--no_title
+\end{minted}
+
+Entfernt Autor, Titel und Datum im fertigen Dokument
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--device=...
+\end{minted}
+
+Gibt an ob das Dokument für die Ausgabe auf einen Bildschirm oder zum Ausdruck optimiert werden soll. Die wichtigsten Optionen sind \emph{screen}, für die Ausgabe auf Bildschirmen (verkleinert Seitenränder), und \emph{paper}, für den Ausdruck (Links werden als Fußnote ausgegeben).
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+--urlcheck
+\end{minted}
+
+Überprüft die im Dokument verwendeten Links auf Webseiten auf Gültigkeit
+
+Die zur Konvertierung dieses Dokuments, in Latex und Markdown, verwendeten Skripte sind im Anhang beigefügt.
+\chapter{Fazit}
+\textbf{10\%}
+\chapter{Anhang}
+\section{Setup-Skript}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+#!/bin/bash
+# Automatically generated script by deb2sh.py.
+
+# The script is based on packages listed in debpkg_doconce.txt.
+
+set -x  # make sure each command is printed in the terminal
+
+function apt_install {
+  sudo apt-get -y install $1
+  if [ $? -ne 0 ]; then
+    echo "could not install $1 - abort"
+    exit 1
+  fi
+}
+
+function pip_install {
+  sudo pip install --upgrade "$@"
+  if [ $? -ne 0 ]; then
+    echo "could not install $p - abort"
+    exit 1
+  fi
+}
+
+sudo apt-get update --fix-missing
+
+# Installation script for doconce and all dependencies
+
+# This script is translated from
+# doc/src/manual/debpkg_doconce.txt
+# in the doconce source tree, with help of
+# vagrantbox/doc/src/vagrant/src-vagrant/deb2sh.py
+# (git clone git@github.com:hplgit/vagrantbox.git)
+
+# Python v2.7 must be installed (doconce does not work with v3.x)
+pyversion=`python -c 'import sys; print sys.version[:3]'`
+if [ $pyversion != '2.7' ]; then echo "Python v${pyversion} cannot be used with DocOnce"; exit 1; fi
+
+# Install downloaded source code in subdirectory srclib
+if [ ! -d srclib ]; then mkdir srclib; fi
+
+# Version control systems
+apt_install mercurial
+apt_install git
+apt_install subversion
+
+# --- Python-based packages and tools ---
+apt_install python-pip
+apt_install idle
+apt_install python-dev
+apt_install python-pdftools
+pip_install ipython --upgrade
+pip_install tornado --upgrade
+pip_install pyzmq --upgrade
+pip_install traitlets --upgrade
+pip_install pickleshare --upgrade
+pip_install jsonschema
+# If problems with IPython.nbformat.v4: clone ipython and run setup.py
+# to get the latest version
+
+# Preprocessors
+pip_install future
+pip_install mako --upgrade
+pip_install -e git+https://github.com/hplgit/preprocess#egg=preprocess --upgrade
+
+# Publish for handling bibliography
+pip_install python-Levenshtein
+pip_install lxml
+pip_install -e hg+https://bitbucket.org/logg/publish#egg=publish --upgrade
+
+# Sphinx (with additional third/party themes)
+pip_install sphinx
+
+pip_install alabaster --upgrade
+pip_install sphinx_rtd_theme --upgrade
+pip_install -e hg+https://bitbucket.org/ecollins/cloud_sptheme#egg=cloud_sptheme --upgrade
+pip_install -e git+https://github.com/ryan-roemer/sphinx-bootstrap-theme#egg=sphinx-bootstrap-theme --upgrade
+pip_install -e hg+https://bitbucket.org/miiton/sphinxjp.themes.solarized#egg=sphinxjp.themes.solarized --upgrade
+pip_install -e git+https://github.com/shkumagai/sphinxjp.themes.impressjs#egg=sphinxjp.themes.impressjs --upgrade
+pip_install -e git+https://github.com/kriskda/sphinx-sagecell#egg=sphinx-sagecell --upgrade
+
+# Runestone sphinx books
+pip_install sphinxcontrib-paverutils
+pip_install paver
+pip_install cogapp
+
+#pip install -e git+https://bitbucket.org/sanguineturtle/pygments-ipython-console#egg=pygments-ipython-console
+pip_install -e git+https://bitbucket.org/hplbit/pygments-ipython-console#egg=pygments-ipython-console
+pip_install -e git+https://github.com/hplgit/pygments-doconce#egg=pygments-doconce
+
+# XHTML
+pip_install beautifulsoup4
+pip_install html5lib
+
+# ptex2tex is not needed if --latex_code_style= option is used
+cd srclib
+svn checkout http://ptex2tex.googlecode.com/svn/trunk/ ptex2tex
+cd ptex2tex
+sudo python setup.py install
+cd latex
+sh cp2texmf.sh
+cd ../../..
+
+# LaTeX
+apt_install texinfo
+apt_install texlive-full
+#apt_install texlive-extra-utils
+#apt_install texlive-latex-extra
+#apt_install texlive-latex-recommended
+#apt_install texlive-math-extra
+#apt_install texlive-font-utils
+#apt_install texlive-humanities
+apt_install latexdiff
+apt_install auctex
+
+# Image manipulation
+apt_install imagemagick
+apt_install netpbm
+apt_install mjpegtools
+apt_install pdftk
+apt_install giftrans
+apt_install gv
+apt_install evince
+apt_install smpeg-plaympeg
+apt_install mplayer
+apt_install totem
+apt_install libav-tools
+
+# Misc
+apt_install ispell
+apt_install pandoc
+apt_install libreoffice
+apt_install unoconv
+apt_install libreoffice-dmaths
+#epydoc is an old-fashioned output format, will any doconce user use it?
+#pip install -e svn+https://epydoc.svn.sourceforge.net/svnroot/epydoc/trunk/epydoc#egg=epydoc
+
+apt_install curl
+apt_install a2ps
+apt_install wdiff
+apt_install meld
+apt_install diffpdf
+apt_install kdiff3
+apt_install diffuse
+
+# tkdiff.tcl:
+#tcl8.5-dev tk8.5-dev blt-dev
+#https://sourceforge.net/projects/tkdiff/
+
+# example on installing mdframed.sty manually (it exists in texlive,
+# but sometimes needs to be in its newest version)
+git clone https://github.com/marcodaniel/mdframed
+if [ -d mdframed ]; then cd mdframed; make localinstall; cd ..; fi
+#$ echo "remove the mdframe directory (if successful install of mdframed.sty): rm -rf mdframed"
+
+# DocOnce itself
+cd srclib
+git clone https://github.com/hplgit/doconce.git
+if [ -d doconce ]; then cd doconce; sudo python setup.py install; cd ../..; fi
+echo "Everything is successfully installed!"
+\end{minted}
+\section{Skripte für die Ausgabe in Latex und Markdown}
+\paragraph{Latex beziehungsweise PDF.}
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+    else
+    file=$1
+    sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+    echo -e "\e[32mLaTex File erstellt!\e[0m"
+    filename="${file%%.*}"
+    echo $filename
+    filetex="$filename.tex"
+    echo -e "\e[32mBeginne PDF-Erstellung\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt1: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt2: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mSchritt3: makeindex\e[0m"
+    sudo makeindex $filetex
+    echo -e "\e[32mSchritt4: bibtex\e[0m"
+    sudo bibtex $filetex
+    echo -e "\e[32mSchritt5: pdfLatex\e[0m"
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e "\e[32mPDF erstellt!\e[0m"
+    rm -f "$filename.aux"
+    rm -f "$filename.idx"
+    rm -f "$filename.ilg"
+    rm -f "$filename.ind"
+    rm -f "$filename.out"
+    rm -f "$filename.toc"
+fi
+\end{minted}
+
+\paragraph{Markdown beziehungsweise Github-MD.}
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{bash}
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "\e[31mBitte geben sie einen Dateinamen ein!\e[0m"
+  else
+    file=$1
+    sudo doconce format pandoc $file --no_abort --github_md
+    filename="${file%%.*}"
+    mv $filename.md README.md
+    echo -e "\e[32mREADME.md erstellt!\e[0m"
+fi
+\end{minted}
+
+% ------------------- end of main content ---------------
+
+% #ifdef PREAMBLE
+\end{document}
+% #endif
+

@@ -1,2 +1,65 @@
-========= Parameter für den doconce-Befehl =========
-_10\%_
+========= Parameter für den `doconce`-Befehl =========
+Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem `doconce`-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
+
+!bc
+--help
+!ec
+
+Durch das Anhängen des Parameters `--help` werden alle Optionen von DocOnce ausgegeben.
+
+!bc
+format X
+!ec
+
+Das Ausgabeformat wird dem Parameter `format` angehängt. X kann hierbei `html, latex, pdflatex, rst, sphinx, plain, gwiki, mwiki, cwiki,
+pandoc, epytext` sein.
+
+!bc
+--debug
+!ec
+
+Erstellt eine Debug-Datei die alle auftretenden Fehler und Zwischenschritte protokoliert.
+
+!bc
+--no_abort
+!ec
+
+Führt die Konvertierung auch dann fort, wenn `doconce` Fehler in der Syntax registriert.
+
+!bc
+--verbose=...
+!ec
+
+Gibt den Fortschritt eines Zwischenschritts aus, wenn erlänger als die festgelegte Zeitspanne (in Sekunden) dauert.
+
+!bc
+--toc_depth=...
+!ec
+
+Gibt die Anzahl der Untergliederungen im Inhaltsverzeichnis an.
+
+!bc
+--encoding=...
+!ec
+
+Gibt die zuverwendete Codierung der Eingabedatei an (z.B. utf-8 oder latin1)
+
+!bc
+--no_title
+!ec
+
+Entfernt Autor, Titel und Datum im fertigen Dokument
+
+!bc
+--device=...
+!ec
+
+Gibt an ob das Dokument für die Ausgabe auf einen Bildschirm oder zum Ausdruck optimiert werden soll. Die wichtigsten Optionen sind *screen*, für die Ausgabe auf Bildschirmen (verkleinert Seitenränder), und *paper*, für den Ausdruck (Links werden als Fußnote ausgegeben).
+
+!bc
+--urlcheck
+!ec
+
+Überprüft die im Dokument verwendeten Links auf Webseiten auf Gültigkeit
+
+Die zur Konvertierung dieses Dokuments, in Latex und Markdown, verwendeten Skripte sind im Anhang beigefügt.

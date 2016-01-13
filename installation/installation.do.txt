@@ -4,6 +4,9 @@ Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgef
 
 Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl `doconce` und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den `doconce`-Befehl’’) gestartet werden.
 
+======= Arch-Linux =======
+Eine Installation unter Arch ist nur bedingt möglich, da viele, in Debian vorhandene Repositories nicht oder nur in den Arch User Repositories (AUR) vorhanden sind. Das Bash-Installationsskript wurde hierfür angepasst. Obwohl manche Abhängigkeiten für DocOnce nicht aufgelöst werden konnten, ist es trotzdem möglich das Programm für die grundlegende Konvertierung in andere Markup-Formate zu verwenden. Spezielle Fehler oder Probleme wurden bei der Konvertierung dieses Dokumentes nicht festgestellt.
+
 ======= Mac OSX =======
 Unter Mac OS ist es notwendig den Paketmanager Anaconda für Python 2.7 zu installieren. Dieser ist unter "URL":"https://www.continuum.io/downloads" zu finden. Außerdem muss für die Umwandlung in das PDF-Format eine TeX-Distribution installiert sein. Sollte diese noch nicht vorhanden sein, kann diese unter "URL":"https://tug.org/mactex/" gefunden werden.
 Sobald diese beiden Pakete installiert sind kann über das Terminal mit dem Befehl

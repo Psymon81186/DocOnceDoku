@@ -1,0 +1,141 @@
+TITLE: DocOnce AUTHOR: Michael Weiß
+AUTHOR: Simon Schäfer DATE: today
+
+
+DocOnce, eine universelle Markup-Sprache 
+Was ist DocOnce 
+Doconce ist eine minimal ausgezeichnete Markup-Sprache, die alle wichtigen Funktionen einer Markup-Sprache bereitstellt und hierbei trotzdem die Anzahl der verwendeten Auszeichnungen möglichst gering hält. Durch die Verwendung von Doconce ist eine Konvertierung der Ausgangs-Datei in viele unterschiedliche Formate (Latex, Markdown, PDF, ...) möglich. Außerdem lässt sich das Ausgabeformat für mehrere Anwendungsbereiche anpassen. Dies funktioniert für analoge Medien, wie B. Bücher, Abschlussarbeiten und wissenschaftliche Berichte, aber auch für digitale Veröffentlichungen, wie B. in Blogs oder auf Wiki-Seiten. Vor- und Nachteile 
+Vorteile 
+ viele Ausgabeformate  geeignet für Autoren die für viele unterschiedliche Medien schreiben  Viele unterschiedliche Designs für das Erstellen von B. html-Dokumenten  Source-Code kann direkt aus Dateien ausgelesen werden  kann auch nur als einfacher Text ausgegeben werden B. für Email oder Code-Dokumentationen
+Nachteile 
+Installation auf Windows nicht möglich erstellte Formate (B.tex) benötigen (stellenweise) händische Überprüfung erbt probleme der Zielformate wie B. automatisches Setzen von Grafiken in LaTex Installation 
+Ubuntu 10 
+Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgeführt werden. Zusätzlich zu den im Original Install-Skript angegebenen Pakete mussten, für die Installation des lxml-Python-Packages, auf Ubuntu 04 noch die development-packages, und installiert werden, da das Compilieren des Package ansonsten fehlschlug.
+
+Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den -Befehl’’) gestartet werden. Syntax 
+DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertieren in verschiedene Markup-Ausgabeformate die Formatierung zu übertragen. Diese Auszeichnungsarten sind zeilenbasierte Auszeichnungen, das sog. Inline-Tagging, Auszeichnungen die im Fließtext vorgenommen werden, und Block-Auszeichnungen. Im folgenden sollen die wichtigsten Auszeichnungen behandelt werden.
+
+Zeilenbasierte Auszeichnungen 
+Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
+
+Die wichtigsten zeilenbasierten Auszeichnungen sind:
+
+
+Befehl Bedeutung 
+--------------l------------------
+ Titel des Dokuments 
+ Autor 
+ Datum (today=aktuelles Datum) 
+ Copyright 
+ Inhaltsverzeichnis 
+ Kapitel Kapitelüberschrift 
+ Abschnitt Abschnitt 
+ Unterabschnitt Unterabschnitt 
+ Unterunterabschnitt Unterunterabschnitt 
+ Pragraph Paragraph 
+ Bild einfügen 
+ Kommentar 
+ Liste 
+ nummerierte Liste 
+ Beschreibungsliste 
+
+
+Die zeilenbasierte Auszeichnung zum Erstellen einer Tabelle nimmt eine Sonderstellung ein. Sie erstreckt sich über mehre Zeilen wie in folgendem Beispiel zu sehen ist:
+
+Durch kleine Buchstaben über den Spalten (hier l) kann die Orientierung der Spalteninhalte festgelegt werden. Möglich sind l(= left), r(= right) und c(= center).
+
+Das oben gezeigte Beispiel ergibt im fertig gerenderten Dokument folgende Tabelle:
+
+
+Beschriftung 1Beschriftung 2
+-------l------
+Eintrag 1 Eintrag 2 
+Eintrag 3 Eintrag 4 
+Eintrag 5 Eintrag 6 
+Eintrag 7 Eintrag 8 
+
+
+Inline-Tagging 
+Das Inline-Tagging wird für das Hervorheben bzw. die spezielle Formatierung von Wörtern im Fließtext verwendet. Das Inline-Tagging umfasst alles von einfachen Formatierungen wie _Fett_ oder Kursiv bis hin zum Verlinken von Websites oder lokalen color{darkblue2}{Dokumenten}.
+
+
+
+Befehl Bedeutung 
+--------------l----------------------------------------------------
+ Kursiv 
+ _Fett_ 
+ color{red}{farbiger Text} 
+` ` 
+ Weblinks 
+ mailto-Links 
+ color{darkblue2}{Link auf lokale Dateien} 
+ ‘‘Zitate’’ 
+ Horizontale Linie 
+ Gedankenstrich(für Zitate) 
+ Kommentar im Fließtext 
+ Zeilenumbruch 
+ Gleichungen (B.) 
+
+
+Block-Auszeichnungen 
+Die dritte Art von Auszeichnungen in DocOnce sind die Block-Auszeichnungen. Die Wichtigsten Vertreter sind der _Formel-Block_ und der _Quellcode-Block_.
+
+Formel-Block.
+
+Der Formel-Block wird verwendet um Mathematische Formeln und Funktionen übersichtlich dar zu stellen. Er wird durch geöffnet und mit wieder geschlossen. Hier ein Beispiel der Formatierung der _Schrödinger Gleichung_ durch einen Formel-Block (Zeilenumbrüche bei Code-Beispiel eingefügt um Übersicht zu verbessern!).
+
+Wird zu:
+
+Zusätzlich werden Gleichungen nach dem Schema (Gleichungsnummer) automatisch durchnummeriert.
+
+Quellcode-Block.
+
+Wie der Formel-Block wird auch der Quellcode-Block durch zwei Auszeichnungen eingeschlossen. Dies sind am Beginn und am Ende. Auch hier ein kurzes Beispiel der Formatierung des klassischen "Hello World"-Programm.
+
+Wird zu:
+
+
+Um das Code-Highlighting zu verwenden kann man hinter Start-Auszeichnung die im Quellcode verwendete Sprache angeben (im Beispiel). Zusätzlich muss der Parameter, als Parameter, dem -Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe Pygments-Homepage) . Ausgabeformate 
+
+Markdown 
+Verwendung von Markdown.
+
+Ausgabeoptionen für Markdown.
+
+Konvertierung von Markdown in weitere Formate.
+
+Rest und Sphinx 
+Verwendung von Rest und Sphinx.
+
+Ausgabeoptionen für Rest und Sphinx.
+
+Konvertierung von Rest und Sphinx in weitere Formate.
+
+LaTex 
+Verwendung von LaTex.
+
+Ausgabeoptionen für LaTex.
+
+Konvertierung von LaTex in weitere Formate.
+
+HTML 
+Verwendung von HTML.
+
+Ausgabeoptionen für HTML.
+
+Konvertierung von HTML in weitere Formate.
+
+Wiki-Formate 
+Verwendung von Wiki-Formaten.
+
+Ausgabeoptionen für Wiki-Formate.
+
+Konvertierung von Wiki-Formaten in weitere Formate.
+
+Parameter für den -Befehl 
+_10\%_
+Fazit 
+_10\%_
+Anhang 
+Setup-Script 
+
