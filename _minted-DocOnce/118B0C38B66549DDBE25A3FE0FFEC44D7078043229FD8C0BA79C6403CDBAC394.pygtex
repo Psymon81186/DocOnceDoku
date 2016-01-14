@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
-doconce format gwiki *Datei* (Googlecode Wiki)
-doconce format mwiki *Datei* (MediaWiki)
-doconce format cwiki *Datei* (Creole Wiki)
-\end{Verbatim}

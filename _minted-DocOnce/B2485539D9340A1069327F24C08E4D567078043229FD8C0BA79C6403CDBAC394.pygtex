@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
-!bc
-public class HelloWorld \PYGZob{}
-   public static void main(String[] args) \PYGZob{}
-      System.out.println(\PYGZdq{}Hello, World\PYGZdq{});
-   \PYGZcb{}
-\PYGZcb{}
-!ec
-\end{Verbatim}

@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
-Terminal\PYGZgt{} doconce format latex DATEINAME
-Terminal\PYGZgt{} doconce ptex2tex DATEINAME
-Terminal\PYGZgt{} doconce replace \PYGZsq{}\PYGZbs{}Verb!\PYGZsq{} \PYGZsq{}\PYGZbs{}verb!\PYGZsq{} DATEINAME.tex
-Terminal\PYGZgt{} pandoc \PYGZhy{}f latex \PYGZhy{}t docx \PYGZhy{}o DATEINAME.docx DATEINAME.tex
-\end{Verbatim}

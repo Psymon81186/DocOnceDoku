@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
-Terminal\PYGZgt{} doconce format pandoc DATEINAME
-Terminal\PYGZgt{} doconce md2html DATEINAME
-\end{Verbatim}
