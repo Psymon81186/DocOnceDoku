@@ -1,4 +1,4 @@
-========= Parameter für den `doconce`-Befehl =========
+========= Parameter für den doconce-Befehl =========
 Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem `doconce`-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
 
 !bc
@@ -11,8 +11,8 @@ Durch das Anhängen des Parameters `--help` werden alle Optionen von DocOnce aus
 format X
 !ec
 
-Das Ausgabeformat wird dem Parameter `format` angehängt. X kann hierbei `html, latex, pdflatex, rst, sphinx, plain, gwiki, mwiki, cwiki,
-pandoc, epytext` sein.
+Das Ausgabeformat wird dem Parameter `format` angehängt. X kann hierbei `html, latex, pdflatex,`
+`rst, sphinx, plain, gwiki, mwiki, cwiki, pandoc, epytext` sein.
 
 !bc
 --debug
