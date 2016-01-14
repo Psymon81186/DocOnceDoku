@@ -6,14 +6,13 @@ _TODO:_
 * [x] Einleitung
 * [x] Installation
 * [x] Syntax
-* [ ] Ausgabe
+* [x] Ausgabe
 * [x] Parameter
-* [ ] Fazit
+* [x] Fazit
 * [x] Anhang
 
 Offen:
-* Text für Ausgabeformate
-* Text Fazit
+
 
 Erledigt:
 * Einleitung
@@ -21,6 +20,8 @@ Erledigt:
 * Struktur des Dokuments
 * Skripte für Ausgabeformate
 * Repository eingerichtet
+* Text für Ausgabeformate
+* Text Fazit
 * Aufteilung der Kapitel
   * Simon
     * Installation Ubuntu
