@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+Terminal\PYGZgt{} rst2html.py DATEINAME.rst \PYGZgt{} DATEINAME.html \PYGZsh{} für HTML
+Terminal\PYGZgt{} rst2latex.py DATEINAME.rst \PYGZgt{} DATEINAME.tex \PYGZsh{} für LaTeX
+Terminal\PYGZgt{} rst2xml.py DATEINAME.rst \PYGZgt{} DATEINAME.xml \PYGZsh{} für XML
+Terminal\PYGZgt{} rst2odt.py DATEINAME.rst \PYGZgt{} DATEINAME.odt \PYGZsh{} für OpenOffice
+\end{Verbatim}

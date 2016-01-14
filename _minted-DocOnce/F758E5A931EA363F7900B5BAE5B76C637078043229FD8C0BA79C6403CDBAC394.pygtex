@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+Terminal\PYGZgt{} pdflatex \PYGZhy{}shell\PYGZhy{}escape DATEINAME
+Terminal\PYGZgt{} pdflatex \PYGZhy{}shell\PYGZhy{}escape DATEINAME
+Terminal\PYGZgt{} makeindex DATEINAME \PYGZsh{} falls es einen Index gibt
+Terminal\PYGZgt{} bibtex DATEINAME    \PYGZsh{} falls es ein Literaturverzeichnis gibt
+Terminal\PYGZgt{} pdflatex \PYGZhy{}shell\PYGZhy{}escape DATEINAME
+\end{Verbatim}

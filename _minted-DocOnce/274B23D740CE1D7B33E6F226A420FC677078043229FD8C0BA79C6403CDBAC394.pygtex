@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+Terminal\PYGZgt{} doconce format pdflatex DATEINAME \PYGZhy{}\PYGZhy{}latex\PYGZus{}code\PYGZus{}style=vrb
+\end{Verbatim}

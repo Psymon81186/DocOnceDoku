@@ -1,0 +1,161 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{}!/bin/bash}
+\PYG{c}{\PYGZsh{} Automatically generated script by deb2sh.py.}
+
+\PYG{c}{\PYGZsh{} The script is based on packages listed in debpkg\PYGZus{}doconce.txt.}
+
+\PYG{n+nb}{set} \PYGZhy{}x  \PYG{c}{\PYGZsh{} make sure each command is printed in the terminal}
+
+\PYG{k}{function} apt\PYGZus{}install \PYG{o}{\PYGZob{}}
+  sudo apt\PYGZhy{}get \PYGZhy{}y install \PYG{n+nv}{\PYGZdl{}1}
+  \PYG{k}{if} \PYG{o}{[} \PYG{n+nv}{\PYGZdl{}?} \PYGZhy{}ne \PYG{l+m}{0} \PYG{o}{]}\PYG{p}{;} \PYG{k}{then}
+    \PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}could not install }\PYG{n+nv}{\PYGZdl{}1}\PYG{l+s+s2}{ \PYGZhy{} abort\PYGZdq{}}
+    \PYG{n+nb}{exit }1
+  \PYG{k}{fi}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k}{function} pip\PYGZus{}install \PYG{o}{\PYGZob{}}
+  sudo pip install \PYGZhy{}\PYGZhy{}upgrade \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}@}\PYG{l+s+s2}{\PYGZdq{}}
+  \PYG{k}{if} \PYG{o}{[} \PYG{n+nv}{\PYGZdl{}?} \PYGZhy{}ne \PYG{l+m}{0} \PYG{o}{]}\PYG{p}{;} \PYG{k}{then}
+    \PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}could not install }\PYG{n+nv}{\PYGZdl{}p}\PYG{l+s+s2}{ \PYGZhy{} abort\PYGZdq{}}
+    \PYG{n+nb}{exit }1
+  \PYG{k}{fi}
+\PYG{o}{\PYGZcb{}}
+
+sudo apt\PYGZhy{}get update \PYGZhy{}\PYGZhy{}fix\PYGZhy{}missing
+
+\PYG{c}{\PYGZsh{} Installation script for doconce and all dependencies}
+
+\PYG{c}{\PYGZsh{} This script is translated from}
+\PYG{c}{\PYGZsh{} doc/src/manual/debpkg\PYGZus{}doconce.txt}
+\PYG{c}{\PYGZsh{} in the doconce source tree, with help of}
+\PYG{c}{\PYGZsh{} vagrantbox/doc/src/vagrant/src\PYGZhy{}vagrant/deb2sh.py}
+\PYG{c}{\PYGZsh{} (git clone git@github.com:hplgit/vagrantbox.git)}
+
+\PYG{c}{\PYGZsh{} Python v2.7 must be installed (doconce does not work with v3.x)}
+\PYG{n+nv}{pyversion}\PYG{o}{=}\PYG{l+s+sb}{`}python \PYGZhy{}c \PYG{l+s+s1}{\PYGZsq{}import sys; print sys.version[:3]\PYGZsq{}}\PYG{l+s+sb}{`}
+\PYG{k}{if} \PYG{o}{[} \PYG{n+nv}{\PYGZdl{}pyversion} !\PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}2.7\PYGZsq{}} \PYG{o}{]}\PYG{p}{;} \PYG{k}{then} \PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}Python v}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{pyversion}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ cannot be used with DocOnce\PYGZdq{}}\PYG{p}{;} \PYG{n+nb}{exit }1\PYG{p}{;} \PYG{k}{fi}
+
+\PYG{c}{\PYGZsh{} Install downloaded source code in subdirectory srclib}
+\PYG{k}{if} \PYG{o}{[} ! \PYGZhy{}d srclib \PYG{o}{]}\PYG{p}{;} \PYG{k}{then} mkdir srclib\PYG{p}{;} \PYG{k}{fi}
+
+\PYG{c}{\PYGZsh{} Version control systems}
+apt\PYGZus{}install mercurial
+apt\PYGZus{}install git
+apt\PYGZus{}install subversion
+
+\PYG{c}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{} Python\PYGZhy{}based packages and tools \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+apt\PYGZus{}install python\PYGZhy{}pip
+apt\PYGZus{}install idle
+apt\PYGZus{}install python\PYGZhy{}dev
+apt\PYGZus{}install python\PYGZhy{}pdftools
+pip\PYGZus{}install ipython \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install tornado \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install pyzmq \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install traitlets \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install pickleshare \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install jsonschema
+\PYG{c}{\PYGZsh{} If problems with IPython.nbformat.v4: clone ipython and run setup.py}
+\PYG{c}{\PYGZsh{} to get the latest version}
+
+\PYG{c}{\PYGZsh{} Preprocessors}
+pip\PYGZus{}install future
+pip\PYGZus{}install mako \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install \PYGZhy{}e git+https://github.com/hplgit/preprocess\PYGZsh{}egg\PYG{o}{=}preprocess \PYGZhy{}\PYGZhy{}upgrade
+
+\PYG{c}{\PYGZsh{} Publish for handling bibliography}
+pip\PYGZus{}install python\PYGZhy{}Levenshtein
+pip\PYGZus{}install lxml
+pip\PYGZus{}install \PYGZhy{}e hg+https://bitbucket.org/logg/publish\PYGZsh{}egg\PYG{o}{=}publish \PYGZhy{}\PYGZhy{}upgrade
+
+\PYG{c}{\PYGZsh{} Sphinx (with additional third/party themes)}
+pip\PYGZus{}install sphinx
+
+pip\PYGZus{}install alabaster \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install sphinx\PYGZus{}rtd\PYGZus{}theme \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install \PYGZhy{}e hg+https://bitbucket.org/ecollins/cloud\PYGZus{}sptheme\PYGZsh{}egg\PYG{o}{=}cloud\PYGZus{}sptheme \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install \PYGZhy{}e git+https://github.com/ryan\PYGZhy{}roemer/sphinx\PYGZhy{}bootstrap\PYGZhy{}theme\PYGZsh{}egg\PYG{o}{=}sphinx\PYGZhy{}bootstrap\PYGZhy{}theme \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install \PYGZhy{}e hg+https://bitbucket.org/miiton/sphinxjp.themes.solarized\PYGZsh{}egg\PYG{o}{=}sphinxjp.themes.solarized \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install \PYGZhy{}e git+https://github.com/shkumagai/sphinxjp.themes.impressjs\PYGZsh{}egg\PYG{o}{=}sphinxjp.themes.impressjs \PYGZhy{}\PYGZhy{}upgrade
+pip\PYGZus{}install \PYGZhy{}e git+https://github.com/kriskda/sphinx\PYGZhy{}sagecell\PYGZsh{}egg\PYG{o}{=}sphinx\PYGZhy{}sagecell \PYGZhy{}\PYGZhy{}upgrade
+
+\PYG{c}{\PYGZsh{} Runestone sphinx books}
+pip\PYGZus{}install sphinxcontrib\PYGZhy{}paverutils
+pip\PYGZus{}install paver
+pip\PYGZus{}install cogapp
+
+\PYG{c}{\PYGZsh{}pip install \PYGZhy{}e git+https://bitbucket.org/sanguineturtle/pygments\PYGZhy{}ipython\PYGZhy{}console\PYGZsh{}egg=pygments\PYGZhy{}ipython\PYGZhy{}console}
+pip\PYGZus{}install \PYGZhy{}e git+https://bitbucket.org/hplbit/pygments\PYGZhy{}ipython\PYGZhy{}console\PYGZsh{}egg\PYG{o}{=}pygments\PYGZhy{}ipython\PYGZhy{}console
+pip\PYGZus{}install \PYGZhy{}e git+https://github.com/hplgit/pygments\PYGZhy{}doconce\PYGZsh{}egg\PYG{o}{=}pygments\PYGZhy{}doconce
+
+\PYG{c}{\PYGZsh{} XHTML}
+pip\PYGZus{}install beautifulsoup4
+pip\PYGZus{}install html5lib
+
+\PYG{c}{\PYGZsh{} ptex2tex is not needed if \PYGZhy{}\PYGZhy{}latex\PYGZus{}code\PYGZus{}style= option is used}
+\PYG{n+nb}{cd }srclib
+svn checkout http://ptex2tex.googlecode.com/svn/trunk/ ptex2tex
+\PYG{n+nb}{cd }ptex2tex
+sudo python setup.py install
+\PYG{n+nb}{cd }latex
+sh cp2texmf.sh
+\PYG{n+nb}{cd} ../../..
+
+\PYG{c}{\PYGZsh{} LaTeX}
+apt\PYGZus{}install texinfo
+apt\PYGZus{}install texlive\PYGZhy{}full
+\PYG{c}{\PYGZsh{}apt\PYGZus{}install texlive\PYGZhy{}extra\PYGZhy{}utils}
+\PYG{c}{\PYGZsh{}apt\PYGZus{}install texlive\PYGZhy{}latex\PYGZhy{}extra}
+\PYG{c}{\PYGZsh{}apt\PYGZus{}install texlive\PYGZhy{}latex\PYGZhy{}recommended}
+\PYG{c}{\PYGZsh{}apt\PYGZus{}install texlive\PYGZhy{}math\PYGZhy{}extra}
+\PYG{c}{\PYGZsh{}apt\PYGZus{}install texlive\PYGZhy{}font\PYGZhy{}utils}
+\PYG{c}{\PYGZsh{}apt\PYGZus{}install texlive\PYGZhy{}humanities}
+apt\PYGZus{}install latexdiff
+apt\PYGZus{}install auctex
+
+\PYG{c}{\PYGZsh{} Image manipulation}
+apt\PYGZus{}install imagemagick
+apt\PYGZus{}install netpbm
+apt\PYGZus{}install mjpegtools
+apt\PYGZus{}install pdftk
+apt\PYGZus{}install giftrans
+apt\PYGZus{}install gv
+apt\PYGZus{}install evince
+apt\PYGZus{}install smpeg\PYGZhy{}plaympeg
+apt\PYGZus{}install mplayer
+apt\PYGZus{}install totem
+apt\PYGZus{}install libav\PYGZhy{}tools
+
+\PYG{c}{\PYGZsh{} Misc}
+apt\PYGZus{}install ispell
+apt\PYGZus{}install pandoc
+apt\PYGZus{}install libreoffice
+apt\PYGZus{}install unoconv
+apt\PYGZus{}install libreoffice\PYGZhy{}dmaths
+\PYG{c}{\PYGZsh{}epydoc is an old\PYGZhy{}fashioned output format, will any doconce user use it?}
+\PYG{c}{\PYGZsh{}pip install \PYGZhy{}e svn+https://epydoc.svn.sourceforge.net/svnroot/epydoc/trunk/epydoc\PYGZsh{}egg=epydoc}
+
+apt\PYGZus{}install curl
+apt\PYGZus{}install a2ps
+apt\PYGZus{}install wdiff
+apt\PYGZus{}install meld
+apt\PYGZus{}install diffpdf
+apt\PYGZus{}install kdiff3
+apt\PYGZus{}install diffuse
+
+\PYG{c}{\PYGZsh{} tkdiff.tcl:}
+\PYG{c}{\PYGZsh{}tcl8.5\PYGZhy{}dev tk8.5\PYGZhy{}dev blt\PYGZhy{}dev}
+\PYG{c}{\PYGZsh{}https://sourceforge.net/projects/tkdiff/}
+
+\PYG{c}{\PYGZsh{} example on installing mdframed.sty manually (it exists in texlive,}
+\PYG{c}{\PYGZsh{} but sometimes needs to be in its newest version)}
+git clone https://github.com/marcodaniel/mdframed
+\PYG{k}{if} \PYG{o}{[} \PYGZhy{}d mdframed \PYG{o}{]}\PYG{p}{;} \PYG{k}{then} \PYG{n+nb}{cd }mdframed\PYG{p}{;} make localinstall\PYG{p}{;} \PYG{n+nb}{cd} ..\PYG{p}{;} \PYG{k}{fi}
+\PYG{c}{\PYGZsh{}\PYGZdl{} echo \PYGZdq{}remove the mdframe directory (if successful install of mdframed.sty): rm \PYGZhy{}rf mdframed\PYGZdq{}}
+
+\PYG{c}{\PYGZsh{} DocOnce itself}
+\PYG{n+nb}{cd }srclib
+git clone https://github.com/hplgit/doconce.git
+\PYG{k}{if} \PYG{o}{[} \PYGZhy{}d doconce \PYG{o}{]}\PYG{p}{;} \PYG{k}{then} \PYG{n+nb}{cd }doconce\PYG{p}{;} sudo python setup.py install\PYG{p}{;} \PYG{n+nb}{cd} ../..\PYG{p}{;} \PYG{k}{fi}
+\PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}Everything is successfully installed!\PYGZdq{}}
+\end{Verbatim}

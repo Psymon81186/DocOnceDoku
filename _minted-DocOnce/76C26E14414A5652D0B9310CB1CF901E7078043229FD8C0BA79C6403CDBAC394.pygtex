@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+Terminal\PYGZgt{} doconce format rst DATEINAME.do.txt
+\end{Verbatim}

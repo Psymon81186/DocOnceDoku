@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{}!/bin/bash}
+
+\PYG{k}{if} \PYG{o}{[} \PYG{n+nv}{\PYGZdl{}\PYGZsh{} }\PYGZhy{}eq \PYG{l+m}{0} \PYG{o}{]}
+  \PYG{k}{then}
+    \PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[31mBitte geben sie einen Dateinamen ein!\PYGZbs{}e[0m\PYGZdq{}}
+    \PYG{k}{else}
+    \PYG{n+nv}{file}\PYG{o}{=}\PYG{n+nv}{\PYGZdl{}1}
+    sudo doconce format pdflatex \PYG{n+nv}{\PYGZdl{}file} \PYGZhy{}\PYGZhy{}latex\PYGZus{}packages\PYG{o}{=}minted,ngerman,parskip \PYGZhy{}\PYGZhy{}latex\PYGZus{}font\PYG{o}{=}helvetica \PYGZhy{}\PYGZhy{}latex\PYGZus{}code\PYGZus{}style\PYG{o}{=}pyg \PYGZhy{}\PYGZhy{}latex\PYGZus{}papersize\PYG{o}{=}a4 \PYGZhy{}\PYGZhy{}latex\PYGZus{}title\PYGZus{}layout\PYG{o}{=}titlepage \PYGZhy{}\PYGZhy{}minted\PYGZus{}latex\PYGZus{}style\PYG{o}{=}autumn \PYGZhy{}\PYGZhy{}toc\PYGZus{}depth\PYG{o}{=}\PYG{l+m}{1} \PYGZhy{}\PYGZhy{}no\PYGZus{}abort
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mLaTex File erstellt!\PYGZbs{}e[0m\PYGZdq{}}
+    \PYG{n+nv}{filename}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{file}\PYG{p}{\PYGZpc{}\PYGZpc{}.*}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}
+    \PYG{n+nb}{echo} \PYG{n+nv}{\PYGZdl{}filename}
+    \PYG{n+nv}{filetex}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.tex\PYGZdq{}}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mBeginne PDF\PYGZhy{}Erstellung\PYGZbs{}e[0m\PYGZdq{}}
+    sudo pdflatex \PYGZhy{}interaction\PYG{o}{=}batchmode \PYGZhy{}shell\PYGZhy{}escape \PYG{n+nv}{\PYGZdl{}filetex}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mSchritt1: pdfLatex\PYGZbs{}e[0m\PYGZdq{}}
+    sudo pdflatex \PYGZhy{}interaction\PYG{o}{=}batchmode \PYGZhy{}shell\PYGZhy{}escape \PYG{n+nv}{\PYGZdl{}filetex}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mSchritt2: pdfLatex\PYGZbs{}e[0m\PYGZdq{}}
+    sudo pdflatex \PYGZhy{}interaction\PYG{o}{=}batchmode \PYGZhy{}shell\PYGZhy{}escape \PYG{n+nv}{\PYGZdl{}filetex}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mSchritt3: makeindex\PYGZbs{}e[0m\PYGZdq{}}
+    sudo makeindex \PYG{n+nv}{\PYGZdl{}filetex}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mSchritt4: bibtex\PYGZbs{}e[0m\PYGZdq{}}
+    sudo bibtex \PYG{n+nv}{\PYGZdl{}filetex}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mSchritt5: pdfLatex\PYGZbs{}e[0m\PYGZdq{}}
+    sudo pdflatex \PYGZhy{}interaction\PYG{o}{=}batchmode \PYGZhy{}shell\PYGZhy{}escape \PYG{n+nv}{\PYGZdl{}filetex}
+    \PYG{n+nb}{echo} \PYGZhy{}e \PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}e[32mPDF erstellt!\PYGZbs{}e[0m\PYGZdq{}}
+    rm \PYGZhy{}f \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.aux\PYGZdq{}}
+    rm \PYGZhy{}f \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.idx\PYGZdq{}}
+    rm \PYGZhy{}f \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.ilg\PYGZdq{}}
+    rm \PYGZhy{}f \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.ind\PYGZdq{}}
+    rm \PYGZhy{}f \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.out\PYGZdq{}}
+    rm \PYGZhy{}f \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}filename}\PYG{l+s+s2}{.toc\PYGZdq{}}
+\PYG{k}{fi}
+\end{Verbatim}
