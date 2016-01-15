@@ -1,0 +1,924 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="DocOnce">
+
+<title>DocOnce</title>
+
+
+<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<style type="text/css">
+/* solarized style */
+body {
+  margin:5;
+  padding:0;
+  border:0; /* Remove the border around the viewport in old versions of IE */
+  width:100%;
+  background: #fdf6e3;
+  min-width:600px;	/* Minimum width of layout - remove if not required */
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.0em;
+  line-height: 1.3em;
+  color: #657b83;
+}
+a { color: #859900; text-decoration: underline; }
+a:hover, a:active { outline:none }
+a, a:active, a:visited { color: #859900; }
+a:hover { color: #268bd2; }
+h1, h2, h3 { margin:.8em 0 .2em 0; padding:0; line-height: 125%; }
+h2 { font-variant: small-caps; }
+tt, code { font-family: monospace, sans-serif; box-shadow: none; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; }
+p { text-indent: 0px; }
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa; }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 0,
+ 'sections': [(u' DocOnce, eine universelle Markup-Sprache ',
+               0,
+               None,
+               '___sec0'),
+              (u' Was ist DocOnce ', 1, None, '___sec1'),
+              (u' Vor- und Nachteile ', 1, None, '___sec2'),
+              (u' Vorteile ', 2, None, '___sec3'),
+              (u' Nachteile ', 2, None, '___sec4'),
+              (u' Installation ', 0, None, '___sec5'),
+              (u' Ubuntu 15.04/15.10 ', 1, None, '___sec6'),
+              (u' Arch-Linux ', 1, None, '___sec7'),
+              (u' Mac OSX ', 1, None, '___sec8'),
+              (u' Syntax ', 0, None, '___sec9'),
+              (u' Zeilenbasierte Auszeichnungen ', 1, None, '___sec10'),
+              (u' Inline-Tagging ', 1, None, '___sec11'),
+              (u' Block-Auszeichnungen ', 1, None, '___sec12'),
+              (u' Ausgabeformate ', 0, None, '___sec13'),
+              (u' Markdown ', 1, None, '___sec14'),
+              (u' reStructuredText ', 1, None, '___sec15'),
+              (u' LaTeX ', 1, None, '___sec16'),
+              (u' Konvertierung in LaTeX ', 2, None, '___sec17'),
+              (u' Konvertierung von LaTeX in PDF ', 2, None, '___sec18'),
+              (u' HTML ', 1, None, '___sec19'),
+              (u' Wiki-Formate ', 1, None, '___sec20'),
+              (u' Parameter f\xfcr den doconce-Befehl ', 0, None, '___sec21'),
+              (u' Fazit ', 0, None, '___sec22'),
+              (u' Simon ', 1, None, '___sec23'),
+              (u' Michael ', 1, None, '___sec24'),
+              (u' Anhang ', 0, None, '___sec25'),
+              (u' Setup-Skript ', 1, None, '___sec26'),
+              (u' Skripte f\xfcr die Ausgabe in Latex und Markdown ',
+               1,
+               None,
+               '___sec27')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+
+
+<center><h1>DocOnce</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Michael Weiß, and Simon Schäfer -->
+
+<center>
+<b>Michael Weiß</b> 
+</center>
+
+<center>
+<b>Simon Schäfer</b> 
+</center>
+
+<p>
+<!-- institution(s) -->
+<p>
+<center><h4>Jan 14, 2016</h4></center> <!-- date -->
+
+<h2>Table of contents</h2>
+
+<p>
+<a href="#___sec0"> DocOnce, eine universelle Markup-Sprache </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec1"> Was ist DocOnce </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec2"> Vor- und Nachteile </a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec3"> Vorteile </a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec4"> Nachteile </a><br>
+<a href="#___sec5"> Installation </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec6"> Ubuntu 15.04/15.10 </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec7"> Arch-Linux </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec8"> Mac OSX </a><br>
+<a href="#___sec9"> Syntax </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec10"> Zeilenbasierte Auszeichnungen </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec11"> Inline-Tagging </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec12"> Block-Auszeichnungen </a><br>
+<a href="#___sec13"> Ausgabeformate </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec14"> Markdown </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec15"> reStructuredText </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec16"> LaTeX </a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec17"> Konvertierung in LaTeX </a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec18"> Konvertierung von LaTeX in PDF </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec19"> HTML </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec20"> Wiki-Formate </a><br>
+<a href="#___sec21"> Parameter für den doconce-Befehl </a><br>
+<a href="#___sec22"> Fazit </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec23"> Simon </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec24"> Michael </a><br>
+<a href="#___sec25"> Anhang </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec26"> Setup-Skript </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec27"> Skripte für die Ausgabe in Latex und Markdown </a><br>
+</p>
+
+<h1 id="___sec0">DocOnce, eine universelle Markup-Sprache </h1> <hr>
+
+<h1 id="___sec1">Was ist DocOnce </h1>
+Doconce ist eine minimal ausgezeichnete Markup-Sprache, die alle wichtigen Funktionen einer Markup-Sprache bereitstellt und hierbei trotzdem die Anzahl der verwendeten Auszeichnungen möglichst gering hält. Durch die Verwendung von Doconce ist eine Konvertierung der Ausgangsdatei in viele unterschiedliche Formate (Latex, Markdown, PDF, ...) möglich. Außerdem lässt sich das Ausgabeformat für mehrere Anwendungsbereiche anpassen. Dies funktioniert für analoge Medien, wie z.B. Bücher, Abschlussarbeiten und wissenschaftliche Berichte, aber auch für digitale Veröffentlichungen, wie z.B. in Blogs oder auf Wiki-Seiten.
+
+<h1 id="___sec2">Vor- und Nachteile </h1>
+
+<h2 id="___sec3">Vorteile </h2>
+
+<ul>
+<li> viele Ausgabeformate</li>
+<li> geeignet für Autoren die für viele unterschiedliche Medien schreiben</li>
+<li> Viele unterschiedliche Designs für das Erstellen von z.B. html-Dokumenten</li>
+<li> Source-Code kann direkt aus Dateien ausgelesen werden</li>
+<li> kann auch nur als einfacher Text ausgegeben werden z.B. für Email oder Code-Dokumentationen]</li>
+</ul>
+
+<h2 id="___sec4">Nachteile </h2>
+
+<ul>
+ <li> Installation auf Windows nicht möglich</li>
+ <li> erstellte Formate (z.B. .tex) benötigen (stellenweise) händische Überprüfung</li>
+ <li> erbt probleme der Zielformate wie z.B. automatisches Setzen von Grafiken in LaTex</li>
+</ul>
+
+<h1 id="___sec5">Installation </h1> <hr>
+
+<h1 id="___sec6">Ubuntu 15.04/15.10 </h1>
+Die Installation unter Ubuntu kann durch ein Bash-Skript (siehe Anhang) durchgeführt werden. Zusätzlich zu den im Original Install-Skript angegebenen Pakete mussten, für die Installation des lxml-Python-Packages, auf Ubuntu 15.04 noch die development-packages  <code>libxml2-dev</code>, <code>libxslt1-dev</code> und <code>python-dev</code> installiert werden, da das Compilieren des Package ansonsten fehlschlug.
+
+<p>
+Nach der Installation kann DocOnce direkt im Terminal mit dem Befehl <code>doconce</code> und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den <code>doconce</code>-Befehl’’) gestartet werden.
+
+<h1 id="___sec7">Arch-Linux </h1>
+Eine Installation unter Arch ist nur bedingt möglich, da viele, in Debian vorhandene Repositories nicht oder nur in den Arch User Repositories (AUR) vorhanden sind. Das Bash-Installationsskript wurde hierfür angepasst. Obwohl manche Abhängigkeiten für DocOnce nicht aufgelöst werden konnten, ist es trotzdem möglich das Programm für die grundlegende Konvertierung in andere Markup-Formate zu verwenden. Spezielle Fehler oder Probleme wurden bei der Konvertierung dieses Dokumentes nicht festgestellt.
+
+<h1 id="___sec8">Mac OSX </h1>
+Unter Mac OS ist es notwendig den Paketmanager Anaconda für Python 2.7 zu installieren. Dieser ist unter <a href="https://www.continuum.io/downloads" target="_self"><tt>https://www.continuum.io/downloads</tt></a> zu finden. Außerdem muss für die Umwandlung in das PDF-Format eine TeX-Distribution installiert sein. Sollte diese noch nicht vorhanden sein, kann diese unter <a href="https://tug.org/mactex/" target="_self"><tt>https://tug.org/mactex/</tt></a> gefunden werden.
+Sobald diese beiden Pakete installiert sind kann über das Terminal mit dem Befehl
+<!-- begin verbatim block -->
+<pre><code>conda install --channel johannr doconce
+</code></pre>
+<!-- end verbatim block -->
+das DocOnce Paket installiert werden.
+
+<p>
+Wenn mit Pandoc Markdown gearbeitet werden soll, muss auch noch dieses Paket gesondert installiert werden, welches unter <a href="http://pandoc.org/installing.html" target="_self"><tt>http://pandoc.org/installing.html</tt></a> gefunden werden kann. Das Paket wird benötigt um beispielsweise in das <code>docx</code>-Format von Microsoft Office zu konvertieren.
+
+<p>
+Ebenso wie unter Ubuntu kann DocOnce nun direkt im Terminal mit dem Befehl <code>doconce</code> und verschiedenen Parametern(siehe Kapitel 5 ‘‘Parameter für den <code>doconce</code>-Befehl’’) gestartet werden.
+
+<h1 id="___sec9">Syntax </h1> <hr>
+DocOnce verwendet drei grundlegende Arten von Auszeichnungen um beim konvertieren in verschiedene Markup-Ausgabeformate die Formatierung zu übertragen. Diese Auszeichnungsarten sind  <em>zeilenbasierte Auszeichnungen</em>, das sog. <em>Inline-Tagging</em>, Auszeichnungen die im Fließtext vorgenommen werden, und <em>Block-Auszeichnungen</em>. Im folgenden sollen die wichtigsten Auszeichnungen behandelt werden.
+
+<h1 id="___sec10">Zeilenbasierte Auszeichnungen </h1>
+Zeilenbasierte Auszeichnungen sind Auszeichnungen, die durch ein bestimmtes Schlüsselwort am Anfang der Zeile eingeleitet werden und dessen Inhalt bis zum Abschluss der Zeile anhalten.
+
+<p>
+Die wichtigsten zeilenbasierten Auszeichnungen sind:
+<table border="1">
+<thead>
+<tr><th align="center">                            Befehl                            </th> <th align="center">          Bedeutung          </th> </tr>
+</thead>
+<tbody>
+<tr><td align="left">   <code>TITLE:</code>                                               </td> <td align="left">   Titel des Dokuments              </td> </tr>
+<tr><td align="left">   <code>AUTHOR:</code>                                              </td> <td align="left">   Autor                            </td> </tr>
+<tr><td align="left">   <code>DATE:</code>                                                </td> <td align="left">   Datum (today=aktuelles Datum)    </td> </tr>
+<tr><td align="left">   <code>{copyright,year1-year2|license}</code>                      </td> <td align="left">   Copyright                        </td> </tr>
+<tr><td align="left">   <code>TOC:</code>                                                 </td> <td align="left">   Inhaltsverzeichnis               </td> </tr>
+<tr><td align="left">   <code>=========</code> <em>Kapitel</em> <code>=========</code>    </td> <td align="left">   Kapitelüberschrift               </td> </tr>
+<tr><td align="left">   <code>=======</code> <em>Abschnitt</em> <code>=======</code>      </td> <td align="left">   Abschnitt                        </td> </tr>
+<tr><td align="left">   <code>=====</code> <em>Unterabschnitt</em> <code>=====</code>     </td> <td align="left">   Unterabschnitt                   </td> </tr>
+<tr><td align="left">   <code>===</code> <em>Unterunterabschnitt</em> <code>===</code>    </td> <td align="left">   Unterunterabschnitt              </td> </tr>
+<tr><td align="left">   <code>__</code> <em>Pragraph</em> <code>__</code>                 </td> <td align="left">   Paragraph                        </td> </tr>
+<tr><td align="left">   <code>FIGURE:[Datei, width= frac=] Unterschrift</code>            </td> <td align="left">   Bild einfügen                    </td> </tr>
+<tr><td align="left">   <code>#</code>                                                    </td> <td align="left">   Kommentar                        </td> </tr>
+<tr><td align="left">   <code>*</code>                                                    </td> <td align="left">   Liste                            </td> </tr>
+<tr><td align="left">   <code>o</code>                                                    </td> <td align="left">   nummerierte Liste                </td> </tr>
+<tr><td align="left">   <code>- Wort: Erklärung</code>                                    </td> <td align="left">   Beschreibungsliste               </td> </tr>
+</tbody>
+</table>
+<p>
+Die zeilenbasierte Auszeichnung zum Erstellen einer Tabelle nimmt eine Sonderstellung ein . Sie erstreckt sich über mehre Zeilen wie in folgendem Beispiel zu sehen ist:
+<!-- begin verbatim block -->
+<pre><code>
+|----l-----------------l------|
+|Beschriftung 1|Beschriftung 2|
+|----l---------|-------l------|
+|Eintrag 1     |Eintrag 2     |
+|Eintrag 3     |Eintrag 4     |
+|Eintrag 5     |Eintrag 6     |
+|Eintrag 7     |Eintrag 8     |
+|-----------------------------|
+
+</code></pre>
+<!-- end verbatim block -->
+Durch kleine Buchstaben über den Spalten (hier <em>l</em>) kann die Orientierung der Spalteninhalte festgelegt werden. Möglich sind l(= <em>left</em>), r(= <em>right</em>) und c(= <em>center</em>).<br />
+<br />
+Das oben gezeigte Beispiel ergibt im fertig gerenderten Dokument folgende Tabelle:
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="left">Beschriftung 1</th> <th align="left">Beschriftung 2</th> </tr>
+</thead>
+<tbody>
+<tr><td align="left">   Eintrag 1         </td> <td align="left">   Eintrag 2         </td> </tr>
+<tr><td align="left">   Eintrag 3         </td> <td align="left">   Eintrag 4         </td> </tr>
+<tr><td align="left">   Eintrag 5         </td> <td align="left">   Eintrag 6         </td> </tr>
+<tr><td align="left">   Eintrag 7         </td> <td align="left">   Eintrag 8         </td> </tr>
+</tbody>
+</table>
+
+<h1 id="___sec11">Inline-Tagging </h1>
+Das Inline-Tagging wird für das Hervorheben bzw. die spezielle Formatierung von Wörtern im Fließtext verwendet. Das Inline-Tagging umfasst alles von einfachen Formatierungen wie <b>Fett</b> oder <em>Kursiv</em> bis hin zum Verlinken von <a href="https://github.com/hplgit/doconce" target="_self">Websites</a> oder lokalen "<font color="darkblue2<a href="tools/manual.pdf" target="_self">>Dokumenten</font></a>.
+<br />
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">                             Befehl                             </th> <th align="center">                                              Bedeutung                                              </th> </tr>
+</thead>
+<tbody>
+<tr><td align="left">   <code>*Text*</code>                                                 </td> <td align="left">   <em>Kursiv</em>                                                                                          </td> </tr>
+<tr><td align="left">   <code>_Fett_</code>                                                 </td> <td align="left">   <b>Fett</b>                                                                                              </td> </tr>
+<tr><td align="left">   <code>&lt;font color=&quot;red&quot;&gt;Text&lt;/font&gt;</code>    </td> <td align="left">   <font color="red">farbiger Text</font>                                                                   </td> </tr>
+<tr><td align="left">   ` <code>Code</code> `                                               </td> <td align="left">   <code>Quellcode</code>                                                                                   </td> </tr>
+<tr><td align="left">   <code>''Google'': ''URL''</code>                                    </td> <td align="left">   <a href="http://google.com" target="_self">Weblinks</a>                                                  </td> </tr>
+<tr><td align="left">   <code>''mailto'': ''mailto:Email'' </code>                          </td> <td align="left">   <a href="mailto:simon81186@aol.com" target="_self">mailto-Links</a>                                      </td> </tr>
+<tr><td align="left">   <code>''Dokument'': ''/Pfad/zu/Dokument'' </code>                   </td> <td align="left">   "<font color="darkblue2<a href="/tools/manual.pdf" target="_self">>Link auf lokale Dateien</font></a>    </td> </tr>
+<tr><td align="left">   <code>‘‘Zitat’’</code>                                              </td> <td align="left">   ‘‘Zitate’’                                                                                               </td> </tr>
+<tr><td align="left">   <code>----</code>                                                   </td> <td align="left">   Horizontale Linie                                                                                        </td> </tr>
+<tr><td align="left">   <code>*Zitat*----Vorname Nachname</code>                            </td> <td align="left">   Gedankenstrich(für Zitate)                                                                               </td> </tr>
+<tr><td align="left">   <code>[Name:Kommentar ]</code>                                      </td> <td align="left">   Kommentar im Fließtext                                                                                   </td> </tr>
+<tr><td align="left">   <code>&lt;linebreak&gt;</code>                                      </td> <td align="left">   Zeilenumbruch                                                                                            </td> </tr>
+<tr><td align="left">   <code>$Gleichung$</code>                                            </td> <td align="left">   Gleichungen (z.B.: \( a^2 + b^2 = c^2 \))                                                                </td> </tr>
+</tbody>
+</table>
+
+<h1 id="___sec12">Block-Auszeichnungen </h1>
+Die dritte Art von Auszeichnungen in DocOnce sind die Block-Auszeichnungen. Die Wichtigsten Vertreter sind der <b>Formel-Block</b> und der <b>Quellcode-Block</b>.
+
+<p>
+<b>Formel-Block.</b>
+Der Formel-Block wird verwendet um Mathematische Formeln und Funktionen übersichtlich dar zu stellen. Er wird durch <code>!bt</code> geöffnet und mit <code>!et</code> wieder geschlossen. Hier ein Beispiel der Formatierung der <b>Schrödinger Gleichung</b> durch einen Formel-Block (Zeilenumbrüche bei Code-Beispiel eingefügt um Übersicht zu verbessern!).
+<!-- begin verbatim block -->
+<pre><code>!bt
+\begin{align}
+\frac{\partial^2 \Psi(x,y,z)}{\partial x\partial x}
++ \frac{\partial^2 \Psi(x,y,z)}{\partial y\partial y}
++ \frac{\partial^2 \Psi(x,y,z)}{\partial z\partial z}
+= -c (E-E_{pot}(x))\Psi(x) \quad \textrm{mit} \qquad c=\frac{8\pi^2m}{h^2}
+\end{align}
+!et
+</code></pre>
+<!-- end verbatim block -->
+Wird zu:
+$$
+\begin{align}
+\frac{\partial^2 \Psi(x,y,z)}{\partial x\partial x} + \frac{\partial^2 \Psi(x,y,z)}{\partial y\partial y} + \frac{\partial^2 \Psi(x,y,z)}{\partial z\partial z} = -c (E-E_{pot}(x))\Psi(x) \quad \textrm{mit} \qquad c=\frac{8\pi^2m}{h^2}
+\end{align}
+$$
+
+Zusätzlich werden Gleichungen nach dem Schema <em>(Kapitelnummer.Gleichungsnummer)</em> automatisch durchnummeriert.
+
+<p>
+<b>Quellcode-Block.</b>
+Wie der Formel-Block wird auch der Quellcode-Block durch zwei Auszeichnungen eingeschlossen. Dies sind am Beginn <code>!bc</code> und am Ende <code>!ec</code>. Auch hier ein kurzes Beispiel der Formatierung des klassischen "Hello World"-Programm.
+<!-- begin verbatim block -->
+<pre><code>!bc
+public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.println(&quot;Hello, World&quot;);
+   }
+}
+!ec
+</code></pre>
+<!-- end verbatim block -->
+Wird zu:
+<!-- begin verbatim block  java-->
+<pre><code>public class HelloWorld {
+   public static void main(String[] args) {
+      System.out.println(&quot;Hello, World&quot;);
+   }
+}
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Um das Code-Highlighting zu verwenden kann man hinter der Start-Auszeichnung <code>!bc</code> die im Quellcode verwendete Sprache angeben (im Beispiel <code>!bc java</code>). Zusätzlich muss der Parameter <code>--latex_code_style=pyg</code>, als Parameter, dem <code>doconce</code>-Befehl übergeben werden. DocOnce nutzt für das Code Highlighting das Paket <code>python-pygments</code>. Python-pygments unterstütz viele unterschiedliche Sprachen zum Hervorheben von Quellcode(siehe <a href="http://pygments.org/docs/cmdline/#getting-lexer-names" target="_self">Pygments-Homepage</a>) .
+
+<h1 id="___sec13">Ausgabeformate </h1> <hr>
+
+<h1 id="___sec14">Markdown </h1>
+DocOnce lässt eine Konvertierung in viele Unterarten des Markdown zu und aus diesen lässt sich auch noch in viele andere Formate konvertieren.
+<b> Verwendung von Markdown.</b>
+Die Konvertierung in Markdown erfolgt standardmäßig in das Pandoc-extended Markdown Format
+<!-- begin verbatim block -->
+<pre><code>doconce format pandoc DATEINAME
+</code></pre>
+<!-- end verbatim block -->
+Die Ausgabe erfolt in einer <code>DATEINAME.md</code> Datei. Die unterstützten Markdown Dialekte sind:
+
+<ul>
+<li> Pandoc-extended Markdown</li>
+<li> GitHub-flavored Markdown</li>
+<li> MultiMarkdown</li>
+<li> Strict Markdown</li>
+</ul>
+
+Über das Pandoc Markdown lässt sich beispielsweise in <code>latex</code>, <code>html</code>, <code>odt</code> (OpenOffice), <code>docx</code> (Microsoft Word) und <code>rtf</code> umwandeln.
+<b> Ausgabeoptionen für Markdown.</b>
+Mithilfe von Kommandozeilenparametern lässt sich der Markdown Dialekt spezifizieren:
+
+<ul>
+<li> <code>--github_md</code>: Erzeugt ein GitHub-flavored Markdown File, welches Task-Listen unterstützt (unnummerierte Liste mit [x] (Task erledigt) und [ ] (Task noch zu erledigen))</li>
+<li> <code>--multimarkdown_output</code>: Erzeugt eine MultiMarkdown Version des Dokumentes</li>
+<li> <code>--strict_markdown_output</code>: Erzeugt ein einfaches oder striktes Markdown File ohne viele der Erweiterungen, die Pandoc akzeptiert.</li>
+</ul>
+
+<b> Konvertierung von Markdown in HTML.</b>
+Die HTML Ausgabe von <code>pandoc</code> benötigt einige Anpassungen um eine vollständige Unterstützung von MathJax LaTeX Mathematik anzubieten und aus diesem Grund wird empfohlen den <code>doconce md2html</code> Befehl zu nutzen:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; doconce format pandoc DATEINAME
+Terminal&gt; doconce md2html DATEINAME
+</code></pre>
+<!-- end verbatim block -->
+Die resultierende <code>DATEINAME.html</code> Datei kann mit einem Browser geöffnet werden.
+
+<p>
+<b> Verwendung von Pandoc um von LaTeX in MS Word zu konvertieren.</b>
+Pandoc ist nützlich um von LaTeX Mathematik in beispielsweise HTML oder MS Word umzuwandeln. Hierfür gibt es zwei Wege, welche beide ausporbiert werden sollten, um das beste Ergebnis für ein spezielles Dokument zu erreichen: <code>doconce format pandoc</code> gefolgt von <code>doconce md2latex</code> (führt <code>pandoc</code> aus), oder <code>doconce format latex</code>. Die resultierenden .tex Dateien können dann mithilfe von <code>pandoc</code> in das gewünschte Format konvertiert werden. Hier ein Beispiel der zweiten Möglichkeit:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; doconce format latex DATEINAME
+Terminal&gt; doconce ptex2tex DATEINAME
+Terminal&gt; doconce replace '\Verb!' '\verb!' DATEINAME.tex
+Terminal&gt; pandoc -f latex -t docx -o DATEINAME.docx DATEINAME.tex
+</code></pre>
+<!-- end verbatim block -->
+Beachten Sie, dass DocOnce das <code>Verb</code> Makro des <code>fancyvrb</code> Paketes verwendet währen <code>pandoc</code> nur das standard <code>verb</code> Konstrukt versteht. Desweiteren wären einige weitere Aufrufe von <code>doconce replace</code> bzw. <code>doconce subst</code> nötig um Formeln vollständig richtig in ein MS Word Dokument zu konvertieren.
+
+<h1 id="___sec15">reStructuredText </h1>
+Die Verwendung von reStructuredText ermöglicht es in viele verschiedene Ausgabeformate zu konvertieren. Zuerst wandeln wir das DocOnce Dokument in eine reStructuredText Datei um:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; doconce format rst DATEINAME.do.txt
+</code></pre>
+<!-- end verbatim block -->
+Daraus können nun verschiedene andere Formate erstellt werden:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; rst2html.py DATEINAME.rst &gt; DATEINAME.html # für HTML
+Terminal&gt; rst2latex.py DATEINAME.rst &gt; DATEINAME.tex # für LaTeX
+Terminal&gt; rst2xml.py DATEINAME.rst &gt; DATEINAME.xml # für XML
+Terminal&gt; rst2odt.py DATEINAME.rst &gt; DATEINAME.odt # für OpenOffice
+</code></pre>
+<!-- end verbatim block -->
+Das OpenOffice File könnte nun mit OpenOffice geöffnet werden und beispielsweise in das RTF Format oder das Microsoft Word Format konvertiert werden.
+Unter Ubuntu gibt es zusätzlich die Möglichkeit mit dem Befehl <code>unoconv</code> in der Kommandozeile zwischen den von OpenOffice unterstützten Formaten zu konvertieren. Der Befehl <code>unoconv --show</code> zeigt alle unterstützten Formate an.
+<b> Anmerkung zu Mathematischen Formeln.</b>
+Zur Zeit gibt es keinen einfachen Weg LaTeX Mathematik über das DocOnce Format zu reST bzw. OpenOffice zu konvertieren. Formeln werden nur vollständig von <code>latex</code> unterstützt.
+
+<p>
+<!-- ======= Sphinx ======= -->
+<!-- __ Verwendung von Sphinx.__ -->
+<!-- __ Ausgabeoptionen für Sphinx.__ -->
+<!-- __ Konvertierung von Sphinx in weitere Formate.__ -->
+
+<h1 id="___sec16">LaTeX </h1>
+Für die Umwandlung eines DocOnce Dokumentes in ein LaTeX File gibt es generell zwei verschiedene Möglichkeiten:
+
+<ol>
+<li> direkte Übersetzung in ein <code>.tex</code> File</li>
+<li> Übersetzung in ein <code>.p.tex</code> File</li>
+</ol>
+
+Im zweiten Fall muss noch das Programm <code>ptex2tex</code> oder das vereinfachte <code>doconce ptex2tex</code> verwendet werden um die <code>.p.tex</code> Datei in eine einfache <code>.tex</code> Datei zu konvertieren. Dieser Schritt beinhaltet die Spezifikation, wie Blöcke aus Verbatim Code gesetzt werden sollen. Vor 2015 hat DocOnce immer standardmäßig in eine <code>.p.tex</code> Datei übersetzt und diesen zweiten Schritt erfordert. Nun gibt es eine direkte Übersetzung, welche nicht nur einfacher sondern auch noch vielseitiger ist. Deshalb wird der Einfachheit halber nur auf die direkte Übersetzung eingegangen.
+
+<h2 id="___sec17">Konvertierung in LaTeX </h2>
+Das DocOnce Dokument kann direkt in ein gültiges LaTeX File konvertiert werden, indem der <code>--latex_code_style=</code> Parameter verwendet wird:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; doconce format pdflatex DATEINAME --latex_code_style=vrb
+</code></pre>
+<!-- end verbatim block -->
+Ohne den <code>--latex_code_style</code> Parameter wird nur ein <code>.p.tex</code> File ausgegeben, welches noch mit <code>ptex2tex</code> bzw. <code>doconce ptex2tex</code> weiterbearbeitet werden muss.
+<b> Ausgabe für Druck bzw. Bildschirm.</b>
+Die Option <code>--device=paper</code> verändert einige Parameter der Datei für Dokumente, welche für den Druck gedacht sind. Zum Beispiel werden Links für Web Ressourcen mit einer Fußnote und der kompletten URL verknüpft. Der Standardwert <code>--device=screen</code> erstellt ein PDF für das Lesen auf einem Bildschirm mit klickbaren Links.
+<b> Einige Kommandozeilenparameter.</b>
+Es gibt sehr viele zusätzliche Optionen für die Umwandlung in LaTeX Code (die komplette Liste wird ausgegeben auf den Befehl <code>doconce format --help</code>):
+
+<ul>
+<li> <code>--latex_code_style=lst,vrb,pyg</code></li>
+<li> <code>--latex_font=helvetica,palatino</code></li>
+<li> <code>--latex_papersize=a4,a6</code></li>
+<li> <code>--latex_title_layout=titlepage, std, beamer, doconce_heading, Springer_collection</code></li>
+<li> <code>--latex_packages=package1,package2,package3</code> (Liste der zu importierenden Zusatzpakete; dieser Parameter ist unter Mac OS nicht verfügbar!)</li>
+</ul>
+
+<b> Syntax Hervorhebung.</b>
+Der Stil von Verbatim Blöcken mit Computer Code wird durch den <code>--latex_code_style=X</code> Parameter bestimmt. Es gibt drei Hauptwerte für X, welche drei Verbatim Typ Einstellungen in LaTeX entsprechen:
+
+<ul>
+<li> <code>vrb</code> für den einfachen <code>Verbatim</code> Stil (<code>fancyvrb</code> LaTeX Paket)</li>
+<li> <code>pyg</code> für den Pygments Stil (<code>mintex</code> LaTeX Paket)</li>
+<li> <code>lst</code> für die Listen Stile (<code>listingsutf8</code> LaTeX Paket)</li>
+</ul>
+
+<h2 id="___sec18">Konvertierung von LaTeX in PDF </h2>
+Das <code>.tex</code> File wird nun kompiliert und mithilfe von <code>pdflatex</code> in ein PDF umgewandelt:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; pdflatex DATEINAME
+Terminal&gt; pdflatex DATEINAME
+Terminal&gt; makeindex DATEINAME # falls es einen Index gibt
+Terminal&gt; bibtex DATEINAME    # falls es ein Literaturverzeichnis gibt
+Terminal&gt; pdflatex DATEINAME
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Falls der Minted Stil verwendet wird, <b>muss</b> <code>pdflatex</code> mit der Option <code>-shell-escape</code> ausgeführt werden:
+<!-- begin verbatim block -->
+<pre><code>Terminal&gt; pdflatex -shell-escape DATEINAME
+Terminal&gt; pdflatex -shell-escape DATEINAME
+Terminal&gt; makeindex DATEINAME # falls es einen Index gibt
+Terminal&gt; bibtex DATEINAME    # falls es ein Literaturverzeichnis gibt
+Terminal&gt; pdflatex -shell-escape DATEINAME
+</code></pre>
+<!-- end verbatim block -->
+
+<h1 id="___sec19">HTML </h1>
+Um ein DocOnce Dokument in eine Webseite einzubetten bietet sich an dieses in ein HTML-Dokument umzuwandeln.
+<b> Verwendung von HTML.</b>
+Die Konvertierung in das HTML-Format erfolgt über den Befehl
+<!-- begin verbatim block -->
+<pre><code>doconce format html DATEINAME.do.txt
+</code></pre>
+<!-- end verbatim block -->
+Das erzeugte Dokument mit dem Namen DATEINAME.html kann nun mit jedem Webbrowser zur Ansicht geöffnet werden.
+<b> Ausgabeoptionen für HTML.</b>
+Mithilfe von Kommandozeilenparameter lässt sich das HTML-Dokument noch weiter personalisieren:
+Über den Befehl <code>--css=filename</code> lässt sich ein eigenes CSS Stylesheet zur Verwendung einbinden, wobei über der Befehl <code>--html_style=name</code> aus einigen vorgefertigten Styles ausgewählt werden kann.
+
+<ul>
+<li> solarized: <a href="http://ethanschoonover.com/solarized" target="_self">solarized</a> Style</li>
+<li> blueish: einfacher Style mit blauen Überschriften (Standard)</li>
+<li> blueish2: etwas abgeänderter Variante von <em>blueish</em></li>
+<li> bloodish: wie <em>blueish</em>, aber in dunkelrot</li>
+</ul>
+
+Andere Parameter:
+
+<ul>
+<li> <code>--html_share=http://...</code> fügt am Ende des Dokumentes ''Share Buttons'' für Email, Facebook, Google+, LinkedIn, Twitter und Drucken ein</li>
+<li> <code>--html_share=http://...,twitter,linkedin</code> erzeugt ''Share Buttons'' für Twitter und LinkedIn. Die Seitennamen werden durch Kommata getrennt. Gültige Namen sind: <code>email</code>, <code>facebook</code>, <code>google+</code>, <code>linkedin</code>, <code>twitter</code> und <code>print</code>. Die URL muss auf die Seite weisen, auf der das Dokument publiziert wird.</li>
+<li> <code>--toc_depth=X</code>: bestimmt die Tiefe des Inhaltsverzeichnisses im Dokument. Der Standardwert beträgt 3 und erzeugt somit Einträge für Kapitelüberschriften, Abschnitte und Unterabschnitte.</li>
+<li> <code>--html_body_font=</code>: bestimmt die Schriftart für den Fließtext. Der Wert <code>?</code> listet alle verfügbaren Schriftarten auf.</li>
+<li> <code>--html_heading_font=</code>: bestimmt die Schriftart für die Überschriften. Der Wert <code>?</code> listet alle verfügbaren Schriftarten auf.</li>
+<li> <code>--html_video_autoplay=True,False</code>: lässt Videos automatisch abspielen, sobald die HTML Seite geladen wird (<code>True</code>, Standard).</li>
+</ul>
+
+<h1 id="___sec20">Wiki-Formate </h1>
+<b> Verwendung von Wiki-Formaten.</b>
+Wikis werden in vielen Unternehmen verwendet um verschiedenste Aufgaben zu erledigen. Zu diesen Aufgaben zählen z.B. die Standadisierung verschiedener Prozesse im Betrieb, wie die Einarbeitung von Mitarbeitern oder das Sammeln von externen Berichten (Pressespiegel) über das Unternehmen. Häufig werden Wikis auch als Wissensdatenbank für unterschiedliche Themen (Dokumementation von bestimmten Prozessen in der IT oder Qualitätsmanagment) benutzt. Die wohl bekannteste Anwendung eines Wikis ist die freie Enzyklopädie Wikipedia.
+<b> Ausgabeoptionen für Wiki-Formate.</b>
+DocOnce unterstützt die drei gebräuchlichsten Wiki-Formate Googlecode wiki, MediaWiki und Creole Wiki. Die Auswahl des gewünschten Wiki-Formats wir durch den <code>format</code>-Befehl realisiert:
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>doconce format gwiki *Datei* (Googlecode Wiki)
+doconce format mwiki *Datei* (MediaWiki)
+doconce format cwiki *Datei* (Creole Wiki)
+</code></pre>
+<!-- end verbatim block -->
+<b> Konvertierung von Wiki-Formaten in weitere Formate.</b>
+Das ausgegebene Wiki-Dokument kann nicht weiter in andere Formate konvertiert werden. Ein Anwendungszweck ist das erstellte DocOnce-Dokument zusätzlich zur Ausgabe als PDF für die Veröffentlichung in einem Wiki zu konvertieren.
+
+<h1 id="___sec21">Parameter für den doconce-Befehl </h1> <hr>
+Generell wird das Umwandeln der \*.do.txt-Datei in das gewünschte Ausgabeformat mit dem <code>doconce</code>-Befehl eingeleitet. Durch das Anhängen von zusätzlichen Parameter kann die Ausgabe weiter an die Bedürfnisse des Benutzers angepasst werden.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--help
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Durch das Anhängen des Parameters <code>--help</code> werden alle Optionen von DocOnce ausgegeben.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>format X
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Das Ausgabeformat wird dem Parameter <code>format</code> angehängt. X kann hierbei <code>html, latex, pdflatex,</code>
+<code>rst, sphinx, plain, gwiki, mwiki, cwiki, pandoc, epytext</code> sein.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--debug
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Erstellt eine Debug-Datei die alle auftretenden Fehler und Zwischenschritte protokoliert.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--no_abort
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Führt die Konvertierung auch dann fort, wenn <code>doconce</code> Fehler in der Syntax registriert.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--verbose=...
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Gibt den Fortschritt eines Zwischenschritts aus, wenn erlänger als die festgelegte Zeitspanne (in Sekunden) dauert.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--toc_depth=...
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Gibt die Anzahl der Untergliederungen im Inhaltsverzeichnis an.
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--encoding=...
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Gibt die zuverwendete Codierung der Eingabedatei an (z.B. utf-8 oder latin1)
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--no_title
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Entfernt Autor, Titel und Datum im fertigen Dokument
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--device=...
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Gibt an ob das Dokument für die Ausgabe auf einen Bildschirm oder zum Ausdruck optimiert werden soll. Die wichtigsten Optionen sind <em>screen</em>, für die Ausgabe auf Bildschirmen (verkleinert Seitenränder), und <em>paper</em>, für den Ausdruck (Links werden als Fußnote ausgegeben).
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>--urlcheck
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Überprüft die im Dokument verwendeten Links auf Webseiten auf Gültigkeit
+
+<p>
+Die zur Konvertierung dieses Dokuments, in Latex und Markdown, verwendeten Skripte sind im Anhang beigefügt.
+
+<h1 id="___sec22">Fazit </h1> <hr>
+
+<h1 id="___sec23">Simon </h1>
+DocOnce ist eine leicht zu erlernente Markup-Sprache, die durch den Einsatz von Mako und preprocess stark an die Bedürfnisse des Benutzers angepasst werden kann. Aber auch ohne den Einsatz der Präprozessoren lässt sich das gewünschte Ausgabeformat durch viele Parameter gut abstimmen. Die größte Stärke von DocOnce, nämlich die Vielzahl der Ausgabeformate, ist auch gleichzeitig eine ihrer Schwächen. Dadurch, dass die Sprache sehr einfach gehalten ist, können nicht alle Möglichkeiten der Ausgabe-Sprachen erfasst werden oder nur schwierig durch Präprozessor-Direktiven realisiert werden. Nichtsdestotrotz hat die Arbeit mit DocOnce Spaß gemacht. Die Installation läuft, auf Linux-Systemen (Ubuntu bzw. Arch-Linux), durch das setup-Skript einfach und das Konvertieren in die Ausgabeformate kann nach Erstellen eines kurzen BASH-Skripts beginnen. <br />
+Insgesamt kann man sagen, dass DocOnce eine Sprache für fortgeschrittene Benutzer ist, da es keinen WYSIWYG-Editor gibt und die Konvertierung nur über das Terminal gestartet werden kann. Ich werde DocOnce auf Github weiter im Auge behalten und gespannt verfolgen, was alles Hans Petter Langtangen, im Alleingang, noch in die Sprache integriert.
+
+<h1 id="___sec24">Michael </h1>
+Als Mac OS User hatte ich einige Startschwierigkeiten, da das DocOnce-Paket aus den Anaconda-Repositories u.A. nicht alle Parameter der neuesten ''Original''-Version unterstützt. Nach kurzer Suche konnte ich aber alle benötigten Befehle über Umwege trotzdem implementieren (siehe /tools/dotopdfMac) und so eine gleichwertige PDF-Ausgabe unter Mac OS produzieren. <br />
+Nachdem alle Probleme soweit gelöst waren fand ich mich sehr schnell in DocOnce zurecht und bin, ebenso wie mein Kollege, davon überzeugt, dass sich diese Markup-Sprache sehr schnell und leicht erlernen lässt. Am Einfachsten haben es sicherlich Linux bzw. Ubuntu User, da die Installation des Paketes für diese Systeme relativ gut dokumentiert ist und diese es meist auch gewohnt sind viel mit der Konsole zu arbeiten. Für eine Installation unter Mac OS muss man schon etwas Geduld mitbringen, da man sich hier einige Informationen doch noch zusammensuchen muss. Windows User bleiben jedoch fürs Erste auf der Strecke: Eine Installation auf einem Windows System konnten wir bisher nicht lauffähig machen. <br />
+Ich war vor diesem Projekt schon geübt in der Verwendung und ein Fan von LaTeX, aber ich muss gestehen, dass ich in der Zwischenzeit schon sehr von DocOnce angetan bin. Auch ich werde das Projekt von Herrn Langtangen weiter im Auge behalten und freue mich auf die Zukunft von DocOnce.
+
+<h1 id="___sec25">Anhang </h1> <hr>
+
+<h1 id="___sec26">Setup-Skript </h1>
+<!-- begin verbatim block  shpro-->
+<pre><code>#!/bin/bash
+# Automatically generated script by deb2sh.py.
+
+# The script is based on packages listed in debpkg_doconce.txt.
+
+set -x  # make sure each command is printed in the terminal
+
+function apt_install {
+  sudo apt-get -y install $1
+  if [ $? -ne 0 ]; then
+    echo &quot;could not install $1 - abort&quot;
+    exit 1
+  fi
+}
+
+function pip_install {
+  sudo pip install --upgrade &quot;$@&quot;
+  if [ $? -ne 0 ]; then
+    echo &quot;could not install $p - abort&quot;
+    exit 1
+  fi
+}
+
+sudo apt-get update --fix-missing
+
+# Installation script for doconce and all dependencies
+
+# This script is translated from
+# doc/src/manual/debpkg_doconce.txt
+# in the doconce source tree, with help of
+# vagrantbox/doc/src/vagrant/src-vagrant/deb2sh.py
+# (git clone git@github.com:hplgit/vagrantbox.git)
+
+# Python v2.7 must be installed (doconce does not work with v3.x)
+pyversion=`python -c 'import sys; print sys.version[:3]'`
+if [ $pyversion != '2.7' ]; then echo &quot;Python v${pyversion} cannot be used with DocOnce&quot;; exit 1; fi
+
+# Install downloaded source code in subdirectory srclib
+if [ ! -d srclib ]; then mkdir srclib; fi
+
+# Version control systems
+apt_install mercurial
+apt_install git
+apt_install subversion
+
+# --- Python-based packages and tools ---
+apt_install python-pip
+apt_install idle
+apt_install python-dev
+apt_install python-pdftools
+pip_install ipython --upgrade
+pip_install tornado --upgrade
+pip_install pyzmq --upgrade
+pip_install traitlets --upgrade
+pip_install pickleshare --upgrade
+pip_install jsonschema
+# If problems with IPython.nbformat.v4: clone ipython and run setup.py
+# to get the latest version
+
+# Preprocessors
+pip_install future
+pip_install mako --upgrade
+pip_install -e git+https://github.com/hplgit/preprocess#egg=preprocess --upgrade
+
+# Publish for handling bibliography
+pip_install python-Levenshtein
+pip_install lxml
+pip_install -e hg+https://bitbucket.org/logg/publish#egg=publish --upgrade
+
+# Sphinx (with additional third/party themes)
+pip_install sphinx
+
+pip_install alabaster --upgrade
+pip_install sphinx_rtd_theme --upgrade
+pip_install -e hg+https://bitbucket.org/ecollins/cloud_sptheme#egg=cloud_sptheme --upgrade
+pip_install -e git+https://github.com/ryan-roemer/sphinx-bootstrap-theme#egg=sphinx-bootstrap-theme --upgrade
+pip_install -e hg+https://bitbucket.org/miiton/sphinxjp.themes.solarized#egg=sphinxjp.themes.solarized --upgrade
+pip_install -e git+https://github.com/shkumagai/sphinxjp.themes.impressjs#egg=sphinxjp.themes.impressjs --upgrade
+pip_install -e git+https://github.com/kriskda/sphinx-sagecell#egg=sphinx-sagecell --upgrade
+
+# Runestone sphinx books
+pip_install sphinxcontrib-paverutils
+pip_install paver
+pip_install cogapp
+
+#pip install -e git+https://bitbucket.org/sanguineturtle/pygments-ipython-console#egg=pygments-ipython-console
+pip_install -e git+https://bitbucket.org/hplbit/pygments-ipython-console#egg=pygments-ipython-console
+pip_install -e git+https://github.com/hplgit/pygments-doconce#egg=pygments-doconce
+
+# XHTML
+pip_install beautifulsoup4
+pip_install html5lib
+
+# ptex2tex is not needed if --latex_code_style= option is used
+cd srclib
+svn checkout http://ptex2tex.googlecode.com/svn/trunk/ ptex2tex
+cd ptex2tex
+sudo python setup.py install
+cd latex
+sh cp2texmf.sh
+cd ../../..
+
+# LaTeX
+apt_install texinfo
+apt_install texlive-full
+#apt_install texlive-extra-utils
+#apt_install texlive-latex-extra
+#apt_install texlive-latex-recommended
+#apt_install texlive-math-extra
+#apt_install texlive-font-utils
+#apt_install texlive-humanities
+apt_install latexdiff
+apt_install auctex
+
+# Image manipulation
+apt_install imagemagick
+apt_install netpbm
+apt_install mjpegtools
+apt_install pdftk
+apt_install giftrans
+apt_install gv
+apt_install evince
+apt_install smpeg-plaympeg
+apt_install mplayer
+apt_install totem
+apt_install libav-tools
+
+# Misc
+apt_install ispell
+apt_install pandoc
+apt_install libreoffice
+apt_install unoconv
+apt_install libreoffice-dmaths
+#epydoc is an old-fashioned output format, will any doconce user use it?
+#pip install -e svn+https://epydoc.svn.sourceforge.net/svnroot/epydoc/trunk/epydoc#egg=epydoc
+
+apt_install curl
+apt_install a2ps
+apt_install wdiff
+apt_install meld
+apt_install diffpdf
+apt_install kdiff3
+apt_install diffuse
+
+# tkdiff.tcl:
+#tcl8.5-dev tk8.5-dev blt-dev
+#https://sourceforge.net/projects/tkdiff/
+
+# example on installing mdframed.sty manually (it exists in texlive,
+# but sometimes needs to be in its newest version)
+git clone https://github.com/marcodaniel/mdframed
+if [ -d mdframed ]; then cd mdframed; make localinstall; cd ..; fi
+#$ echo &quot;remove the mdframe directory (if successful install of mdframed.sty): rm -rf mdframed&quot;
+
+# DocOnce itself
+cd srclib
+git clone https://github.com/hplgit/doconce.git
+if [ -d doconce ]; then cd doconce; sudo python setup.py install; cd ../..; fi
+echo &quot;Everything is successfully installed!&quot;
+</code></pre>
+<!-- end verbatim block -->
+
+<h1 id="___sec27">Skripte für die Ausgabe in Latex und Markdown </h1>
+<b>Latex beziehungsweise PDF.</b>
+
+<p>
+<!-- begin verbatim block  shcod-->
+<pre><code>#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo &quot;\e[31mBitte geben sie einen Dateinamen ein!\e[0m&quot;
+    else
+    file=$1
+    sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --toc_depth=1 --no_abort
+    echo -e &quot;\e[32mLaTex File erstellt!\e[0m&quot;
+    filename=&quot;${file%%.*}&quot;
+    echo $filename
+    filetex=&quot;$filename.tex&quot;
+    echo -e &quot;\e[32mBeginne PDF-Erstellung\e[0m&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;\e[32mSchritt1: pdfLatex\e[0m&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;\e[32mSchritt2: pdfLatex\e[0m&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;\e[32mSchritt3: makeindex\e[0m&quot;
+    sudo makeindex $filetex
+    echo -e &quot;\e[32mSchritt4: bibtex\e[0m&quot;
+    sudo bibtex $filetex
+    echo -e &quot;\e[32mSchritt5: pdfLatex\e[0m&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;\e[32mPDF erstellt!\e[0m&quot;
+    rm -f &quot;$filename.aux&quot;
+    rm -f &quot;$filename.idx&quot;
+    rm -f &quot;$filename.ilg&quot;
+    rm -f &quot;$filename.ind&quot;
+    rm -f &quot;$filename.out&quot;
+    rm -f &quot;$filename.toc&quot;
+fi
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+<b>Latex beziehungsweise PDF - Mac OS.</b>
+
+<p>
+<!-- begin verbatim block  shcod-->
+<pre><code>#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo &quot;Bitte geben sie einen Dateinamen ein!&quot;
+    else
+    file=$1
+    sudo doconce format pdflatex $file --latex_packages=minted,ngerman,parskip --latex_font=helvetica --latex_code_style=pyg --latex_papersize=a4 --latex_title_layout=titlepage --minted_latex_style=autumn --no_abort
+    echo -e &quot;LaTex File erstellt!&quot;
+    filename=&quot;${file%%.*}&quot;
+    echo $filename
+    filetex=&quot;$filename.tex&quot;
+    echo -e &quot;TeX-Header aufräumen&quot;
+    sudo doconce replace &quot;\setcounter{tocdepth}{2}&quot; &quot;\setcounter{tocdepth}{1}&quot; $filetex
+    sudo doconce replace &quot;twoside&quot; &quot;oneside&quot; $filetex
+    sudo doconce replace &quot;\usepackage[pdftex]{graphicx}&quot; &quot;\usepackage[pdftex]{minted,ngerman,parskip,graphicx}&quot; $filetex
+    echo -e &quot;Beginne PDF-Erstellung&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;mchritt1: pdfLatex&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;Schritt2: pdfLatex&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;Schritt3: makeindex&quot;
+    sudo makeindex $filetex
+    echo -e &quot;Schritt4: bibtex&quot;
+    sudo bibtex $filetex
+    echo -e &quot;Schritt5: pdfLatex&quot;
+    sudo pdflatex -interaction=batchmode -shell-escape $filetex
+    echo -e &quot;PDF erstellt!&quot;
+    rm -f &quot;$filename.aux&quot;
+    rm -f &quot;$filename.idx&quot;
+    rm -f &quot;$filename.ilg&quot;
+    rm -f &quot;$filename.ind&quot;
+    rm -f &quot;$filename.out&quot;
+    rm -f &quot;$filename.tex&quot;
+    rm -f &quot;$filename.toc&quot;
+    rm -f &quot;$filename.tex.old~~&quot;
+    rm -f &quot;tmp_preprocess__$filename.do.txt&quot;
+    sudo rm -f -r &quot;_minted-$filename&quot;
+fi
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+<b>Markdown beziehungsweise Github-MD.</b>
+
+<p>
+<!-- begin verbatim block  shcod-->
+<pre><code>#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo &quot;\e[31mBitte geben sie einen Dateinamen ein!\e[0m&quot;
+  else
+    file=$1
+    sudo doconce format pandoc $file --no_abort --github_md
+    filename=&quot;${file%%.*}&quot;
+    mv $filename.md README.md
+    echo -e &quot;\e[32mREADME.md erstellt!\e[0m&quot;
+fi
+</code></pre>
+<!-- end verbatim block -->
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+
